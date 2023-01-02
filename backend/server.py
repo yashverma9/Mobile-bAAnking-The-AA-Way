@@ -124,7 +124,18 @@ def getNudges():
     
     with open('./output-data/nudgesData.json') as json_file:
         nudgesData = json.load(json_file)
-    return {"Type": "Success", "nudges": nudgesData}
+
+
+    with open('./output-data/nudgesDataUser2.json') as json_file2:
+        nudgesDataUser2 = json.load(json_file2)
+    
+    combinedNudgesData = {
+        '8037988169': nudgesData["nudges"],
+        '9987600001': nudgesDataUser2["nudges"]
+    } 
+
+
+    return {"Type": "Success", "nudges": combinedNudgesData}
 
 
 # Get personalized widget details for the user
