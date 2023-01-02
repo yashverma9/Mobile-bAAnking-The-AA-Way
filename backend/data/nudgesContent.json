@@ -1,58 +1,58 @@
 {
   "investors": {
-    "mainText": "test investors",
-    "smallText": "small test investors"
+    "mainText": "Do you want to diverify your investments? Check this out!",
+    "smallText": "Diversification reduces the impact of market volatility"
   },
   "savers": {
-    "mainText": "test savers",
-    "smallText": "small test savers"
+    "mainText": "You have been saving up a lot in your bank accounts, why not put it in a lock-free Fixed Deposit for better returns?",
+    "smallText": "One can earn upto 7% interest on FDs"
   },
   "big spenders": {
-    "mainText": "test big spenders",
-    "smallText": "small big spenders"
+    "mainText": "We notice you are a big spender, get this credit card for a higher credit limit!",
+    "smallText": "More than 50% of our users with similar spends use this card!"
   },
   "debtors": {
-    "mainText": "test debtors",
-    "smallText": "small test debtors"
+    "mainText": "Start investing today to save and get returns at the same time! Checkout our Mutual Funds...",
+    "smallText": "Investing into stable instruments can help save and even grow your money gradually"
   },
   "shoppers": {
-    "mainText": "test shoppers",
-    "smallText": "small test shoppers"
+    "mainText": "Shopping is the best medicine, we have a credit card just for you!",
+    "smallText": "Get higher credit limits and many offers for the shopper in you!"
   },
   "paymentForgetful": {
-    "mainText": "test paymentForgetful",
-    "smallText": "small test paymentForgetful"
+    "mainText": "Reminder: Your wifi bill will be due in 3 days, pay early!",
+    "smallText": "You missed 2 bill payments in the last 3 months. Pay early and avoid the late fees."
   },
   "lumpSumReceiver": {
-    "mainText": "test lumpSumReceiver",
-    "smallText": "small test lumpSumReceiver"
+    "mainText": "You have received lump sum amount in your bank account this week, would you like to invest in Mutual Funds?",
+    "smallText": "Mutual Funds can give more than 10% average annualized return subject to market risk"
   },
   "underCoveredInsurance": {
-    "mainText": "test underCoveredInsurance",
-    "smallText": "small test underCoveredInsurance"
+    "mainText": "On the basis of your demographic and income, you are under insured. Would you like to opt for a better life insurance?",
+    "smallText": "80% customers of your age opt for a 1Cr+ life cover!"
   },
   "studentLoanRequired": {
-    "mainText": "test studentLoanRequired",
-    "smallText": "small test studentLoanRequired"
+    "mainText": "You are going to graduate soon. Any plans for higher education? Check out pre-approved student loans just for you!",
+    "smallText": "Student loans cover entire cost associated with the degree and the interest rates are lower"
   },
   "foodie": {
-    "mainText": "test foodie",
-    "smallText": "small test foodie"
+    "mainText": "People who love to eat are always the best people! Why not go for the best card with offers on leading food ordering platforms",
+    "smallText": "Our cards provide extra discounts on Zomato, Swiggy and many more....."
   },
   "shopper": {
-    "mainText": "test shopper",
-    "smallText": "small test shopper"
+    "mainText": "Shopping is the best medicine, we have a credit card just for you!",
+    "smallText": "Get higher credit limits and many offers for the shopper in you!"
   },
   "entertainMax": {
-    "mainText": "test entertainMax",
-    "smallText": "small test entertainMax"
+    "mainText": "Checkout this card for various offers accross book my show and OTT platforms",
+    "smallText": "Users of this card save upto 30% on entertainment platforms"
   },
   "creditCardUser": {
-    "mainText": "test creditCardUser",
-    "smallText": "small test creditCardUser"
+    "mainText": "Want to increase your credit score? Have a look!",
+    "smallText": "People with higher credit scores get potentially lower interest rates"
   },
   "nomineeMF": {
-    "mainText": "test nomineeMF",
-    "smallText": "small test nomineeMF"
+    "mainText": "We notice you haven't registered your Nominee for the mutual funds you have invested in. Want to add it today?",
+    "smallText": "Having a nominee saves the trouble to your loved ones"
   }
 }
