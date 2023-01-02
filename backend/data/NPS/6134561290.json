@@ -1,0 +1,74 @@
+{
+  "xsiSchemaLocation": "http://api.rebit.org.in/FISchema/nps.xsd",
+  "xmlnsXsi": "http://www.w3.org/2001/XMLSchema-instance",
+  "schemaLocation": null,
+  "Profile": {
+    "Holders": {
+      "Holder": {
+        "name": "ANKIT MUKESH NANDU",
+        "dob": "1996-04-12",
+        "mobile": "8037988169",
+        "nominee": "REGISTERED",
+        "pranId": "100016069165",
+        "landline": null,
+        "address": "19/1352 SECTOR-19, , , INDIRA NAGAR, MUNSHI PULIA, LUCKNOW, MAHARASHTRA, INDIA",
+        "email": "QK_AnishaK@nsdl.co.in",
+        "pan": "CKAPP2000P",
+        "ckycCompliance": null
+      }
+    }
+  },
+  "Summary": {
+    "Holdings": {
+      "Tier1Holdings": {
+        "Tier1Holding": [
+          {
+            "blockedUnits": 1.0,
+            "freeUnits": 3102.485,
+            "nav": "200.1220",
+            "schemeName": "SBI PENSION FUND  SCHEME E - TIER I",
+            "schemeId": "SM001003",
+            "totalUnits": 3102.485,
+            "totalValueOfScheme": 620875.5,
+            "allocationPercentage": 0.0
+          }
+        ],
+        "schemePreferenceType": null,
+        "investmentValue": 1426495.1,
+        "amountInTransition": 0.0
+      },
+      "Tier2Holdings": {
+        "Tier2Holding": [
+          {
+            "blockedUnits": 1.0,
+            "freeUnits": 3102.485,
+            "nav": "200.1220",
+            "schemeName": "SBI PENSION FUND  SCHEME E - TIER I",
+            "schemeId": "SM001003",
+            "totalUnits": 3102.485,
+            "totalValueOfScheme": 620875.5,
+            "schemeAllocationPercentage": 0.0
+          }
+        ],
+        "schemePreferenceType": null,
+        "investmentValue": 0.0,
+        "amountInTransition": 0.0
+      }
+    },
+    "openingDate": "2019-01-22",
+    "currentValue": 1426495.1,
+    "status": "DEACTIVATED",
+    "tier1Status": "FROZEN",
+    "tier2NAVDate": "2021-01-22",
+    "tier2Status": "ACTIVE",
+    "tier1NAVDate": "2021-01-22",
+    "debtAssetValue": 0.0,
+    "equityAssetValue": 0.0,
+    "otherAssetValue": 0.0
+  },
+  "maskedAccNumber": "XXXXXXXX0493",
+  "version": "1.0.0",
+  "linkedAccRef": "62ecf498-3e5a-4bae-8963-0147b7fd336f",
+  "type": "nps",
+  "xmlns": "http://api.rebit.org.in/FISchema/nps"
+}

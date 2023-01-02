@@ -1,0 +1,163 @@
+{
+    "Account": {
+        "linkedAccRef": "",
+        "maskedAccNumber": "",
+        "version": "1.0",
+        "type": "ppf",
+        "Profile": {
+            "Holders": {
+                "type": "SINGLE",
+                "Holder": {
+                    "name": "Marudhanayagam Pillai",
+                    "dob": "1988-09-24",
+                    "mobile": "8037988169",
+                    "nominee": "REGISTERED",
+                    "email": "vs123@gmail.com",
+                    "pan": "AAAPL1234P",
+                    "ckycCompliance": "true"
+                }
+            }
+        },
+        "Summary": {
+            "openingDate": "2012-04-12",
+            "maturityDate": "2028-03-31",
+            "ifscCode": "ABCD0123",
+            "micrCode": "",
+            "branchAddr": "",
+            "status": "ACTIVE",
+            "currentBalance": ""
+        },
+        "Transactions": {
+            "endDate": "2021-09-01",
+            "startDate": "2022-09-30",
+            "Transaction": [
+                {
+                    "txnId": "",
+                    "txnDate": "2021-09-07",
+                    "valueDate": "2021-09-07",
+                    "type": "DEPOSIT",
+                    "amount": "1500.00",
+                    "balance": "174000.74",
+                    "narration": ""
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2021-10-10",
+                    "valueDate": "2021-10-10",
+                    "type": "DEPOSIT",
+                    "amount": "1500.00",
+                    "balance": "175500.74",
+                    "narration": ""
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2021-11-01",
+                    "valueDate": "2021-11-01",
+                    "type": "DEPOSIT",
+                    "amount": "1500.00",
+                    "balance": "177000.74",
+                    "narration": ""
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2021-12-07",
+                    "valueDate": "2021-12-07",
+                    "type": "DEPOSIT",
+                    "amount": "1500.00",
+                    "balance": "178500.74",
+                    "narration": ""
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-01-02",
+                    "valueDate": "2022-01-02",
+                    "type": "DEPOSIT",
+                    "amount": "1500.00",
+                    "balance": "180000.74",
+                    "narration": ""
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-02-04",
+                    "valueDate": "2022-02-04",
+                    "type": "DEPOSIT",
+                    "amount": "1500.00",
+                    "balance": "181500.74",
+                    "narration": ""
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-03-05",
+                    "valueDate": "2022-03-05",
+                    "type": "DEPOSIT",
+                    "amount": "1500.00",
+                    "balance": "183000.74",
+                    "narration": ""
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-03-31",
+                    "valueDate": "2022-03-31",
+                    "type": "INTEREST",
+                    "amount": "12948.15",
+                    "balance": "195948.89",
+                    "narration": ""
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-04-05",
+                    "valueDate": "2022-04-05",
+                    "type": "DEPOSIT",
+                    "amount": "1500.00",
+                    "balance": "197448.89",
+                    "narration": ""
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-05-04",
+                    "valueDate": "2022-05-04",
+                    "type": "DEPOSIT",
+                    "amount": "1500.00",
+                    "balance": "198948.89",
+                    "narration": ""
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-06-05",
+                    "valueDate": "2022-06-05",
+                    "type": "DEPOSIT",
+                    "amount": "1500.00",
+                    "balance": "200448.89",
+                    "narration": ""
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-07-05",
+                    "valueDate": "2022-07-05",
+                    "type": "DEPOSIT",
+                    "amount": "1500.00",
+                    "balance": "201948.89",
+                    "narration": ""
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-08-01",
+                    "valueDate": "2022-08-01",
+                    "type": "DEPOSIT",
+                    "amount": "1500.00",
+                    "balance": "203448.89",
+                    "narration": ""
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-09-07",
+                    "valueDate": "2022-09-07",
+                    "type": "DEPOSIT",
+                    "amount": "1500.00",
+                    "balance": "204948.89",
+                    "narration": ""
+                }
+            ]
+        }
+    }
+}

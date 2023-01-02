@@ -1,0 +1,76 @@
+{
+  "schemaLocation": "http://api.rebit.org.in/FISchema/term_deposit ../FISchema/term_deposit.xsd",
+  "Profile": {
+    "Holders": {
+      "Holder": [
+        {
+          "name": "Mr. SANKET  SALVI",
+          "dob": "1947-08-15",
+          "mobile": "8037988169",
+          "nominee": "REGISTERED",
+          "landline": "08942-223322",
+          "address": "ADD1001242",
+          "email": "mail@mail.com",
+          "pan": "AAAAA0000A",
+          "ckycCompliance": "true"
+        }
+      ],
+      "type": "SINGLE"
+    }
+  },
+  "Summary": {
+    "branch": "Jayanagar 4th Block",
+    "openingDate": "2019-12-22",
+    "ifsc": "ICIC0001124",
+    "accountType": "FIXED",
+    "maturityAmount": "105622.00",
+    "maturityDate": "2021-01-16",
+    "description": "390 Days Cumulative Term Deposit ",
+    "interestPayout": "OnMaturity",
+    "interestRate": "5.15",
+    "principalAmount": "100000.00",
+    "tenureDays": "390",
+    "tenureMonths": "0",
+    "tenureYears": "0",
+    "interestComputation": "COMPOUND",
+    "compoundingFrequency": "QUARTERLY",
+    "interestPeriodicPayoutAmount": "0",
+    "interestOnMaturity": "5622",
+    "currentValue": "100000.00"
+  },
+  "Transactions": {
+    "Transaction": [
+      {
+        "txnId": "M478543511",
+        "amount": "100000.00",
+        "narration": "TOWARDS FD for Month 11",
+        "type": "OPENING",
+        "mode": "FT",
+        "balance": "100000.00",
+        "transactionDateTime": "2021-11-11T05:04:14+00:00",
+        "valueDate": "2021-11-11",
+        "reference": "RFN00013383011"
+      },
+      {
+        "txnId": "M478543512",
+        "amount": "100000.00",
+        "narration": "TOWARDS FD for Month 12",
+        "type": "OPENING",
+        "mode": "FT",
+        "balance": "100000.00",
+        "transactionDateTime": "2021-12-01T05:04:14+00:00",
+        "valueDate": "2021-12-01",
+        "reference": "RFN00013383012"
+      }
+    ],
+    "startDate": "2021-10-19",
+    "endDate": "2022-10-19"
+  },
+  "type": "term_deposit",
+  "maskedAccNumber": "XXXXXX8161",
+  "version": "1.1",
+  "linkedAccRef": "2b1e44b2-4b9a-4d15-afe4-8ffbe662d20c",
+  "xsi:schemaLocation": null,
+  "xmlns": null,
+  "xmlns:xsi": null
+}
