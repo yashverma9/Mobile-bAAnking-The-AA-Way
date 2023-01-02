@@ -124,14 +124,29 @@ def getNudges():
     
     with open('./output-data/nudgesData.json') as json_file:
         nudgesData = json.load(json_file)
-    return {"Type": "Success", "nudges": nudgesData}
+
+
+    with open('./output-data/nudgesDataUser2.json') as json_file2:
+        nudgesDataUser2 = json.load(json_file2)
+    
+    combinedNudgesData = {
+        '8037988169': nudgesData["nudges"],
+        '9987600001': nudgesDataUser2["nudges"]
+    } 
+
+
+    return {"Type": "Success", "nudges": combinedNudgesData}
 
 
 # Get personalized widget details for the user
 @app.route('/api/getWidgetDetails', methods = ['GET'])
 def getWidgetDetails():
-    sampleWidgetDetails = {"widget_name_1": "This widget does ...", "widget_name_2": "This widget does this..."}    
-    return {"Type": "Success", "widgetDetails": sampleWidgetDetails}
+
+    # sampleWidgetDetails = {"widget_name_1": "This widget does ...", "widget_name_2": "This widget does this..."}    
+    
+    with open('./output-data/widgetsData.json') as json_file:
+        widgetsData = json.load(json_file)
+    return {"Type": "Success", "widgetData": widgetsData}
 
 
 
