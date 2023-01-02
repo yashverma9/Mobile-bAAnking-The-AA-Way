@@ -1,0 +1,78 @@
+{
+  "xsiSchemaLocation": null,
+  "xmlnsXsi": null,
+  "schemaLocation": "http://api.rebit.org.in/FISchema/recurring_deposit ../FISchema/recurring_deposit.xsd",
+  "Profile": {
+    "Holders": {
+      "Holder": [
+        {
+          "name": "Akshay Kumar",
+          "DOB": "1947-08-15",
+          "mobile": "8037988169",
+          "nominee": "REGISTERED",
+          "landline": "",
+          "address": "8/1190, 5th Cross, 3rd Main, 7th Block, Jayanagar, Bangalore - 560011",
+          "email": "mail@mail.com",
+          "pan": "AAAAA0000A",
+          "ckycCompliance": "true"
+        }
+      ],
+      "type": "SINGLE"
+    }
+  },
+  "Summary": {
+    "branch": "JayaNagar 4th Block",
+    "openingDate": "2019-12-22",
+    "ifsc": "ICIC0001124",
+    "accountType": "RECURRING",
+    "maturityAmount": "61693.00",
+    "maturityDate": "2020-12-22",
+    "description": "12 Months Recurring Deposit",
+    "interestPayout": "OnMaturity",
+    "interestRate": "5.15",
+    "principalAmount": "5000.00",
+    "tenureDays": "0",
+    "tenureMonths": "12",
+    "tenureYears": "0",
+    "recurringAmount": "5000.00",
+    "recurringDepositDay": "22",
+    "interestComputation": "COMPOUND",
+    "compoundingFrequency": "MONTHLY",
+    "interestPeriodicPayoutAmount": "0",
+    "interestOnMaturity": "1693",
+    "currentValue": "35000.00"
+  },
+  "Transactions": {
+    "Transaction": [
+      {
+        "txnId": "M2230745511",
+        "amount": "5000.00",
+        "narration": "TOWARDS RD INSTALLMENT for month 11",
+        "type": "INSTALLMENT",
+        "mode": "FT",
+        "balance": "35000.00",
+        "transactionDateTime": "2021-11-11T04:53:45+00:00",
+        "valueDate": "2021-11-11T04:53:45+00:00",
+        "reference": "RFN000283341411"
+      },
+      {
+        "txnId": "M2230745512",
+        "amount": "5000.00",
+        "narration": "TOWARDS RD INSTALLMENT for month 12",
+        "type": "INSTALLMENT",
+        "mode": "FT",
+        "balance": "35000.00",
+        "transactionDateTime": "2021-12-12T04:53:45+00:00",
+        "valueDate": "2021-12-12T04:53:45+00:00",
+        "reference": "RFN000283341412"
+      }
+    ],
+    "startDate": "2021-10-19",
+    "endDate": "2022-10-19"
+  },
+  "type": "recurring_deposit",
+  "maskedAccNumber": "XXXXXX8161",
+  "version": "1.1",
+  "linkedAccRef": "5d037071-3243-49bf-8bad-a54fd45f43b1",
+  "xmlns": null
+}

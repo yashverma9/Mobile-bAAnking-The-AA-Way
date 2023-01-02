@@ -1,0 +1,58 @@
+{
+  "investors": {
+    "mainText": "test investors",
+    "smallText": "small test investors"
+  },
+  "savers": {
+    "mainText": "test savers",
+    "smallText": "small test savers"
+  },
+  "big spenders": {
+    "mainText": "test big spenders",
+    "smallText": "small big spenders"
+  },
+  "debtors": {
+    "mainText": "test debtors",
+    "smallText": "small test debtors"
+  },
+  "shoppers": {
+    "mainText": "test shoppers",
+    "smallText": "small test shoppers"
+  },
+  "paymentForgetful": {
+    "mainText": "test paymentForgetful",
+    "smallText": "small test paymentForgetful"
+  },
+  "lumpSumReceiver": {
+    "mainText": "test lumpSumReceiver",
+    "smallText": "small test lumpSumReceiver"
+  },
+  "underCoveredInsurance": {
+    "mainText": "test underCoveredInsurance",
+    "smallText": "small test underCoveredInsurance"
+  },
+  "studentLoanRequired": {
+    "mainText": "test studentLoanRequired",
+    "smallText": "small test studentLoanRequired"
+  },
+  "foodie": {
+    "mainText": "test foodie",
+    "smallText": "small test foodie"
+  },
+  "shopper": {
+    "mainText": "test shopper",
+    "smallText": "small test shopper"
+  },
+  "entertainMax": {
+    "mainText": "test entertainMax",
+    "smallText": "small test entertainMax"
+  },
+  "creditCardUser": {
+    "mainText": "test creditCardUser",
+    "smallText": "small test creditCardUser"
+  },
+  "nomineeMF": {
+    "mainText": "test nomineeMF",
+    "smallText": "small test nomineeMF"
+  }
+}

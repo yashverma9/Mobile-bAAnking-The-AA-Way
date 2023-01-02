@@ -1,0 +1,122 @@
+{
+    "Account": {
+        "linkedAccRef": "",
+        "maskedAccNumber": "",
+        "version": "1.0",
+        "type": "insurance",
+        "Profile": {
+            "Holders": {
+                "type": "SINGLE",
+                "Holder": {
+                    "name": "Rohit Yadav",
+                    "dob": "1974-03-12",
+                    "mobile": "8037988169",
+                    "nominee": "REGISTERED",
+                    "email": "ry123@gmail.com",
+                    "pan": "AAAPL1234P",
+                    "ckycCompliance": "true"
+                }
+            },
+            "Riders": {
+                "Rider": {
+                    "riderType": "",
+                    "sumAssured": "2500000",
+                    "tenureYears": "20",
+                    "tenureMonths": "240",
+                    "premiumAmount": "8367.00",
+                    "policyStartDate": "2015-04-12",
+                    "policyEndDate": "2025-04-12"
+                }
+            }
+        },
+        "Summary": {
+            "policyName": "",
+            "policyNumber": "",
+            "eiaNumber": "",
+            "sumAssured": "2500000",
+            "coverAmount": "2500000",
+            "tenureMonths": "240",
+            "tenureYears": "20",
+            "premiumAmount": "8367.00",
+            "policyStartDate": "2015-04-12",
+            "policyType": "TERM",
+            "coverType": "TERM_ROP",
+            "premiumFrequency": "QUARTELY",
+            "premiumPaymentYears": "15",
+            "premiumPaymentMonths": "180",
+            "maturityDate": "2025-04-12",
+            "maturityBenefit": "",
+            "MoneyBacks": {
+                "MoneyBack": {
+                    "date": "2025-04-12",
+                    "amount": "2500000",
+                    "description": ""
+                }
+            },
+            "ContractClauses": {
+                "ContractClause": {
+                    "title": "",
+                    "subLimit": "",
+                    "conditions": "",
+                    "exlcusions": "",
+                    "amount": "",
+                    "description": ""
+                }
+            },
+            "Covers": {
+                "Cover": {
+                    "amount": "",
+                    "description": ""
+                }
+            }
+        },
+        "Transactions": {
+            "endDate": "2021-09-01",
+            "startDate": "2022-09-30",
+            "Transaction": [
+                {
+                    "txnId": "",
+                    "txnDate": "2021-09-28",
+                    "narration": "",
+                    "type": "PREMIUM_PAYMENT",
+                    "amount": "8367.00"
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2021-12-28",
+                    "narration": "",
+                    "type": "PREMIUM_PAYMENT",
+                    "amount": "8367.00"
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-04-12",
+                    "narration": "",
+                    "type": "PREMIUM_PAYMENT",
+                    "amount": "8367.00"
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-04-15",
+                    "narration": "",
+                    "type": "LATE_FEES",
+                    "amount": "118.00"
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-06-28",
+                    "narration": "",
+                    "type": "PREMIUM_PAYMENT",
+                    "amount": "8367.00"
+                },
+                {
+                    "txnId": "",
+                    "txnDate": "2022-09-28",
+                    "narration": "",
+                    "type": "PREMIUM_PAYMENT",
+                    "amount": "8367.00"
+                }
+            ]
+        }
+    }
+}
