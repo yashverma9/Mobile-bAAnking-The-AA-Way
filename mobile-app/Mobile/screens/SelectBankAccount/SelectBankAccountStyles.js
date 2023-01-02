@@ -171,4 +171,36 @@ export default StyleSheet.create({
     color: '#00214E',
     textAlign: 'center',
   },
+  bankAccount: {
+    marginTop: '4%',
+    width: '92%',
+    // height: '10%',
+    borderWidth: 1,
+    borderColor: '#D4D4D4',
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    padding: '2%',
+  },
+  selected: {
+    borderColor: '#00214E',
+  },
+  bankName: {
+    marginLeft: '5%',
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: getScaledDimension(20, 'font'),
+    color: 'black',
+  },
+  bktxt: {
+    marginLeft: '5%',
+    marginRight: 'auto',
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: getScaledDimension(20, 'font'),
+    color: '#838383',
+  },
+  tick: {
+    marginLeft: 'auto',
+    marginRight: '4%',
+  },
 });

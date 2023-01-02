@@ -7,6 +7,8 @@ import MobileNumber from './screens/MobileNumber/MobileNumber';
 import Otp from './screens/Otp/Otp';
 import Name from './screens/Name/Name';
 import FetchAA from './screens/FetchAA/FetchAA';
+import SelectBankAccount from './screens/SelectBankAccount/SelectBankAccount';
+import Syncing from './screens/Syncing/Syncing';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -19,6 +21,11 @@ const App = () => {
           component={Splash}
         />
         <Stack.Screen
+          name="Name"
+          options={{headerShown: false, animation: 'none'}}
+          component={Name}
+        />
+        <Stack.Screen
           name="MobileNumber"
           options={{headerShown: false, animation: 'none'}}
           component={MobileNumber}
@@ -29,14 +36,19 @@ const App = () => {
           component={Otp}
         />
         <Stack.Screen
-          name="Name"
-          options={{headerShown: false, animation: 'none'}}
-          component={Name}
-        />
-        <Stack.Screen
           name="FetchAA"
           options={{headerShown: false, animation: 'none'}}
           component={FetchAA}
+        />
+        <Stack.Screen
+          name="SelectBankAccount"
+          options={{headerShown: false, animation: 'none'}}
+          component={SelectBankAccount}
+        />
+        <Stack.Screen
+          name="Syncing"
+          options={{headerShown: false, animation: 'none'}}
+          component={Syncing}
         />
       </Stack.Navigator>
     </NavigationContainer>

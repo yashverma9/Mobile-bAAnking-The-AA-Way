@@ -18,7 +18,7 @@ const Splash = ({navigation}) => {
       <Text style={styles.heroText}>Start bAAnking the AA way</Text>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('MobileNumber');
+          navigation.navigate('Name');
         }}
         style={styles.button}>
         <Text style={styles.buttonText}>Begin your Journey</Text>

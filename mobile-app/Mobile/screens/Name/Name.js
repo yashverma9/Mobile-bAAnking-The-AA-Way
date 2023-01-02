@@ -29,7 +29,7 @@ const Name = ({navigation}) => {
 
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('FetchAA');
+            navigation.navigate('MobileNumber');
           }}
           style={styles.button}>
           <Text style={styles.buttonText}>Continue</Text>

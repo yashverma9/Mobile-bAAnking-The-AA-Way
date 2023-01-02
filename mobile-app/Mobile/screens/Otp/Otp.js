@@ -44,7 +44,7 @@ const Otp = ({navigation}) => {
 
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('Name');
+            navigation.navigate('FetchAA');
           }}
           style={styles.button}>
           <Text style={styles.buttonText}>Continue</Text>
