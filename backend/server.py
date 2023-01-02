@@ -130,8 +130,12 @@ def getNudges():
 # Get personalized widget details for the user
 @app.route('/api/getWidgetDetails', methods = ['GET'])
 def getWidgetDetails():
-    sampleWidgetDetails = {"widget_name_1": "This widget does ...", "widget_name_2": "This widget does this..."}    
-    return {"Type": "Success", "widgetDetails": sampleWidgetDetails}
+
+    # sampleWidgetDetails = {"widget_name_1": "This widget does ...", "widget_name_2": "This widget does this..."}    
+    
+    with open('./output-data/widgetsData.json') as json_file:
+        widgetsData = json.load(json_file)
+    return {"Type": "Success", "widgetData": widgetsData}
 
 
 
