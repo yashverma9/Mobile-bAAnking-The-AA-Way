@@ -99,7 +99,7 @@ const Syncing = ({navigation}) => {
 
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('SelectBankAccount');
+          navigation.navigate('Home');
         }}>
         <Text>Proceed</Text>
       </TouchableOpacity>

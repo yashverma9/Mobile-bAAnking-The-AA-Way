@@ -9,6 +9,7 @@ import Name from './screens/Name/Name';
 import FetchAA from './screens/FetchAA/FetchAA';
 import SelectBankAccount from './screens/SelectBankAccount/SelectBankAccount';
 import Syncing from './screens/Syncing/Syncing';
+import Home from './screens/Home/Home';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -49,6 +50,11 @@ const App = () => {
           name="Syncing"
           options={{headerShown: false, animation: 'none'}}
           component={Syncing}
+        />
+        <Stack.Screen
+          name="Home"
+          options={{headerShown: false, animation: 'none'}}
+          component={Home}
         />
       </Stack.Navigator>
     </NavigationContainer>
