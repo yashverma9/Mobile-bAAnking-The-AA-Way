@@ -57,7 +57,7 @@ const Syncing = ({navigation}) => {
       console.log(data[i]);
       setMsg(data[i]);
       {
-        i < data.length-1 ? i++ : (i = 0);
+        i < data.length - 1 ? i++ : (i = 0);
       }
       setHide(prev => !prev);
       changeMessage();
@@ -95,6 +95,13 @@ const Syncing = ({navigation}) => {
           setHide(prev => !prev);
         }}>
         <Text>Click Me</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('SelectBankAccount');
+        }}>
+        <Text>Proceed</Text>
       </TouchableOpacity>
     </View>
   );

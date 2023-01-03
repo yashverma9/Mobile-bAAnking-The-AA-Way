@@ -208,5 +208,6 @@ export default StyleSheet.create({
     fontFamily: 'Poppins-Medium',
     fontSize: getScaledDimension(18, 'font'),
     color: '#00214E',
+    textAlign: 'center',
   },
 });
