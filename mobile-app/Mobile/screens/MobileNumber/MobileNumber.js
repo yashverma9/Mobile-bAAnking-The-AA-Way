@@ -46,6 +46,10 @@ const MobileNumber = ({navigation}) => {
           style={{marginTop: 'auto'}}>
           <TouchableOpacity
             onPress={() => {
+              if(mobileNumber===''){
+                alert("Enter Mobile Number")
+                return;
+              }
               navigation.navigate('Otp');
             }}
             style={styles.button}>

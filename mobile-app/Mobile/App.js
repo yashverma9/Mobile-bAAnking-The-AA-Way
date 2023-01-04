@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Splash from './screens/Splash/Splash';
 import MobileNumber from './screens/MobileNumber/MobileNumber';
 import Otp from './screens/Otp/Otp';
+import SEA from './screens/SearchingAccountAnimation/SearchingAccountAnimation';
 import Name from './screens/Name/Name';
 import FetchAA from './screens/FetchAA/FetchAA';
 import SelectBankAccount from './screens/SelectBankAccount/SelectBankAccount';
@@ -35,6 +36,11 @@ const App = () => {
           name="Otp"
           options={{headerShown: false, animation: 'none'}}
           component={Otp}
+        />
+        <Stack.Screen
+          name="SEA"
+          options={{headerShown: false, animation: 'none'}}
+          component={SEA}
         />
         <Stack.Screen
           name="FetchAA"

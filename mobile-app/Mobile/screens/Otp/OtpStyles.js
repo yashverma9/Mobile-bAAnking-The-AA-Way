@@ -59,4 +59,20 @@ export default StyleSheet.create({
     fontSize: getScaledDimension(18, 'font'),
     color: '#00214E',
   },
+  fetchingOtp: {
+    marginTop: '20%',
+    //backgroundColor: 'red',
+    width: '100%',
+    //height:'20%',
+    alignItems: 'center',
+    position: 'relative',
+  },
+  otp: {
+    // marginTop: '4%',
+    fontFamily: 'Poppins-Regular',
+    fontSize: getScaledDimension(16, 'font'),
+    color: '#00214E',
+    position: 'absolute',
+    top: '60%',
+  },
 });
