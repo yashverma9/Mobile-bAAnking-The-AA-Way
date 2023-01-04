@@ -24,6 +24,7 @@ import Animated, {
   AnimatedComponent,
 } from 'react-native-reanimated';
 const FetchAA = ({navigation}) => {
+  //https://flask-production-a663.up.railway.app/api/checkConsentStatus
   const [mobileNumber, setMobileNumber] = React.useState('');
   return (
     <View style={styles.FetchAA}>

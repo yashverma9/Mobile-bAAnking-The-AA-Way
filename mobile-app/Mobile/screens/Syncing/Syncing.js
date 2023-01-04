@@ -35,6 +35,11 @@ import Animated, {
 import Lottie from 'lottie-react-native';
 
 const Syncing = ({navigation}) => {
+  //https://flask-production-a663.up.railway.app/api/getFIData
+  //https://flask-production-a663.up.railway.app/api/getBankAnalysisData
+  //https://flask-production-a663.up.railway.app/api/getProfile
+  //https://flask-production-a663.up.railway.app/api/getWidgetDetails
+  //https://flask-production-a663.up.railway.app/api/getNudges
   const [mobileNumber, setMobileNumber] = React.useState('');
   const [hide, setHide] = React.useState(true);
   const [msg, setMsg] = React.useState('Analyzing your financial data');
@@ -101,7 +106,7 @@ const Syncing = ({navigation}) => {
         onPress={() => {
           navigation.navigate('Home');
         }}>
-        <Text>Proceed</Text>
+        <Text style={{color:'black'}}>Proceed</Text>
       </TouchableOpacity>
     </View>
   );

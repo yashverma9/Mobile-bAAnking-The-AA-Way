@@ -27,8 +27,7 @@ const MobileNumber = ({navigation}) => {
         <Animated.View entering={FadeInRight.duration(650)}>
           <Text style={styles.headerText}>give us your{'\n'}mobile number</Text>
           <Text style={styles.bodyText}>
-            to apply , we need your mobile number{'\n'}linked to your credit
-            cards
+            we need your mobile number{'\n'}to connect to account aggregator
           </Text>
 
           <TextInput
@@ -36,7 +35,7 @@ const MobileNumber = ({navigation}) => {
             onChangeText={setMobileNumber}
             value={mobileNumber}
             placeholder="9999999999"
-            placeholderTextColor="#333"
+            placeholderTextColor="#C2C2C2"
             keyboardType="numeric"
             autoFocus={true}
           />

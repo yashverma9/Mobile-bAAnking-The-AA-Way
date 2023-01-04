@@ -26,7 +26,7 @@ export default StyleSheet.create({
     color: 'white',
   },
   heroText: {
-    marginTop: '10%',
+    marginTop: '40%',
     fontFamily: 'Poppins-Bold',
     fontSize: getScaledDimension(23, 'font'),
     color: '#00214E',

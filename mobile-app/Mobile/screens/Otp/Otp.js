@@ -20,6 +20,7 @@ import Animated, {
   AnimatedComponent,
 } from 'react-native-reanimated';
 const Otp = ({navigation}) => {
+  //https://flask-production-a663.up.railway.app/api/initiateConsentJourney
   const [mobileNumber, setMobileNumber] = React.useState('');
   return (
     <View style={styles.Otp}>
@@ -27,8 +28,7 @@ const Otp = ({navigation}) => {
         <Animated.View entering={FadeInRight.duration(650)}>
           <Text style={styles.headerText}>we have sent you{'\n'}an OTP</Text>
           <Text style={styles.bodyText}>
-            to apply , we need your mobile number{'\n'}linked to your credit
-            cards
+            just verifying your mobile{'\n'}number
           </Text>
 
           <TextInput
@@ -40,6 +40,11 @@ const Otp = ({navigation}) => {
             keyboardType="numeric"
             autoFocus={true}
           />
+
+          <View style={styles.fetchingOtp}>
+
+          </View>
+
         </Animated.View>
 
         <TouchableOpacity
