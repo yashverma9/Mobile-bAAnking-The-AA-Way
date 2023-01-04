@@ -149,6 +149,14 @@ def getWidgetDetails():
     return {"Type": "Success", "widgetData": widgetsData}
 
 
+# Get insuranceRecommendation for the user
+@app.route('/api/getInsuranceDetails', methods = ['GET'])
+def getInsuranceDetails():
+
+    with open('./output-data/insuranceRecommendationData.json') as json_file:
+        insuranceDetails = json.load(json_file)
+    return {"Type": "Success", "insuranceDetails": insuranceDetails}
+
 
 
 if __name__ == "__main__":
