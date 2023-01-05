@@ -3,46 +3,33 @@ Project submisson for the bob World hAAckathon 2022
 
 ## Summary
 
-With the introduction of the Account Aggregator, it’s time to level up the financial applications. In this new era of modern technology, customers deserve a more intuitive and engaging digital banking experience. Our aim is to introduce that experience!
+With the introduction of the Account Aggregator, it’s time to level up the financial applications. In this new era of modern technology, customers deserve a **more intuitive and engaging digital banking experience**. Our aim is to introduce that experience! 
+We have developed a **new generation of mobile banking app** which is more of a Financial Service Platform than a transaction only platform! **It's rich in user experience, targeted and hyper-personalized for every customer.**
 
-AA has for sure brought a heavy amount of data into the banking game. Everybody will have the data, but how you use it will matter the most. This is what we plan on doing with that data:
+Above this we have provided a **seamless on-boarding process involving less than a couple of clicks** for the users.
 
-Developing a new generation of mobile banking app which is more of a Financial Service Platform than a transaction only platform! It will be highly customizable and hyper-personalized.
+AA has for sure brought a heavy amount of data into the banking game. Everybody will have the data, but how you use it will matter the most. We used AA data to **create analysis models** based on different algorithms. This analysis process helped us:
 
-Use AA data to create analysis models based on different algorithms. This analysis process will help us:
-1. with **micro segmentation of customers**
-2. convert **data into insights** which becomes intuitive as far as the customer is concerned.
-3. understand a **user’s spend behaviour**.
-
-Above this we will provide a seamless on-boarding process involving less than a couple of clicks for the users.
-
-Analysis will help us in the following things:
-
-#### Micro segmentation of Customers:
-
-- Divide customers into different DNA types. Each DNA type reveals a specific customer behaviour.
-- Map new customers into one of the DNA type.
-- Run targeted programs personalized for the users based on their segmentation.
-- Design financial journeys for them
-- Get the most out of every customer!
+  1. with **micro segmentation of customers**
+     - Dividing customers into different DNA types. Each DNA type reveals a specific customer behaviour.
+     - Map new customers into one of the DNA type.
+     - Run targeted programs personalized for the users based on their segmentation.
+     - Design financial journeys for them
+     - Get the most out of every customer!
 
 
-#### User Insights:
-
-- Hyper-personalization for each user.
-- Every customer treated in distinctive manner
-- Every user’s screen is unique with financial features.
-- Treat customers with custom nudges intuitively.
-- For example, one user might be seeing a payment due reminder where as another user seeing an investment suggestion as a nudge.
-
-
-#### User’s spend behaviour:
-
-- Suggest financial management specifically for each user.
-- For example, how one can better manage their money.
-- or how one can improve their credit score.
+  2. convert **data into intuitive insights**
+     - Hyper-personalization for each user.
+     - Every customer treated in distinctive manner
+     - Every user’s screen is unique with financial features.
+     - Treat customers with custom nudges intuitively.
+     - For example, one user might be seeing a payment due reminder where as another user seeing an investment suggestion as a nudge.
 
 
+  3. understand a **user’s spend behaviour**.
+     - Suggest financial management specifically for each user.
+     - For example, how one can better manage their money.
+     - or how one can improve their credit score.
 
 ## Technology Stack
 
