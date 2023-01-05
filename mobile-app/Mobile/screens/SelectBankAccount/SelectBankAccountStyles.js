@@ -10,9 +10,10 @@ export default StyleSheet.create({
   },
   content: {
     width: '88%',
-    backgroundColor: 'green',
+   // backgroundColor: 'green',
     backgroundColor: '#FFFFFF',
     flex: 1,
+
   },
   headerText: {
     marginTop: '4%',
@@ -43,8 +44,10 @@ export default StyleSheet.create({
     padding: 0,
   },
   button: {
+    marginTop: 'auto',
     marginLeft: 'auto',
     marginRight: 'auto',
+    marginBottom:'4%',
     width: '80%',
     //height: getScaledDimension(80, 'height'),
     backgroundColor: '#E9F2FF',
@@ -53,8 +56,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     paddingTop: '4%',
     paddingBottom: '4%',
-    marginTop: 'auto',
-    marginBottom: '8%',
+    
   },
   buttonText: {
     fontFamily: 'Poppins-Medium',
@@ -62,11 +64,11 @@ export default StyleSheet.create({
     color: '#00214E',
   },
   consent: {
-    marginTop: '4%',
+    marginTop: '2%',
     paddingBottom: '4%',
     width: '95%',
     // height: '80%',
-    backgroundColor: 'red',
+   // backgroundColor: 'red',
     marginLeft: 'auto',
     marginRight: 'auto',
     borderRadius: 20,
@@ -180,11 +182,21 @@ export default StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    flexDirection: 'row',
+   // flexDirection: 'row',
     padding: '2%',
   },
   selected: {
     borderColor: '#00214E',
+  },
+  row:{
+    flexDirection:'row',
+    width:'100%',
+    alignItems:'center'
+  },
+  rowAcc:{
+    justifyContent:'space-between',
+    paddingLeft:'2%',
+    paddingRight:'2%'
   },
   bankName: {
     marginLeft: '5%',
@@ -193,14 +205,35 @@ export default StyleSheet.create({
     color: 'black',
   },
   bktxt: {
+    marginTop:'2%',
     marginLeft: '5%',
     marginRight: 'auto',
     fontFamily: 'Poppins-SemiBold',
-    fontSize: getScaledDimension(20, 'font'),
+    fontSize: getScaledDimension(18, 'font'),
     color: '#838383',
   },
   tick: {
     marginLeft: 'auto',
     marginRight: '4%',
   },
+  secure:{
+    width:'100%',
+    height:"4%",
+    backgroundColor:'red',
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center'
+  },
+  secureText:{
+    marginLeft: '2%',
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: getScaledDimension(12, 'font'),
+    color: 'white',
+  },
+  lock:{
+    marginRight:'2%'
+  },
+  secureGroup:{
+    flexDirection:'row'
+  }
 });

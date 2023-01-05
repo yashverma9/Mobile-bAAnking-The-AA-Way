@@ -7,7 +7,9 @@ import Search from '../../assets/svg/search.svg';
 import RightArrow from '../../assets/svg/rightArrow.svg';
 import A1 from '../../assets/svg/a1.svg';
 import A2 from '../../assets/svg/a2.svg';
-
+import Hdfc from '../../assets/svg/hdfc.svg';
+import Kotak from '../../assets/svg/kotak.svg';
+import Bob from '../../assets/svg/bob.svg';
 import HomeSVG from '../../assets/svg/home.svg';
 import CreditCard from '../../assets/svg/creditCard.svg';
 import CC2 from '../../assets/svg/cc2.svg';
@@ -25,7 +27,7 @@ const Home = () => {
         <View style={styles.headerTextParent}>
           <Text style={styles.headerSmall}>
             Welcome{'\n'}
-            <Text style={styles.headerBig}>Yash.ß</Text>
+            <Text style={styles.headerBig}>Yash</Text>
           </Text>
           {/* <Text style={styles.headerBig}>¸</Text> */}
         </View>
@@ -40,31 +42,84 @@ const Home = () => {
         <Text style={styles.heroText}>
           Link more accounts to unlock full features
         </Text>
-        <View style={styles.money}>
+        {/* <View style={styles.money}>
           <Text style={styles.moneyText}>₹79,800</Text>
+        </View> */}
+      </View>
+
+      <View style={styles.balance}>
+        <View style={styles.bobBalance}>
+          <Bob
+            style={styles.headerImg}
+            width={getScaledDimension(40, 'height')}
+            height={getScaledDimension(40, 'height')}
+          />
+          <Text>Bank of Baroda</Text>
+          <View style={styles.moneyTwo}>
+            <Text style={styles.moneyText}>₹55,800</Text>
+          </View>
+        </View>
+        <View style={[styles.bobBalance,{paddingLeft:'1%'}]}>
+          <Hdfc
+            style={{paddingLeft:'1%'}}
+            width={getScaledDimension(25, 'height')}
+            height={getScaledDimension(25, 'height')}
+          />
+          <Text style={{marginLeft:'4%'}}>HDFC</Text>
+          <View style={styles.moneyTwo}>
+            <Text style={styles.moneyText}>85,650</Text>
+          </View>
         </View>
       </View>
 
-      <Text style={styles.bigText}>specially{'\n'}for you</Text>
+      <Text style={styles.bigText}>specially for you</Text>
 
-      <View style={styles.nudge}>
-        <Text style={styles.nudgeH1}>Grow Your Money!</Text>
+      <TouchableOpacity style={styles.nudge}>
+        <Text style={styles.nudgeH1}>
+          Investments for a secured future Consider our smart investment plans
+          personalized for your profile
+        </Text>
         <View style={styles.nudgeDescription}>
           <Text style={styles.nudgeText}>
-            Investments for a secured future Consider our smart investment plans
-            personalized for your profile
+            One can earn upto 7% interest on FDs
           </Text>
         </View>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           onPress={() => {
             alert('Nudges');
           }}
           style={styles.button}>
           <Text style={styles.buttonText}>Continue</Text>
+        </TouchableOpacity> */}
+      </TouchableOpacity>
+      <Text style={styles.mediumText}>Financial Services</Text>
+      <View style={styles.row}>
+        <TouchableOpacity style={styles.widget}>
+          <Text style={styles.widgetText}>Investments</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.widget}>
+          <Text style={styles.widgetText}>Deposits</Text>
         </TouchableOpacity>
       </View>
+      <View style={styles.row}>
+        <TouchableOpacity style={styles.widget}>
+          <Text style={styles.widgetText}>Payments</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.widget}>
+          <Text style={styles.widgetText}>Insurance</Text>
+        </TouchableOpacity>
+      </View>
+      <TouchableOpacity style={styles.aaButtonPress}>
+        <Text style={styles.viewMore}>View More</Text>
 
-      <Text style={styles.mediumText}>Account Aggregator</Text>
+        <RightArrow
+          style={styles.rightArrow}
+          width={getScaledDimension(25, 'height')}
+          height={getScaledDimension(25, 'height')}
+        />
+      </TouchableOpacity>
+
+      {/* <Text style={[styles.mediumText,{marginTop:'1%'}]}>Account Aggregator</Text>
 
       <View style={styles.aaMenu}>
         <TouchableOpacity
@@ -90,15 +145,15 @@ const Home = () => {
           />
         </TouchableOpacity>
         <TouchableOpacity style={styles.aaButtonPress}>
-        <Text style={styles.viewMore}>View More</Text>
-      
+          <Text style={styles.viewMore}>View More</Text>
+
           <RightArrow
             style={styles.rightArrow}
             width={getScaledDimension(25, 'height')}
             height={getScaledDimension(25, 'height')}
           />
         </TouchableOpacity>
-      </View>
+      </View> */}
 
       <View style={styles.bottomTab}>
         <View style={styles.pill}></View>
@@ -119,7 +174,7 @@ const Home = () => {
               width={getScaledDimension(25, 'height')}
               height={getScaledDimension(25, 'height')}
             />
-            <Text style={styles.menuItemsText}>Credit Card</Text>
+            <Text style={styles.menuItemsText}>Accounts</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.menuItems}>
             <CC2
@@ -127,7 +182,7 @@ const Home = () => {
               width={getScaledDimension(25, 'height')}
               height={getScaledDimension(25, 'height')}
             />
-            <Text style={styles.menuItemsText}>Something</Text>
+            <Text style={styles.menuItemsText}>Pay</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.menuItems}>
             <UPI
@@ -135,7 +190,7 @@ const Home = () => {
               width={getScaledDimension(25, 'height')}
               height={getScaledDimension(25, 'height')}
             />
-            <Text style={styles.menuItemsText}>UPI</Text>
+            <Text style={styles.menuItemsText}>Consents</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.menuItems}>
             <VA
@@ -143,7 +198,7 @@ const Home = () => {
               width={getScaledDimension(25, 'height')}
               height={getScaledDimension(25, 'height')}
             />
-            <Text style={styles.menuItemsText}>Virtual</Text>
+            <Text style={styles.menuItemsText}>Profile</Text>
           </TouchableOpacity>
         </View>
       </View>

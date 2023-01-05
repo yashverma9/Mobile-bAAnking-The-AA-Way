@@ -8,7 +8,7 @@ export default StyleSheet.create({
   header: {
     width: '100%',
     height: '8%',
-   // backgroundColor: 'red',
+    // backgroundColor: 'red',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
@@ -20,10 +20,10 @@ export default StyleSheet.create({
     marginLeft: 'auto',
   },
   headerTextParent: {
-    marginTop:'1.2%',
-   // backgroundColor: 'green',
-    margin:0,
-    padding:0
+    marginTop: '1.2%',
+    // backgroundColor: 'green',
+    margin: 0,
+    padding: 0,
   },
   headerBig: {
     fontFamily: 'Poppins-Regular',
@@ -60,6 +60,49 @@ export default StyleSheet.create({
     fontSize: getScaledDimension(12, 'font'),
     color: '#00214E',
   },
+  balance: {
+    marginTop: '4%',
+    width: '92%',
+    height: '5%',
+  //  backgroundColor: 'red',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    borderRadius: 8,
+    // shadowColor: 'black',
+    // shadowOpacity: 0.26,
+    // shadowOffset: {width: 0, height: 2},
+    // shadowRadius: 10,
+    // elevation: 3,
+    // backgroundColor: 'white',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    // paddingLeft: '2%',
+    // paddingRight: '2%',
+  },
+  bobBalance: {
+   // width: '50%',
+    height: '100%',
+    borderRadius: 8,
+    //borderColor: '#FF5B35',
+   // borderWidth: 1,
+    shadowColor: 'black',
+    shadowOpacity: 0.26,
+    shadowOffset: {width: 0, height: 2},
+    shadowRadius: 10,
+    elevation: 3,
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  moneyTwo: {
+    marginLeft: 'auto',
+    marginRight:'4%',
+    borderRadius: 5,
+    borderWidth: 0.5,
+    borderColor: '#00214E',
+    padding: '1%',
+  },
   money: {
     marginLeft: 'auto',
     borderRadius: 5,
@@ -80,7 +123,7 @@ export default StyleSheet.create({
     color: '#00214E',
   },
   nudge: {
-    marginTop: '4%',
+    marginTop: '2%',
     width: '92%',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -98,8 +141,9 @@ export default StyleSheet.create({
   },
   nudgeH1: {
     fontFamily: 'Poppins-SemiBold',
-    fontSize: getScaledDimension(24, 'font'),
+    fontSize: getScaledDimension(16, 'font'),
     color: '#00214E',
+    textAlign: 'center',
   },
   nudgeDescription: {
     marginTop: '4%',
@@ -110,12 +154,13 @@ export default StyleSheet.create({
     borderWidth: 0.5,
     borderColor: '#BE4A4A',
     padding: '2%',
+    backgroundColor: '#BE4A4A',
   },
   nudgeText: {
     textAlign: 'center',
     fontFamily: 'Poppins-Regular',
     fontSize: getScaledDimension(13, 'font'),
-    color: '#00214E',
+    color: 'white',
   },
 
   button: {
@@ -157,6 +202,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
+    backgroundColor: 'red',
   },
   aaMenuBox: {
     borderRadius: 8,
@@ -179,7 +225,7 @@ export default StyleSheet.create({
     color: '#00214E',
   },
   rightArrow: {
-    marginLeft: '10%',
+    marginLeft: '4%',
   },
   bottomTab: {
     //  backgroundColor: 'red',
@@ -244,8 +290,35 @@ export default StyleSheet.create({
     fontSize: getScaledDimension(10, 'font'),
     color: '#5C5C5C',
   },
-  aaButtonPress:{
-    flexDirection:'row',
-    marginLeft:'auto'
-  }
+  aaButtonPress: {
+    flexDirection: 'row',
+    marginLeft: 'auto',
+    marginRight: '4%',
+    marginTop: '2%',
+  },
+  row: {
+    // backgroundColor:'red',
+    width: '100%',
+    // height:'10%',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    paddingTop: '2%',
+    paddingBottom: '2%',
+    paddingLeft: '4%',
+    paddingRight: '4%',
+  },
+  widget: {
+    width: 150,
+    height: 55,
+    borderRadius: 8,
+    backgroundColor: '#E9F2FF',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  widgetText: {
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: getScaledDimension(16, 'font'),
+    color: '#00214E',
+  },
 });

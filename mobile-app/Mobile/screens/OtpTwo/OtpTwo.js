@@ -21,51 +21,30 @@ import Animated, {
   AnimatedComponent,
 } from 'react-native-reanimated';
 import Lottie from 'lottie-react-native';
-import axios from 'axios';
 const Otp = ({navigation}) => {
   //https://flask-production-a663.up.railway.app/api/initiateConsentJourney
   const [mobileNumber, setMobileNumber] = React.useState('');
   const [hide, setHide] = React.useState(true);
-  const [showLoader, setShowLoader] = React.useState(false);
   React.useEffect(() => {
     setTimeout(() => {
       setHide(false);
     }, 700);
     setTimeout(() => {
-      setMobileNumber("4444")
+      setMobileNumber("7354")
       setHide(true);
+
+      navigation.navigate('FetchAA');
     }, 3000);
   }, []);
-
-  const callApi = async () => {
-    setShowLoader(true);
-    var config = {
-      method: 'post',
-      url: `https://flask-production-a663.up.railway.app/api/initiateConsentJourney`,
-
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
-    axios(config)
-      .then(async function (response) {
-        setShowLoader(false);
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        setShowLoader(false);
-        alert('some error occured');
-      });
-  };
 
   return (
     <View style={styles.Otp}>
       <View style={styles.content}>
         <Animated.View entering={FadeInRight.duration(650)}>
-          <Text style={styles.headerText}>we have sent you{'\n'}an OTP</Text>
-          <Text style={styles.bodyText}>
+          <Text style={styles.headerText}>fetching banks and providers{'\n'}otp</Text>
+          {/* <Text style={styles.bodyText}>
             just verifying your mobile{'\n'}number
-          </Text>
+          </Text> */}
 
           <TextInput
             style={styles.input}
@@ -91,8 +70,7 @@ const Otp = ({navigation}) => {
 
         <TouchableOpacity
           onPress={() => {
-            callApi()
-            navigation.navigate('SEA');
+            navigation.navigate('FetchAA');
           }}
           style={styles.button}>
           <Text style={styles.buttonText}>Continue</Text>

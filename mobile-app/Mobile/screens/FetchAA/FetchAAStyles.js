@@ -88,7 +88,7 @@ export default StyleSheet.create({
   id: {
     marginTop: '4%',
     width: '92%',
-    height: '6%',
+    height: 30,
     borderWidth: 1,
     borderColor: '#00214E',
     borderRadius: 8,
@@ -137,6 +137,7 @@ export default StyleSheet.create({
     // elevation: 3,
     alignItems: 'center',
     justifyContent: 'center',
+    height:48
   },
   acceptText: {
     fontFamily: 'Poppins-Medium',
@@ -157,6 +158,7 @@ export default StyleSheet.create({
     // elevation: 3,
     alignItems: 'center',
     justifyContent: 'center',
+    height:48
   },
   rejectText: {
     fontFamily: 'Poppins-Medium',
@@ -164,6 +166,7 @@ export default StyleSheet.create({
     color: 'white',
   },
   floatingMessage: {
+    marginTop:'2%',
     marginTop: 'auto',
     marginBottom: '2%',
     fontFamily: 'Poppins-Medium',
@@ -171,4 +174,25 @@ export default StyleSheet.create({
     color: '#00214E',
     textAlign: 'center',
   },
+
+  secure:{
+    width:'100%',
+    height:"4%",
+    backgroundColor:'red',
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center'
+  },
+  secureText:{
+    marginLeft: '2%',
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: getScaledDimension(12, 'font'),
+    color: 'white',
+  },
+  lock:{
+    marginRight:'2%'
+  },
+  secureGroup:{
+    flexDirection:'row'
+  }
 });

@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Splash from './screens/Splash/Splash';
 import MobileNumber from './screens/MobileNumber/MobileNumber';
 import Otp from './screens/Otp/Otp';
+import OtpTwo from './screens/OtpTwo/OtpTwo';
 import SEA from './screens/SearchingAccountAnimation/SearchingAccountAnimation';
 import Name from './screens/Name/Name';
 import FetchAA from './screens/FetchAA/FetchAA';
@@ -14,6 +15,7 @@ import Home from './screens/Home/Home';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
+  const [mobileNumber, setMobileNumber] = React.useState('');
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -36,6 +38,11 @@ const App = () => {
           name="Otp"
           options={{headerShown: false, animation: 'none'}}
           component={Otp}
+        />
+        <Stack.Screen
+          name="OtpTwo"
+          options={{headerShown: false, animation: 'none'}}
+          component={OtpTwo}
         />
         <Stack.Screen
           name="SEA"

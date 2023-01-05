@@ -42,31 +42,40 @@ const Syncing = ({navigation}) => {
   //https://flask-production-a663.up.railway.app/api/getNudges
   const [mobileNumber, setMobileNumber] = React.useState('');
   const [hide, setHide] = React.useState(true);
-  const [msg, setMsg] = React.useState('Analyzing your financial data');
-  const data = ['Getting your personalized view ready', 'Fully Secure'];
+  const [msg, setMsg] = React.useState('syncing your account');
+  const data = [
+    'analyzing your finances',
+    'getting your personalized view ready',
+    ""
+  ];
   let i = 0;
   React.useEffect(() => {
     const timeoutId = setTimeout(function () {
       changeMessage();
-    }, 2000);
+    }, 3000);
     return () => {
       clearTimeout(timeoutId);
     };
   }, []);
 
+  useEffect(() => {
+  if(msg===""){navigation.navigate('Home');}
+  }, [msg])
+  
+
   const changeMessage = () => {
     // alert('Message Change Successfull');
+    console.log('Hello World');
+    setHide(prev => !prev);
+    console.log(data[i]);
+    setMsg(data[i]);
+    {
+      i < data.length - 1 ? i++ : (i = 0);
+    }
+    setHide(prev => !prev);
     setTimeout(function () {
-      console.log('Hello World');
-      setHide(prev => !prev);
-      console.log(data[i]);
-      setMsg(data[i]);
-      {
-        i < data.length - 1 ? i++ : (i = 0);
-      }
-      setHide(prev => !prev);
       changeMessage();
-    }, 2500);
+    }, 5000);
   };
   return (
     <View style={styles.FetchAA}>
@@ -74,9 +83,7 @@ const Syncing = ({navigation}) => {
         <Animated.View
           entering={FadeInDown.duration(1000)}
           exiting={FadeOutRight.duration(1000)}>
-          <Text style={styles.headerText}>
-            Syncing your{'\n'}Account Details
-          </Text>
+          <Text style={styles.headerText}>welcome to {'\n'}app name</Text>
           <Text style={styles.bodyText}>Hang Tight</Text>
         </Animated.View>
 
@@ -89,11 +96,12 @@ const Syncing = ({navigation}) => {
             </Animated.View>
           )}
         </View>
-        <Lottie
+        {/* <Lottie
           source={require('../../assets/svg/4UBrDxZTaD.json')}
           autoPlay
           loop
-        />
+        /> */}
+        <Lottie source={require('../../assets/svg/l2.json')} autoPlay loop />
       </View>
       <TouchableOpacity
         onPress={() => {
@@ -106,7 +114,7 @@ const Syncing = ({navigation}) => {
         onPress={() => {
           navigation.navigate('Home');
         }}>
-        <Text style={{color:'black'}}>Proceed</Text>
+        <Text style={{color: 'black'}}>Proceed</Text>
       </TouchableOpacity>
     </View>
   );
