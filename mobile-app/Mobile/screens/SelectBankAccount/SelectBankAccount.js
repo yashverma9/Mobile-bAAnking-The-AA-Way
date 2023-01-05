@@ -45,7 +45,7 @@ const SelectBankAccount = ({navigation}) => {
     <View style={styles.FetchAA}>
       <View style={styles.content}>
         <Animated.View entering={FadeInRight.duration(650)}>
-          <Text style={styles.headerText}>securely view{'\n'}accounts</Text>
+          <Text style={styles.headerText}>securely view accounts</Text>
           <Text style={styles.bodyText}>
             We discovered the following banks and providers linked to your
             mobile number{'\n'}

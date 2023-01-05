@@ -12,6 +12,8 @@ import FetchAA from './screens/FetchAA/FetchAA';
 import SelectBankAccount from './screens/SelectBankAccount/SelectBankAccount';
 import Syncing from './screens/Syncing/Syncing';
 import Home from './screens/Home/Home';
+import Journey from './screens/Journey/Journey';
+import JourneyTwo from './screens/Journey/JourneyTwo';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -68,6 +70,16 @@ const App = () => {
           name="Home"
           options={{headerShown: false, animation: 'none'}}
           component={Home}
+        />
+        <Stack.Screen
+          name="Journey"
+          options={{headerShown: false, animation: 'none'}}
+          component={Journey}
+        />
+        <Stack.Screen
+          name="JourneyTwo"
+          options={{headerShown: false, animation: 'none'}}
+          component={JourneyTwo}
         />
       </Stack.Navigator>
     </NavigationContainer>

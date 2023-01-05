@@ -43,12 +43,14 @@ const Syncing = ({navigation}) => {
   const [mobileNumber, setMobileNumber] = React.useState('');
   const [hide, setHide] = React.useState(true);
   const [msg, setMsg] = React.useState('syncing your account');
-  const data = [
+  const [flag, setFlag] = React.useState(true);
+  let data = [
     'analyzing your finances',
     'getting your personalized view ready',
     ""
   ];
   let i = 0;
+ 
   React.useEffect(() => {
     const timeoutId = setTimeout(function () {
       changeMessage();
@@ -59,7 +61,10 @@ const Syncing = ({navigation}) => {
   }, []);
 
   useEffect(() => {
-  if(msg===""){navigation.navigate('Home');}
+  if(msg==="" && flag){
+    setFlag(false);
+    console.log(flag)
+    navigation.navigate('Home');}
   }, [msg])
   
 
@@ -83,7 +88,7 @@ const Syncing = ({navigation}) => {
         <Animated.View
           entering={FadeInDown.duration(1000)}
           exiting={FadeOutRight.duration(1000)}>
-          <Text style={styles.headerText}>welcome to {'\n'}app name</Text>
+          <Text style={styles.headerText}>welcome to {'\n'}mobile bAAnking</Text>
           <Text style={styles.bodyText}>Hang Tight</Text>
         </Animated.View>
 

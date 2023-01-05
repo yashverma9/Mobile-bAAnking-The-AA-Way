@@ -15,7 +15,7 @@ import CreditCard from '../../assets/svg/creditCard.svg';
 import CC2 from '../../assets/svg/cc2.svg';
 import UPI from '../../assets/svg/upi.svg';
 import VA from '../../assets/svg/virtualAssistant.svg';
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style={styles.content}>
       <View style={styles.header}>
@@ -74,7 +74,7 @@ const Home = () => {
 
       <Text style={styles.bigText}>specially for you</Text>
 
-      <TouchableOpacity style={styles.nudge}>
+      <TouchableOpacity onPress={()=>{navigation.navigate('Journey')}} style={styles.nudge}>
         <Text style={styles.nudgeH1}>
           Investments for a secured future Consider our smart investment plans
           personalized for your profile
@@ -94,7 +94,7 @@ const Home = () => {
       </TouchableOpacity>
       <Text style={styles.mediumText}>Financial Services</Text>
       <View style={styles.row}>
-        <TouchableOpacity style={styles.widget}>
+        <TouchableOpacity  style={styles.widget}>
           <Text style={styles.widgetText}>Investments</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.widget}>

@@ -47,7 +47,7 @@ export default StyleSheet.create({
     marginTop: 'auto',
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginBottom:'8%',
+    marginBottom:'4%',
     width: '80%',
     //height: getScaledDimension(80, 'height'),
     backgroundColor: '#E9F2FF',
@@ -64,7 +64,7 @@ export default StyleSheet.create({
     color: '#00214E',
   },
   consent: {
-    marginTop: '2%',
+    marginTop: '15%',
     paddingBottom: '4%',
     width: '95%',
     // height: '80%',
@@ -191,7 +191,9 @@ export default StyleSheet.create({
   row:{
     flexDirection:'row',
     width:'100%',
-    alignItems:'center'
+    alignItems:'center',
+    //backgroundColor:'red',
+    justifyContent:'space-evenly'
   },
   rowAcc:{
     justifyContent:'space-between',
@@ -235,5 +237,20 @@ export default StyleSheet.create({
   },
   secureGroup:{
     flexDirection:'row'
-  }
+  },
+  txtParent: {
+    marginRight: 'auto',
+    marginLeft: '4.5%',
+    marginTop: '4%',
+  },
+  big: {
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: getScaledDimension(16, 'font'),
+    color: '#00214E',
+  },
+  small: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: getScaledDimension(14, 'font'),
+    color: '#00214E',
+  },
 });
