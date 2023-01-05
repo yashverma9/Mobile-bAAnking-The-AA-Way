@@ -54,7 +54,7 @@ const Home = ({navigation}) => {
             width={getScaledDimension(40, 'height')}
             height={getScaledDimension(40, 'height')}
           />
-          <Text>Bank of Baroda</Text>
+          <Text style={{color:'black'}}>Bank of Baroda</Text>
           <View style={styles.moneyTwo}>
             <Text style={styles.moneyText}>₹55,800</Text>
           </View>
@@ -65,7 +65,7 @@ const Home = ({navigation}) => {
             width={getScaledDimension(25, 'height')}
             height={getScaledDimension(25, 'height')}
           />
-          <Text style={{marginLeft:'4%'}}>HDFC</Text>
+          <Text style={{marginLeft:'4%', color:'black'}}>HDFC</Text>
           <View style={styles.moneyTwo}>
             <Text style={styles.moneyText}>85,650</Text>
           </View>

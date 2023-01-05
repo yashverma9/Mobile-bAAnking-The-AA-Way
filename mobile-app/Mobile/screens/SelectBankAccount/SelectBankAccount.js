@@ -77,7 +77,7 @@ const SelectBankAccount = ({navigation}) => {
                 /> */}
               </View>
               <View style={[styles.row,styles.rowAcc]}>
-                <Text>Savings ..3188</Text>
+                <Text style={{color:'black'}}>Savings ..3188</Text>
                 <CheckBox
                   disabled={false}
                   value={c3}
@@ -86,7 +86,7 @@ const SelectBankAccount = ({navigation}) => {
                 />
               </View>
               <View style={[styles.row,styles.rowAcc]}>
-                <Text>Fixed Deposit ..2242</Text>
+                <Text style={{color:'black'}}>Fixed Deposit ..2242</Text>
                 <CheckBox
                   disabled={false}
                   value={c1}
@@ -111,7 +111,7 @@ const SelectBankAccount = ({navigation}) => {
                 /> */}
               </View>
               <View style={[styles.row,styles.rowAcc]}>
-                <Text>Savings ..3221</Text>
+                <Text style={{color:'black'}}>Savings ..3221</Text>
                 <CheckBox
                   disabled={false}
                   value={c2}

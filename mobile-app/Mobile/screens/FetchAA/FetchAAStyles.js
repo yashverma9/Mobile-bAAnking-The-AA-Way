@@ -107,7 +107,7 @@ export default StyleSheet.create({
   },
   big: {
     fontFamily: 'Poppins-SemiBold',
-    fontSize: getScaledDimension(13, 'font'),
+    fontSize: getScaledDimension(15, 'font'),
     color: '#00214E',
   },
   small: {
