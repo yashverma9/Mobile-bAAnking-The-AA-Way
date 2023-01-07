@@ -47,8 +47,8 @@ const SelectBankAccount = ({navigation}) => {
         <Animated.View entering={FadeInRight.duration(650)}>
           <Text style={styles.headerText}>securely view accounts</Text>
           <Text style={styles.bodyText}>
-            We discovered the following banks and providers linked to your
-            mobile number{'\n'}
+            We discovered the following banks and providers linked{'\n'}to your
+            mobile number
           </Text>
         </Animated.View>
 
@@ -66,10 +66,10 @@ const SelectBankAccount = ({navigation}) => {
               <View style={styles.row}>
                 <Bob
                   style={styles.headerImg}
-                  width={getScaledDimension(40, 'height')}
-                  height={getScaledDimension(40, 'height')}
+                  width={getScaledDimension(38, 'height')}
+                  height={getScaledDimension(38, 'height')}
                 />
-                <Text style={styles.bankName}>Bank of Baroda</Text>
+                <Text style={styles.bankName}>&nbsp;Bank of Baroda</Text>
                 {/* <Tick
                   style={styles.tick}
                   width={getScaledDimension(25, 'height')}
@@ -77,7 +77,7 @@ const SelectBankAccount = ({navigation}) => {
                 /> */}
               </View>
               <View style={[styles.row,styles.rowAcc]}>
-                <Text style={{color:'black'}}>Savings ..3188</Text>
+                <Text style={{color:'black'}}>Savings XXX3188</Text>
                 <CheckBox
                   disabled={false}
                   value={c3}
@@ -86,7 +86,7 @@ const SelectBankAccount = ({navigation}) => {
                 />
               </View>
               <View style={[styles.row,styles.rowAcc]}>
-                <Text style={{color:'black'}}>Fixed Deposit ..2242</Text>
+                <Text style={{color:'black'}}>Fixed Deposit XXX2242</Text>
                 <CheckBox
                   disabled={false}
                   value={c1}
@@ -103,7 +103,7 @@ const SelectBankAccount = ({navigation}) => {
                   width={getScaledDimension(30, 'height')}
                   height={getScaledDimension(30, 'height')}
                 />
-                <Text style={styles.bankName}>HDFC Bank</Text>
+                <Text style={styles.bankName}>&nbsp;&nbsp;HDFC Bank</Text>
                 {/* <Tick
                   style={styles.tick}
                   width={getScaledDimension(25, 'height')}
@@ -111,7 +111,7 @@ const SelectBankAccount = ({navigation}) => {
                 /> */}
               </View>
               <View style={[styles.row,styles.rowAcc]}>
-                <Text style={{color:'black'}}>Savings ..3221</Text>
+                <Text style={{color:'black'}}>Savings XXX3221</Text>
                 <CheckBox
                   disabled={false}
                   value={c2}
@@ -128,11 +128,20 @@ const SelectBankAccount = ({navigation}) => {
                   width={getScaledDimension(30, 'height')}
                   height={getScaledDimension(30, 'height')}
                 />
-                <Text style={styles.bankName}>Angel Broking</Text>
-                <Tick
+                <Text style={styles.bankName}>&nbsp;&nbsp;Angel Broking</Text>
+                {/* <Tick
                   style={styles.tick}
                   width={getScaledDimension(25, 'height')}
                   height={getScaledDimension(25, 'height')}
+                /> */}
+              </View>
+              <View style={[styles.row,styles.rowAcc]}>
+                <Text style={{color:'black'}}>Mutual Funds</Text>
+                <CheckBox
+                  disabled={false}
+                  value={c2}
+                  onValueChange={newValue => sc2(newValue)}
+                  tintColors={ {true:"#00214E",false:"#00214E"} }
                 />
               </View>
               {/* <View style={[styles.row,styles.rowAcc]}>
@@ -153,11 +162,20 @@ const SelectBankAccount = ({navigation}) => {
                   width={getScaledDimension(30, 'height')}
                   height={getScaledDimension(30, 'height')}
                 />
-                <Text style={styles.bankName}>Max Life Insurance</Text>
-                <Tick
+                <Text style={styles.bankName}>&nbsp;&nbsp;Max Life Insurance</Text>
+                {/* <Tick
                   style={styles.tick}
                   width={getScaledDimension(25, 'height')}
                   height={getScaledDimension(25, 'height')}
+                /> */}
+              </View>
+              <View style={[styles.row,styles.rowAcc]}>
+                <Text style={{color:'black'}}>Life Insurance</Text>
+                <CheckBox
+                  disabled={false}
+                  value={c2}
+                  onValueChange={newValue => sc2(newValue)}
+                  tintColors={ {true:"#00214E",false:"#00214E"} }
                 />
               </View>
               {/* <View style={[styles.row,styles.rowAcc]}>
@@ -171,8 +189,8 @@ const SelectBankAccount = ({navigation}) => {
               </View> */}
             </TouchableOpacity>
 
-            <Text style={[styles.bktxt, {marginTop: '8%'}]}>
-              Search All Banks
+            <Text style={[styles.bktxt, {marginTop: '4%'}]}>
+              Search All Banks and Providers
             </Text>
             <SearchBar
               placeholder="Search here"
@@ -193,7 +211,7 @@ const SelectBankAccount = ({navigation}) => {
             navigation.navigate('OtpTwo');
           }}
           style={styles.button}>
-          <Text style={styles.buttonText}>Verify Bank Accounts</Text>
+          <Text style={styles.buttonText}>Verify Accounts</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.secure}>

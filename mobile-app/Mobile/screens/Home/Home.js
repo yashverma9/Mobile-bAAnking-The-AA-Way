@@ -40,7 +40,7 @@ const Home = ({navigation}) => {
 
       <View style={styles.hero}>
         <Text style={styles.heroText}>
-          Link more accounts to unlock full features
+          Link more accounts for better experience
         </Text>
         {/* <View style={styles.money}>
           <Text style={styles.moneyText}>₹79,800</Text>
@@ -67,7 +67,7 @@ const Home = ({navigation}) => {
           />
           <Text style={{marginLeft:'4%', color:'black'}}>HDFC</Text>
           <View style={styles.moneyTwo}>
-            <Text style={styles.moneyText}>85,650</Text>
+            <Text style={styles.moneyText}>₹85,650</Text>
           </View>
         </View>
       </View>

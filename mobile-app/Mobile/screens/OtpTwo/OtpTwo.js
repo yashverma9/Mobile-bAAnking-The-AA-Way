@@ -41,12 +41,12 @@ const Otp = ({navigation}) => {
     <View style={styles.Otp}>
       <View style={styles.content}>
         <Animated.View entering={FadeInRight.duration(650)}>
-          <Text style={styles.headerText}>fetching banks and providers{'\n'}otp</Text>
+          <Text style={styles.headerText}>fetching banks and providers{'\n'}otps</Text>
           {/* <Text style={styles.bodyText}>
             just verifying your mobile{'\n'}number
           </Text> */}
 
-          <TextInput
+          {/* <TextInput
             style={styles.input}
             onChangeText={setMobileNumber}
             value={mobileNumber}
@@ -54,7 +54,7 @@ const Otp = ({navigation}) => {
             placeholderTextColor="#C2C2C2"
             keyboardType="numeric"
             autoFocus={true}
-          />
+          /> */}
           {!hide && (
             <View style={styles.fetchingOtp}>
               <Lottie
@@ -63,7 +63,7 @@ const Otp = ({navigation}) => {
                 loop
                 style={{width: 150, height: 150}}
               />
-              <Text style={styles.otp}>Fetching OTP</Text>
+              <Text style={styles.otp}>Fetching OTPs</Text>
             </View>
           )}
         </Animated.View>

@@ -18,7 +18,7 @@ const SearchingAccountAnimation = ({navigation}) => {
     React.useEffect(() => {
         setTimeout(() => {
             navigation.navigate('SelectBankAccount');
-          }, 3500);
+          }, 8000);
     }, [])
     
   return (

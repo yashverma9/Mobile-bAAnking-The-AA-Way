@@ -178,7 +178,7 @@ export default StyleSheet.create({
   secure:{
     width:'100%',
     height:"4%",
-    backgroundColor:'red',
+    backgroundColor:'#FF5851',
     flexDirection:'row',
     alignItems:'center',
     justifyContent:'center'

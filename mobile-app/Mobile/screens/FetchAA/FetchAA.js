@@ -63,7 +63,7 @@ const FetchAA = ({navigation}) => {
         <Animated.View entering={FadeInRight.duration(650)}>
           <Text style={styles.headerText}>consent request</Text>
           <Text style={styles.bodyText}>
-            Grant consnet to retrieve{'\n'}account details
+            Grant consnet to retrieve account details
           </Text>
         </Animated.View>
 
@@ -83,7 +83,7 @@ const FetchAA = ({navigation}) => {
             <View style={styles.txtParent}>
               <Text style={styles.big}>Consent Valid For</Text>
               <Text style={styles.small}>1 Year</Text>
-              <Text style={[styles.small, {fontSize: 8, color: 'grey'}]}>
+              <Text style={[styles.small, {fontSize: 10, color: 'grey'}]}>
                 You can revoke anytime
               </Text>
             </View>
@@ -94,9 +94,9 @@ const FetchAA = ({navigation}) => {
             <View style={styles.txtParent}>
               <Text style={styles.big}>Accounts to connect</Text>
               <Text style={styles.small}>
-                Savings ..3188, Fixed Deposit ..2242
+                Savings XXX3188, Fixed Deposit XXX2242
               </Text>
-              <Text style={styles.small}>Savings ..3221</Text>
+              <Text style={styles.small}>Savings XXX3221</Text>
               <Text style={styles.small}>Angel Broking</Text>
               <Text style={styles.small}>Max Life Insurance</Text>
             </View>

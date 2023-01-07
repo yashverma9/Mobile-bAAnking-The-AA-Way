@@ -32,7 +32,7 @@ const Otp = ({navigation}) => {
       setHide(false);
     }, 700);
     setTimeout(() => {
-      setMobileNumber("4444")
+      setMobileNumber("1234")
       setHide(true);
     }, 3000);
   }, []);
@@ -71,7 +71,7 @@ const Otp = ({navigation}) => {
             style={styles.input}
             onChangeText={setMobileNumber}
             value={mobileNumber}
-            placeholder="1234"
+            placeholder="4444"
             placeholderTextColor="#C2C2C2"
             keyboardType="numeric"
             autoFocus={true}

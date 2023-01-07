@@ -107,10 +107,9 @@ const Journey = ({navigation}) => {
             </View>
 
             <View style={styles.txtParent}>
-              <Text style={styles.big}>Premium</Text>
+              <Text style={styles.big}>Annual Premium</Text>
               <Text style={styles.small}>₹7063</Text>
             </View>
-       
             </TouchableOpacity>
 
      

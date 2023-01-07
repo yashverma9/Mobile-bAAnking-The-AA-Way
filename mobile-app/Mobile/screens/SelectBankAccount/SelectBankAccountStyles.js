@@ -27,7 +27,6 @@ export default StyleSheet.create({
     fontFamily: 'Poppins-Regular',
     fontSize: getScaledDimension(12, 'font'),
     color: '#00214E',
-    textAlign: 'center',
   },
   input: {
     width: '100%',
@@ -47,7 +46,7 @@ export default StyleSheet.create({
     marginTop: 'auto',
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginBottom:'8%',
+    marginBottom:'4%',
     width: '80%',
     //height: getScaledDimension(80, 'height'),
     backgroundColor: '#E9F2FF',
@@ -191,7 +190,8 @@ export default StyleSheet.create({
   row:{
     flexDirection:'row',
     width:'100%',
-    alignItems:'center'
+    alignItems:'center',
+    //backgroundColor:'red'
   },
   rowAcc:{
     justifyContent:'space-between',
@@ -199,7 +199,7 @@ export default StyleSheet.create({
     paddingRight:'2%'
   },
   bankName: {
-    marginLeft: '5%',
+    marginLeft: '0%',
     fontFamily: 'Poppins-SemiBold',
     fontSize: getScaledDimension(20, 'font'),
     color: 'black',
@@ -219,7 +219,7 @@ export default StyleSheet.create({
   secure:{
     width:'100%',
     height:"4%",
-    backgroundColor:'red',
+    backgroundColor:'#FF5851',
     flexDirection:'row',
     alignItems:'center',
     justifyContent:'center'

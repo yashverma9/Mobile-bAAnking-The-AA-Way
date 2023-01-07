@@ -42,7 +42,7 @@ const Syncing = ({navigation}) => {
   //https://flask-production-a663.up.railway.app/api/getNudges
   const [mobileNumber, setMobileNumber] = React.useState('');
   const [hide, setHide] = React.useState(true);
-  const [msg, setMsg] = React.useState('syncing your account');
+  const [msg, setMsg] = React.useState('syncing your accounts');
   const [flag, setFlag] = React.useState(true);
   let data = [
     'analyzing your finances',
@@ -119,7 +119,7 @@ const Syncing = ({navigation}) => {
         onPress={() => {
           navigation.navigate('Home');
         }}>
-        <Text style={{color: 'black'}}>Proceed</Text>
+        <Text>Proceed</Text>
       </TouchableOpacity>
     </View>
   );
