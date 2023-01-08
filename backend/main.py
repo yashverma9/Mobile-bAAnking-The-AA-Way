@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, session, redirect
+from flask import Flask, jsonify, session, redirect, request
 import json
 import sys
 import os
@@ -11,6 +11,7 @@ app = Flask(__name__)
 CORS(app)
 app.static_folder = 'static'
 app.secret_key = 'the random string'
+apiKey = '476a8e08db7b89d1cdc553faf2'
 
 currentConsent = {
     "trackingId": "f35761ac-4a18-11e8-96ff-0277a9fbfe",
@@ -27,24 +28,36 @@ def test():
 
 @app.route('/api/initiateConsentJourney', methods = ['POST'])
 def initiateConsentJourney():
+    payloadData = request.json
+    
+    mobileNumber = str(payloadData["mobileNumber"])
+    session['mobileNumber'] = mobileNumber
+
+    vuaId = mobileNumber + "@dashboard-aa-uat"
+
+    trackingId = "mobile-baanking-"+ mobileNumber
+    session['trackingId'] = trackingId
+
     url = "https://hackathon.pirimidtech.com/hackathon/init/redirection"
 
     payload = json.dumps({
-    "vuaId": "9987600001@dashboard-aa-uat",
+    "vuaId": vuaId,
     "templateType": "ONETIME",
-    "trackingId": "mobile-baanking-1",
+    "trackingId": trackingId,
     "redirectionUrl": "http://localhost:5000"
     })
     headers = {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
-    'API_KEY': '476a8e08db7b89d1cdc553faf2',
+    'API_KEY': apiKey,
     'Cookie': 'JSESSIONID=21CE483BA61DF10D7721EE24312D2544; OAuth_Token_Request_State=750bf628-ba92-4ae5-a635-765c23014ca3'
     }
 
     response = requests.request("POST", url, headers=headers, data=payload)
 
-    print(response.json())
+    responseData = response.json()
+    referenceId = responseData["referenceId"]
+    session["referenceId"] = referenceId
 
     return {"Type":"Success", "Message":"Consent Journey Initiated", "Response": response.json()}
 
@@ -53,13 +66,13 @@ def initiateConsentJourney():
 @app.route('/api/checkConsentStatus', methods = ['GET'])
 def checkConsentStatus():
     
-    url = "https://hackathon.pirimidtech.com/hackathon/consent/status?referenceId=4b79bbfd-f539-4e50-86bc-654723a7bfaf&trackingId=mobile-baanking-1"
+    url = "https://hackathon.pirimidtech.com/hackathon/consent/status?referenceId=" + session["referenceId"] + "&trackingId=" + session["trackingId"]
 
     payload={}
     headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
-    'API_KEY': '476a8e08db7b89d1cdc553faf2',
+    'API_KEY': apiKey,
     'Cookie': 'JSESSIONID=21CE483BA61DF10D7721EE24312D2544; OAuth_Token_Request_State=750bf628-ba92-4ae5-a635-765c23014ca3'
     }
 
@@ -72,17 +85,23 @@ def checkConsentStatus():
 @app.route('/api/getFIData', methods = ['GET'])
 def getFIData():
     
-    url = "https://hackathon.pirimidtech.com/hackathon/consent/data/fetch?referenceId=4b79bbfd-f539-4e50-86bc-654723a7bfaf&trackingId=mobile-baanking-1"
+    url = "https://hackathon.pirimidtech.com/hackathon/consent/data/fetch?referenceId=" + session["referenceId"] + "&trackingId=" + session["trackingId"]
 
     payload={}
     headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
-    'API_KEY': '476a8e08db7b89d1cdc553faf2',
+    'API_KEY': apiKey,
     'Cookie': 'JSESSIONID=21CE483BA61DF10D7721EE24312D2544; OAuth_Token_Request_State=750bf628-ba92-4ae5-a635-765c23014ca3'
     }
 
     response = requests.request("GET", url, headers=headers, data=payload)
+    fiDataRespJsonPath = "./output-data/fiData-" + session["mobileNumber"] + ".json"
+
+    print("mobileNumber:", session["mobileNumber"])
+
+    with open(fiDataRespJsonPath, "w") as outfile:
+        json.dump(response.json(), outfile)
 
     return {"Type": "Success", "Message":"FI Data fetched successfully", "Response":response.json()}
 
@@ -91,17 +110,23 @@ def getFIData():
 @app.route('/api/getBankAnalysisData', methods = ['GET'])
 def getBankAnalysisData():
     
-    url = "https://hackathon.pirimidtech.com/hackathon/consent/analytics/fetch?referenceId=4b79bbfd-f539-4e50-86bc-654723a7bfaf&trackingId=mobile-baanking-1"
+    url = "https://hackathon.pirimidtech.com/hackathon/consent/analytics/fetch?referenceId=" + session["referenceId"] + "&trackingId=" + session["trackingId"]
 
     payload={}
     headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
-    'API_KEY': '476a8e08db7b89d1cdc553faf2',
+    'API_KEY': apiKey,
     'Cookie': 'JSESSIONID=21CE483BA61DF10D7721EE24312D2544; OAuth_Token_Request_State=750bf628-ba92-4ae5-a635-765c23014ca3'
     }
 
     response = requests.request("GET", url, headers=headers, data=payload)
+    bankAnalysisRespJsonPath = "./output-data/bankAnalysisData-" + session["mobileNumber"] + ".json"
+
+    print("mobileNumber:", session["mobileNumber"])
+
+    with open(bankAnalysisRespJsonPath, "w") as outfile:
+        json.dump(response.json(), outfile)
 
     return {"Type": "Success", "Message":"Bank analysis Data fetched successfully", "response":response.json()}
 
@@ -110,8 +135,10 @@ def getBankAnalysisData():
 # Get personalized nudge for the user
 @app.route('/api/getProfile', methods = ['GET'])
 def getProfile():
-    
-    with open('./output-data/profileData.json') as json_file:
+    payloadData = request.json
+    mobileNumber = str(payloadData["mobileNumber"])
+    profileJsonPath = './output-data/profileData-' + mobileNumber + '.json'
+    with open(profileJsonPath) as json_file:
         profileData = json.load(json_file)
 
     return {"Type": "Success", "profileData": profileData}
@@ -121,19 +148,19 @@ def getProfile():
 # Get personalized nudge for the user
 @app.route('/api/getNudges', methods = ['GET'])
 def getNudges():
-    
-    with open('./output-data/nudgesData.json') as json_file:
+    payloadData = request.json
+    mobileNumber = str(payloadData["mobileNumber"])
+    nudgesJsonPath = './output-data/nudgesData-' + mobileNumber + '.json'
+
+    with open(nudgesJsonPath) as json_file:
         nudgesData = json.load(json_file)
 
-
-    with open('./output-data/nudgesDataUser2.json') as json_file2:
-        nudgesDataUser2 = json.load(json_file2)
+    # with open('./output-data/nudgesDataUser2.json') as json_file2:
+    #     nudgesDataUser2 = json.load(json_file2)
     
     combinedNudgesData = {
-        '8037988169': nudgesData["nudges"],
-        '9987600001': nudgesDataUser2["nudges"]
+     mobileNumber: nudgesData["nudges"],
     } 
-
 
     return {"Type": "Success", "nudges": combinedNudgesData}
 
@@ -144,7 +171,11 @@ def getWidgetDetails():
 
     # sampleWidgetDetails = {"widget_name_1": "This widget does ...", "widget_name_2": "This widget does this..."}    
     
-    with open('./output-data/widgetsData.json') as json_file:
+    payloadData = request.json
+    mobileNumber = str(payloadData["mobileNumber"])
+    widgetsJsonPath = './output-data/widgetsData-' + mobileNumber + '.json'
+
+    with open(widgetsJsonPath) as json_file:
         widgetsData = json.load(json_file)
     return {"Type": "Success", "widgetData": widgetsData}
 
@@ -153,10 +184,37 @@ def getWidgetDetails():
 @app.route('/api/getInsuranceDetails', methods = ['GET'])
 def getInsuranceDetails():
 
-    with open('./output-data/insuranceRecommendationData.json') as json_file:
+    payloadData = request.json
+    mobileNumber = str(payloadData["mobileNumber"])
+    insuranceRecommendationJsonPath = './output-data/insuranceRecommendationData-' + mobileNumber + '.json'
+
+    with open(insuranceRecommendationJsonPath) as json_file:
         insuranceDetails = json.load(json_file)
     return {"Type": "Success", "insuranceDetails": insuranceDetails}
 
+
+# Get all accounts (banks and providers accounts fetch)
+@app.route('/api/getAllAccounts', methods = ['GET'])
+def getAllAccounts():
+    payloadData = request.json
+    mobileNumber = str(payloadData["mobileNumber"])
+    accountDetailsJsonPath = './output-data/accountDetails-' + mobileNumber + '.json'
+
+    with open(accountDetailsJsonPath) as json_file:
+        accountDetails = json.load(json_file)
+    return {"Type": "Success", "allAccountDetails": accountDetails}
+
+
+# Get consent details
+@app.route('/api/getConsentDetails', methods = ['GET'])
+def getConsentDetails():
+    payloadData = request.json
+    mobileNumber = str(payloadData["mobileNumber"])
+    consentDetailsJsonPath = './output-data/consentDetails-' + mobileNumber + '.json'
+
+    with open(consentDetailsJsonPath) as json_file:
+        consentDetails = json.load(json_file)
+    return {"Type": "Success", "consentDetails": consentDetails}
 
 
 if __name__ == "__main__":
