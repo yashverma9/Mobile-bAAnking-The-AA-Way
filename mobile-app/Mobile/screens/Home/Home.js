@@ -15,7 +15,12 @@ import CreditCard from '../../assets/svg/creditCard.svg';
 import CC2 from '../../assets/svg/cc2.svg';
 import UPI from '../../assets/svg/upi.svg';
 import VA from '../../assets/svg/virtualAssistant.svg';
+import {GeneralContext} from '../../contexts/GeneralContext';
 const Home = ({navigation}) => {
+  const {profileData, setProfileData} = React.useContext(GeneralContext);
+  const {widgets, setWidgets} = React.useContext(GeneralContext);
+  const {Nudges, setNudges} = React.useContext(GeneralContext);
+  console.log(Nudges[0]);
   return (
     <View style={styles.content}>
       <View style={styles.header}>
@@ -27,7 +32,7 @@ const Home = ({navigation}) => {
         <View style={styles.headerTextParent}>
           <Text style={styles.headerSmall}>
             Welcome{'\n'}
-            <Text style={styles.headerBig}>Yash</Text>
+            <Text style={styles.headerBig}>{profileData.name}</Text>
           </Text>
           {/* <Text style={styles.headerBig}>¸</Text> */}
         </View>
@@ -79,14 +84,9 @@ const Home = ({navigation}) => {
           navigation.navigate('Journey');
         }}
         style={styles.nudge}>
-        <Text style={styles.nudgeH1}>
-          Investments for a secured future Consider our smart investment plans
-          personalized for your profile
-        </Text>
+        <Text style={styles.nudgeH1}>{Nudges[0].mainText}</Text>
         <View style={styles.nudgeDescription}>
-          <Text style={styles.nudgeText}>
-            One can earn upto 7% interest on FDs
-          </Text>
+          <Text style={styles.nudgeText}>{Nudges[0].smallText}</Text>
         </View>
         {/* <TouchableOpacity
           onPress={() => {
@@ -99,18 +99,18 @@ const Home = ({navigation}) => {
       <Text style={styles.mediumText}>Financial Services</Text>
       <View style={styles.row}>
         <TouchableOpacity style={styles.widget}>
-          <Text style={styles.widgetText}>Investments</Text>
+          <Text style={styles.widgetText}>{Object.keys(widgets[0])}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.widget}>
-          <Text style={styles.widgetText}>Deposits</Text>
+          <Text style={styles.widgetText}>{Object.keys(widgets[1])}</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.row}>
         <TouchableOpacity style={styles.widget}>
-          <Text style={styles.widgetText}>Payments</Text>
+          <Text style={styles.widgetText}>{Object.keys(widgets[2])}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.widget}>
-          <Text style={styles.widgetText}>Insurance</Text>
+          <Text style={styles.widgetText}>{Object.keys(widgets[3])}</Text>
         </TouchableOpacity>
       </View>
       <TouchableOpacity style={styles.aaButtonPress}>
@@ -188,7 +188,11 @@ const Home = ({navigation}) => {
             />
             <Text style={styles.menuItemsText}>Pay</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={()=>{navigation.navigate('Consents')}} style={styles.menuItems}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Consents');
+            }}
+            style={styles.menuItems}>
             <UPI
               style={styles.rightArrow}
               width={getScaledDimension(25, 'height')}
@@ -196,7 +200,11 @@ const Home = ({navigation}) => {
             />
             <Text style={styles.menuItemsText}>Consents</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={()=>{navigation.navigate('Profile')}} style={styles.menuItems}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Profile');
+            }}
+            style={styles.menuItems}>
             <VA
               style={styles.rightArrow}
               width={getScaledDimension(25, 'height')}

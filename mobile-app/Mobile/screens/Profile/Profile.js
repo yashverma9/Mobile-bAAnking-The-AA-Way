@@ -37,12 +37,14 @@ import Animated, {
   FadeInRight,
   AnimatedComponent,
 } from 'react-native-reanimated';
+import {GeneralContext} from '../../contexts/GeneralContext';
 const Profile = ({navigation}) => {
   const [mobileNumber, setMobileNumber] = React.useState('');
   const [toggleCheckBox, setToggleCheckBox] = React.useState(true);
   const [c1, sc1] = React.useState(true);
   const [c2, sc2] = React.useState(true);
   const [c3, sc3] = React.useState(true);
+  const {profileData, setProfileData} = React.useContext(GeneralContext);
   return (
     <View style={styles.FetchAA}>
       <View style={styles.content}>
@@ -65,24 +67,27 @@ const Profile = ({navigation}) => {
             <Text style={styles.bktxt}>Personal Details</Text>
             <TouchableOpacity style={[styles.bankAccount, styles.selected]}>
               <View style={styles.txtParent}>
-                <Text style={styles.big}>Insurance Name</Text>
+                <Text style={styles.big}>Name</Text>
                 <Text style={styles.small}>
-                  IndiaFirst Life Insurance promoted by Bank of Baroda
+                  {profileData.name}
                 </Text>
               </View>
-
               <View style={styles.txtParent}>
-                <Text style={styles.big}>Cover Amount</Text>
-                <Text style={styles.small}>1Crore</Text>
+                <Text style={styles.big}>Mobile Number</Text>
+                <Text style={styles.small}>{profileData.mobile}</Text>
               </View>
               <View style={styles.txtParent}>
-                <Text style={styles.big}>Cover till age</Text>
-                <Text style={styles.small}>60</Text>
+                <Text style={styles.big}>Email</Text>
+                <Text style={styles.small}>{profileData.email}</Text>
               </View>
 
               <View style={styles.txtParent}>
-                <Text style={styles.big}>Annual Premium</Text>
-                <Text style={styles.small}>₹7063</Text>
+                <Text style={styles.big}>Date of Birth</Text>
+                <Text style={styles.small}>{profileData.dob}</Text>
+              </View>
+              <View style={styles.txtParent}>
+                <Text style={styles.big}>Address</Text>
+                <Text style={styles.small}>{profileData.address}</Text>
               </View>
             </TouchableOpacity>
           </Animated.View>

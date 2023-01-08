@@ -33,7 +33,7 @@ import Animated, {
   AnimatedComponent,
 } from 'react-native-reanimated';
 import Lottie from 'lottie-react-native';
-
+import axios from 'axios';
 const Syncing = ({navigation}) => {
   //https://flask-production-a663.up.railway.app/api/getFIData
   //https://flask-production-a663.up.railway.app/api/getBankAnalysisData
@@ -53,6 +53,7 @@ const Syncing = ({navigation}) => {
   let i = 0;
 
   React.useEffect(() => {
+    getProfile();
     const timeoutId = setTimeout(function () {
       changeMessage();
     }, 3000);
@@ -62,8 +63,7 @@ const Syncing = ({navigation}) => {
   }, []);
 
   useEffect(() => {
-    if(msg ==='getting your personalized view ready')
-    setAnimation(false)
+    if (msg === 'getting your personalized view ready') setAnimation(false);
     if (msg === '' && flag) {
       setFlag(false);
       console.log(flag);
@@ -84,6 +84,51 @@ const Syncing = ({navigation}) => {
     setTimeout(function () {
       changeMessage();
     }, 5000);
+  };
+
+  const getProfile = async () => {
+    // var config = {
+    //   method: 'get',
+    //   url: `https://flask-production-a663.up.railway.app/api/getProfile`,
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: {
+    //     mobileNumber: '9987600001',
+    //   },
+    // };
+
+    // console.log(config)
+    // axios(config)
+    //   .then(async function (response) {
+    //     console.log(response.data);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error)
+    //     alert('some error occured');
+    //   });
+
+    // var myHeaders = new Headers();
+    // myHeaders.append('Content-Type', 'application/json');
+
+    // var raw = JSON.stringify({
+    //   mobileNumber: '9987600001',
+    // });
+
+    // var requestOptions = {
+    //   method: 'GET',
+    //   headers: myHeaders,
+    //   body: raw,
+    //   redirect: 'follow',
+    // };
+
+    // fetch(
+    //   'https://flask-production-a663.up.railway.app/api/getProfile',
+    //   requestOptions,
+    // )
+    //   .then(response => response.text())
+    //   .then(result => console.log(result))
+    //   .catch(error => console.log('error', error));
   };
   return (
     <View style={styles.FetchAA}>

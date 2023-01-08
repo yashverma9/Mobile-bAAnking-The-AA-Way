@@ -23,7 +23,7 @@ const Splash = ({navigation}) => {
       <TouchableOpacity
         onPress={() => {
           //navigation.navigate('MobileNumber');
-          navigation.navigate('Home');
+          navigation.navigate('Syncing');
         }}
         style={styles.button}>
         <Text style={styles.buttonText}>Begin your Journey</Text>
