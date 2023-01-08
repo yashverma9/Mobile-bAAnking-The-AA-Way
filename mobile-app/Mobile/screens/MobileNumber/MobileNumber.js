@@ -19,8 +19,9 @@ import Animated, {
   FadeInRight,
   AnimatedComponent,
 } from 'react-native-reanimated';
+import {GeneralContext} from '../../contexts/GeneralContext';
 const MobileNumber = ({navigation}) => {
-  const [mobileNumber, setMobileNumber] = React.useState('');
+  const {mobileNumber, setMobileNumber} = React.useContext(GeneralContext);
   return (
     <View style={styles.MobileNumber}>
       <View style={styles.content}>

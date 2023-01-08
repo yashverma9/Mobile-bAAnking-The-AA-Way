@@ -51,8 +51,8 @@ const Home = ({navigation}) => {
         <View style={styles.bobBalance}>
           <Bob
             style={styles.headerImg}
-            width={getScaledDimension(40, 'height')}
-            height={getScaledDimension(40, 'height')}
+            width={getScaledDimension(30, 'height')}
+            height={getScaledDimension(30, 'height')}
           />
           <Text style={{color:'black'}}>Bank of Baroda</Text>
           <View style={styles.moneyTwo}>

@@ -2,6 +2,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {GeneralProvider} from './contexts/GeneralContext';
 import Splash from './screens/Splash/Splash';
 import MobileNumber from './screens/MobileNumber/MobileNumber';
 import Otp from './screens/Otp/Otp';
@@ -19,6 +20,7 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   const [mobileNumber, setMobileNumber] = React.useState('');
   return (
+    <GeneralProvider>
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
@@ -83,6 +85,7 @@ const App = () => {
         />
       </Stack.Navigator>
     </NavigationContainer>
+    </GeneralProvider>
   );
 };
 

@@ -44,13 +44,14 @@ const Syncing = ({navigation}) => {
   const [hide, setHide] = React.useState(true);
   const [msg, setMsg] = React.useState('syncing your accounts');
   const [flag, setFlag] = React.useState(true);
+  const [animation, setAnimation] = React.useState(true);
   let data = [
     'analyzing your finances',
     'getting your personalized view ready',
-    ""
+    '',
   ];
   let i = 0;
- 
+
   React.useEffect(() => {
     const timeoutId = setTimeout(function () {
       changeMessage();
@@ -61,12 +62,14 @@ const Syncing = ({navigation}) => {
   }, []);
 
   useEffect(() => {
-  if(msg==="" && flag){
-    setFlag(false);
-    console.log(flag)
-    navigation.navigate('Home');}
-  }, [msg])
-  
+    if(msg ==='getting your personalized view ready')
+    setAnimation(false)
+    if (msg === '' && flag) {
+      setFlag(false);
+      console.log(flag);
+      navigation.navigate('Home');
+    }
+  }, [msg]);
 
   const changeMessage = () => {
     // alert('Message Change Successfull');
@@ -88,7 +91,9 @@ const Syncing = ({navigation}) => {
         <Animated.View
           entering={FadeInDown.duration(1000)}
           exiting={FadeOutRight.duration(1000)}>
-          <Text style={styles.headerText}>welcome to {'\n'}mobile bAAnking</Text>
+          <Text style={styles.headerText}>
+            welcome to {'\n'}mobile bAAnking
+          </Text>
           <Text style={styles.bodyText}>Hang Tight</Text>
         </Animated.View>
 
@@ -106,7 +111,15 @@ const Syncing = ({navigation}) => {
           autoPlay
           loop
         /> */}
-        <Lottie source={require('../../assets/svg/l2.json')} autoPlay loop />
+        {!animation ? (
+          <Lottie source={require('../../assets/svg/l2.json')} autoPlay loop />
+        ) : (
+          <Lottie
+            source={require('../../assets/svg/mainLoader.json')}
+            autoPlay
+            loop
+          />
+        )}
       </View>
       <TouchableOpacity
         onPress={() => {

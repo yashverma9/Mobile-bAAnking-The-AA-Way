@@ -27,35 +27,38 @@ import Animated, {
   AnimatedComponent,
 } from 'react-native-reanimated';
 import axios from 'axios';
+import {GeneralContext} from '../../contexts/GeneralContext';
 const FetchAA = ({navigation}) => {
   //https://flask-production-a663.up.railway.app/api/checkConsentStatus
-  const [mobileNumber, setMobileNumber] = React.useState('');
+ 
   const [showMore, setShowMore] = React.useState(false);
   const [showLoader, setShowLoader] = React.useState(false);
+  const {mobileNumber, setMobileNumber} = React.useContext(GeneralContext);
   
 
   const callApi = async () => {
-    setShowLoader(true);
-    var config = {
-      method: 'get',
-      url: `https://flask-production-a663.up.railway.app/api/checkConsentStatus`,
+    navigation.navigate('Syncing');
+    // setShowLoader(true);
+    // var config = {
+    //   method: 'get',
+    //   url: `https://flask-production-a663.up.railway.app/api/checkConsentStatus`,
 
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
-    axios(config)
-      .then(async function (response) {
-        setShowLoader(false);
-        console.log(response.data);
-        if(response.data.Type==="Success"){
-          navigation.navigate('Syncing');
-        }
-      })
-      .catch(function (error) {
-        setShowLoader(false);
-        alert('some error occured');
-      });
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    // };
+    // axios(config)
+    //   .then(async function (response) {
+    //     setShowLoader(false);
+    //     console.log(response.data);
+    //     if(response.data.Type==="Success"){
+    //       navigation.navigate('Syncing');
+    //     }
+    //   })
+    //   .catch(function (error) {
+    //     setShowLoader(false);
+    //     alert('some error occured');
+    //   });
   };
   return (
     <View style={styles.FetchAA}>
@@ -77,7 +80,7 @@ const FetchAA = ({navigation}) => {
               height={getScaledDimension(120, 'height')}
             /> */}
             <View style={styles.id}>
-              <Text style={styles.idText}>9987600001@dashboard-aa-uat</Text>
+              <Text style={styles.idText}>{mobileNumber}@dashboard-aa-uat</Text>
             </View>
 
             <View style={styles.txtParent}>
