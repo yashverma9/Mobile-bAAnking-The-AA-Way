@@ -51,30 +51,34 @@ const Home = ({navigation}) => {
         <View style={styles.bobBalance}>
           <Bob
             style={styles.headerImg}
-            width={getScaledDimension(30, 'height')}
-            height={getScaledDimension(30, 'height')}
-          />
-          <Text style={{color:'black'}}>Bank of Baroda</Text>
-          <View style={styles.moneyTwo}>
-            <Text style={styles.moneyText}>₹55,800</Text>
-          </View>
-        </View>
-        <View style={[styles.bobBalance,{paddingLeft:'1%'}]}>
-          <Hdfc
-            style={{paddingLeft:'1%'}}
             width={getScaledDimension(25, 'height')}
             height={getScaledDimension(25, 'height')}
           />
-          <Text style={{marginLeft:'4%', color:'black'}}>HDFC</Text>
+          <Text style={{marginLeft: '2%', color: 'black'}}>Bank of Baroda</Text>
           <View style={styles.moneyTwo}>
-            <Text style={styles.moneyText}>₹85,650</Text>
+            <Text style={styles.moneyText}>₹ 55,800</Text>
+          </View>
+        </View>
+        <View style={[styles.bobBalance, {paddingLeft: '1%'}]}>
+          <Hdfc
+            style={{paddingLeft: '1%'}}
+            width={getScaledDimension(25, 'height')}
+            height={getScaledDimension(25, 'height')}
+          />
+          <Text style={{marginLeft: '5%', color: 'black'}}>HDFC</Text>
+          <View style={styles.moneyTwo}>
+            <Text style={styles.moneyText}>₹ 85,650</Text>
           </View>
         </View>
       </View>
 
       <Text style={styles.bigText}>specially for you</Text>
 
-      <TouchableOpacity onPress={()=>{navigation.navigate('Journey')}} style={styles.nudge}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Journey');
+        }}
+        style={styles.nudge}>
         <Text style={styles.nudgeH1}>
           Investments for a secured future Consider our smart investment plans
           personalized for your profile
@@ -94,7 +98,7 @@ const Home = ({navigation}) => {
       </TouchableOpacity>
       <Text style={styles.mediumText}>Financial Services</Text>
       <View style={styles.row}>
-        <TouchableOpacity  style={styles.widget}>
+        <TouchableOpacity style={styles.widget}>
           <Text style={styles.widgetText}>Investments</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.widget}>
@@ -184,7 +188,7 @@ const Home = ({navigation}) => {
             />
             <Text style={styles.menuItemsText}>Pay</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.menuItems}>
+          <TouchableOpacity onPress={()=>{navigation.navigate('Consents')}} style={styles.menuItems}>
             <UPI
               style={styles.rightArrow}
               width={getScaledDimension(25, 'height')}
@@ -192,7 +196,7 @@ const Home = ({navigation}) => {
             />
             <Text style={styles.menuItemsText}>Consents</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.menuItems}>
+          <TouchableOpacity onPress={()=>{navigation.navigate('Profile')}} style={styles.menuItems}>
             <VA
               style={styles.rightArrow}
               width={getScaledDimension(25, 'height')}

@@ -41,6 +41,7 @@ export default StyleSheet.create({
     padding: 0,
   },
   button: {
+    flexDirection:'row',
     marginLeft: 'auto',
     marginRight: 'auto',
     width: '80%',

@@ -10,9 +10,10 @@ export default StyleSheet.create({
   },
   content: {
     width: '88%',
-    backgroundColor: 'green',
+   // backgroundColor: 'green',
     backgroundColor: '#FFFFFF',
     flex: 1,
+
   },
   headerText: {
     marginTop: '4%',
@@ -43,8 +44,10 @@ export default StyleSheet.create({
     padding: 0,
   },
   button: {
+    marginTop: 'auto',
     marginLeft: 'auto',
     marginRight: 'auto',
+    marginBottom:'4%',
     width: '80%',
     //height: getScaledDimension(80, 'height'),
     backgroundColor: '#E9F2FF',
@@ -53,8 +56,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     paddingTop: '4%',
     paddingBottom: '4%',
-    marginTop: 'auto',
-    marginBottom: '8%',
+    
   },
   buttonText: {
     fontFamily: 'Poppins-Medium',
@@ -62,11 +64,11 @@ export default StyleSheet.create({
     color: '#00214E',
   },
   consent: {
-    marginTop: '4%',
+    marginTop: '12%',
     paddingBottom: '4%',
     width: '95%',
     // height: '80%',
-    backgroundColor: 'red',
+   // backgroundColor: 'red',
     marginLeft: 'auto',
     marginRight: 'auto',
     borderRadius: 20,
@@ -88,7 +90,7 @@ export default StyleSheet.create({
   id: {
     marginTop: '4%',
     width: '92%',
-    height: 30,
+    height: '6%',
     borderWidth: 1,
     borderColor: '#00214E',
     borderRadius: 8,
@@ -107,7 +109,7 @@ export default StyleSheet.create({
   },
   big: {
     fontFamily: 'Poppins-SemiBold',
-    fontSize: getScaledDimension(15, 'font'),
+    fontSize: getScaledDimension(13, 'font'),
     color: '#00214E',
   },
   small: {
@@ -137,7 +139,6 @@ export default StyleSheet.create({
     // elevation: 3,
     alignItems: 'center',
     justifyContent: 'center',
-    height:48
   },
   acceptText: {
     fontFamily: 'Poppins-Medium',
@@ -158,7 +159,6 @@ export default StyleSheet.create({
     // elevation: 3,
     alignItems: 'center',
     justifyContent: 'center',
-    height:48
   },
   rejectText: {
     fontFamily: 'Poppins-Medium',
@@ -166,7 +166,6 @@ export default StyleSheet.create({
     color: 'white',
   },
   floatingMessage: {
-    marginTop:'2%',
     marginTop: 'auto',
     marginBottom: '2%',
     fontFamily: 'Poppins-Medium',
@@ -174,11 +173,55 @@ export default StyleSheet.create({
     color: '#00214E',
     textAlign: 'center',
   },
-
+  bankAccount: {
+    marginTop: '2%',
+    width: '92%',
+    // height: '10%',
+    borderWidth: 1,
+    borderColor: '#D4D4D4',
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+   // flexDirection: 'row',
+    padding: '2%',
+  },
+  selected: {
+    borderColor: '#00214E',
+  },
+  row:{
+    flexDirection:'row',
+    width:'100%',
+    alignItems:'center',
+    //backgroundColor:'red',
+    justifyContent:'space-evenly'
+  },
+  rowAcc:{
+    justifyContent:'space-between',
+    paddingLeft:'2%',
+    paddingRight:'2%'
+  },
+  bankName: {
+    marginLeft: '5%',
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: getScaledDimension(20, 'font'),
+    color: 'black',
+  },
+  bktxt: {
+    marginTop:'2%',
+    marginLeft: '5%',
+    marginRight: 'auto',
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: getScaledDimension(18, 'font'),
+    color: '#838383',
+  },
+  tick: {
+    marginLeft: 'auto',
+    marginRight: '4%',
+  },
   secure:{
     width:'100%',
     height:"4%",
-    backgroundColor:'#FF5851',
+    backgroundColor:'red',
     flexDirection:'row',
     alignItems:'center',
     justifyContent:'center'
@@ -195,9 +238,19 @@ export default StyleSheet.create({
   secureGroup:{
     flexDirection:'row'
   },
-  logoWithText:{
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'flex-start'
-  }
+  txtParent: {
+    marginRight: 'auto',
+    marginLeft: '4.5%',
+    marginTop: '4%',
+  },
+  big: {
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: getScaledDimension(16, 'font'),
+    color: '#00214E',
+  },
+  small: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: getScaledDimension(14, 'font'),
+    color: '#00214E',
+  },
 });

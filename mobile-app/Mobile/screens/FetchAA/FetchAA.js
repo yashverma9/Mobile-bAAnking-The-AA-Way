@@ -14,6 +14,15 @@ import {getScaledDimension} from '../../utils/DynamicScaling';
 import Logo from '../../assets/svg/fiu-logo-rmbg.svg';
 import Lock from '../../assets/svg/lock.svg';
 import Saafe from '../../assets/svg/saafe.svg';
+import Sc from '../../assets/svg/standardCharted.svg';
+import Sbi from '../../assets/svg/sbi.svg';
+import Pnb from '../../assets/svg/pnb.svg';
+import Hdfc from '../../assets/svg/hdfc.svg';
+import Kotak from '../../assets/svg/kotak.svg';
+import Bob from '../../assets/svg/bob.svg';
+import Angel from '../../assets/svg/angel.svg';
+import Max from '../../assets/svg/max.svg';
+import Tick from '../../assets/svg/tick.svg';
 import Animated, {
   SlideInDown,
   SlideInUp,
@@ -30,11 +39,10 @@ import axios from 'axios';
 import {GeneralContext} from '../../contexts/GeneralContext';
 const FetchAA = ({navigation}) => {
   //https://flask-production-a663.up.railway.app/api/checkConsentStatus
- 
+
   const [showMore, setShowMore] = React.useState(false);
   const [showLoader, setShowLoader] = React.useState(false);
   const {mobileNumber, setMobileNumber} = React.useContext(GeneralContext);
-  
 
   const callApi = async () => {
     navigation.navigate('Syncing');
@@ -96,12 +104,39 @@ const FetchAA = ({navigation}) => {
             </View>
             <View style={styles.txtParent}>
               <Text style={styles.big}>Accounts to connect</Text>
-              <Text style={styles.small}>
-                Savings XXX3188, Fixed Deposit XXX2242
-              </Text>
-              <Text style={styles.small}>Savings XXX3221</Text>
-              <Text style={styles.small}>Angel Broking</Text>
-              <Text style={styles.small}>Max Life Insurance</Text>
+              <View style={styles.logoWithText}>
+                <Bob
+                  width={getScaledDimension(20, 'height')}
+                  height={getScaledDimension(20, 'height')}
+                />
+                <Text style={styles.small}>
+                  Savings XXX3188, Fixed Deposit XXX2242
+                </Text>
+              </View>
+
+              <View style={styles.logoWithText}>
+                <Bob
+                  width={getScaledDimension(20, 'height')}
+                  height={getScaledDimension(20, 'height')}
+                />
+                <Text style={styles.small}>Savings XXX3221</Text>
+              </View>
+
+              <View style={styles.logoWithText}>
+                <Bob
+                  width={getScaledDimension(20, 'height')}
+                  height={getScaledDimension(20, 'height')}
+                />
+                <Text style={styles.small}>Angel Broking</Text>
+              </View>
+
+              <View style={styles.logoWithText}>
+                <Bob
+                  width={getScaledDimension(20, 'height')}
+                  height={getScaledDimension(20, 'height')}
+                />
+                <Text style={styles.small}>Max Life Insurance</Text>
+              </View>
             </View>
             {showMore && (
               <>

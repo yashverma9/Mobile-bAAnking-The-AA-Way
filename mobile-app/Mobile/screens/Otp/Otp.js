@@ -5,6 +5,7 @@ import {
   TextInput,
   TouchableOpacity,
   Alert,
+  ActivityIndicator,
 } from 'react-native';
 import React from 'react';
 import styles from './OtpStyles';
@@ -27,13 +28,18 @@ const Otp = ({navigation}) => {
   const [mobileNumber, setMobileNumber] = React.useState('');
   const [hide, setHide] = React.useState(true);
   const [showLoader, setShowLoader] = React.useState(false);
+
   React.useEffect(() => {
     setTimeout(() => {
       setHide(false);
     }, 700);
     setTimeout(() => {
-      setMobileNumber("1234")
+      setMobileNumber('1234');
       setHide(true);
+      setShowLoader(true)
+      setTimeout(() => {
+         navigation.navigate('SEA');
+      }, 1500);
     }, 3000);
   }, []);
 
@@ -91,11 +97,15 @@ const Otp = ({navigation}) => {
 
         <TouchableOpacity
           onPress={() => {
-            callApi()
+            callApi();
             navigation.navigate('SEA');
           }}
           style={styles.button}>
-          <Text style={styles.buttonText}>Continue</Text>
+          {showLoader ? (
+            <ActivityIndicator size="small" color="#00214E" />
+          ) : (
+            <Text style={styles.buttonText}>Continue</Text>
+          )}
         </TouchableOpacity>
       </View>
     </View>

@@ -41,6 +41,8 @@ const SelectBankAccount = ({navigation}) => {
   const [c1, sc1] = React.useState(true);
   const [c2, sc2] = React.useState(true);
   const [c3, sc3] = React.useState(true);
+  const [c4, sc4] = React.useState(true);
+  const [c5, sc5] = React.useState(true);
   return (
     <View style={styles.FetchAA}>
       <View style={styles.content}>
@@ -139,8 +141,8 @@ const SelectBankAccount = ({navigation}) => {
                 <Text style={{color:'black'}}>Mutual Funds</Text>
                 <CheckBox
                   disabled={false}
-                  value={c2}
-                  onValueChange={newValue => sc2(newValue)}
+                  value={c4}
+                  onValueChange={newValue => sc4(newValue)}
                   tintColors={ {true:"#00214E",false:"#00214E"} }
                 />
               </View>
@@ -173,8 +175,8 @@ const SelectBankAccount = ({navigation}) => {
                 <Text style={{color:'black'}}>Life Insurance</Text>
                 <CheckBox
                   disabled={false}
-                  value={c2}
-                  onValueChange={newValue => sc2(newValue)}
+                  value={c5}
+                  onValueChange={newValue => sc5(newValue)}
                   tintColors={ {true:"#00214E",false:"#00214E"} }
                 />
               </View>

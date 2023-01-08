@@ -15,7 +15,9 @@ export default StyleSheet.create({
     paddingLeft: '4%',
     paddingRight: '4%',
   },
-  headerImg: {},
+  headerImg: {
+    marginLeft:'2%'
+  },
   headerSearchImg: {
     marginLeft: 'auto',
   },
@@ -36,7 +38,7 @@ export default StyleSheet.create({
     color: '#00214E',
   },
   hero: {
-    marginTop: '4%',
+    marginTop: '1%',
     width: '92%',
     height: '5%',
     backgroundColor: 'red',
@@ -52,13 +54,14 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    paddingLeft: '2%',
+    paddingLeft: '4%',
     paddingRight: '2%',
   },
   heroText: {
     fontFamily: 'Poppins-Regular',
     fontSize: getScaledDimension(12, 'font'),
     color: '#00214E',
+    textAlign:'center'
   },
   balance: {
     marginTop: '4%',
@@ -102,6 +105,8 @@ export default StyleSheet.create({
     borderWidth: 0.5,
     borderColor: '#00214E',
     padding: '1%',
+     //paddingLeft:'2%',
+    // paddingRight:'2%'
   },
   money: {
     marginLeft: 'auto',
@@ -138,16 +143,20 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     padding: '2%',
+    paddingBottom:0,
+    paddingLeft:0,
+    paddingRight:0
   },
   nudgeH1: {
+    margin:'2%',
     fontFamily: 'Poppins-SemiBold',
     fontSize: getScaledDimension(16, 'font'),
     color: '#00214E',
-    textAlign: 'center',
+    textAlign: 'left',
   },
   nudgeDescription: {
     marginTop: '4%',
-    width: '88%',
+    width: '100%',
     marginLeft: 'auto',
     marginRight: 'auto',
     borderRadius: 5,
@@ -155,6 +164,11 @@ export default StyleSheet.create({
     borderColor: '#BE4A4A',
     padding: '2%',
     backgroundColor: '#BE4A4A',
+    borderRadius: 20,
+    borderTopLeftRadius:0,
+    borderTopRightRadius:0,
+    paddingTop:'2%',
+    paddingBottom:'2%',
   },
   nudgeText: {
     textAlign: 'center',
@@ -309,7 +323,7 @@ export default StyleSheet.create({
     paddingRight: '4%',
   },
   widget: {
-    width: 150,
+    width: 175,
     height: 55,
     borderRadius: 8,
     backgroundColor: '#E9F2FF',
