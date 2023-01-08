@@ -1,0 +1,27 @@
+{
+  "vuaId": "9987600001@dashboard-aa-uat",
+  "validFor": "1 Year",
+  "detailsToShare": "Profile, Summary, Transactions",
+  "accountsToConnect": [
+    {
+      "providerName": "Bank of Baroda",
+      "accountsText": "Savings XXXX 3188, Fixed Deposit XXXX 2242"
+    },
+    {
+      "providerName": "HDFC Bank",
+      "accountsText": "Savings XXXX 3221"
+    },
+    {
+      "providerName": "Angel Broking",
+      "accountsText": "Mutual Funds XXXX 2990"
+    },
+    {
+      "providerName": "Max Life Insurance",
+      "accountsText": "Life Insurance XXXX 8788"
+    }
+  ],
+  "transactionsFrom": "08 Jan 2021 to 08 Jan 2023",
+  "purpose": "Mobile Banking",
+  "dataLife": "10 years (or earlier on request)",
+  "detailsFetched": "Hourly"
+}

@@ -1,0 +1,233 @@
+{
+  "Account": {
+    "linkedAccRef": "",
+    "maskedAccNumber": "",
+    "version": "1.1",
+    "type": "equities",
+    "Profile": {
+      "Holders": {
+        "type": "SINGLE",
+        "Holder": {
+          "name": "Gurpreet Chadha",
+          "dob": "1981-09-24",
+          "mobile": "8037988169",
+          "nominee": "REGISTERED",
+          "dematId": "4456327821390819",
+          "email": "pl123@gmail.com",
+          "pan": "AAAPL1234P",
+          "ckycCompliance": "true"
+        }
+      }
+    },
+    "Summary": {
+      "investmentValue": "258735.49",
+      "currentValue": "287624.19",
+      "Investment": [
+        {
+          "Holdings": [
+            {
+              "type": "DEMAT",
+              "Holding": {
+                "issuerName": "Reliance Industries Limited",
+                "isin": "INE002A01018",
+                "units": "79",
+                "rate": "2153.15",
+                "investmentDateTime": "2004-04-12T13:20:00-05:00",
+                "lastTradedPrice": "2377.75",
+                "description": ""
+              }
+            },
+            {
+              "type": "DEMAT",
+              "Holding": {
+                "issuerName": "HCL Technologies Ltd",
+                "isin": "INE860A01027",
+                "units": "34",
+                "rate": "1021.97",
+                "investmentDateTime": "2004-04-12T13:20:00-05:00",
+                "lastTradedPrice": "923.05",
+                "description": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "Transactions": {
+      "endDate": "2021-09-01",
+      "startDate": "2022-09-30",
+      "Transaction": [
+        {
+          "txnId": "",
+          "orderId": "",
+          "isin": "INE002A01018",
+          "companyName": "Reliance Industries Limited",
+          "symbol": "RELIANCE",
+          "exchange": "NSE",
+          "narration": "",
+          "transactionDateTime": "2021-10-12T13:20:00-05:00",
+          "equityCategory": "EQUITY",
+          "instrumentType": "",
+          "optionType": "",
+          "strikePrice": "",
+          "rate": "2664.25",
+          "tradeValue": "29306.75",
+          "shareHolderEquityType": "COMMON-STOCK",
+          "type": "BUY",
+          "units": "11",
+          "otherCharges": "",
+          "totalCharge": "12.64"
+        },
+        {
+          "txnId": "",
+          "orderId": "",
+          "isin": "INE860A01027",
+          "companyName": "HCL Technologies Ltd",
+          "symbol": "HCLTECH",
+          "exchange": "NSE",
+          "narration": "",
+          "transactionDateTime": "2021-11-15T14:25:00-05:00",
+          "equityCategory": "EQUITY",
+          "instrumentType": "",
+          "optionType": "",
+          "strikePrice": "",
+          "rate": "1170.50",
+          "tradeValue": "14046.00",
+          "shareHolderEquityType": "COMMON-STOCK",
+          "type": "BUY",
+          "units": "12",
+          "otherCharges": "",
+          "totalCharge": "14.64"
+        },
+        {
+          "txnId": "",
+          "orderId": "",
+          "isin": "INE002A01018",
+          "companyName": "Reliance Industries Limited",
+          "symbol": "RELIANCE",
+          "exchange": "NSE",
+          "narration": "",
+          "transactionDateTime": "2021-12-11T10:48:00-05:00",
+          "equityCategory": "EQUITY",
+          "instrumentType": "",
+          "optionType": "",
+          "strikePrice": "",
+          "rate": "2441.45",
+          "tradeValue": "24414.5",
+          "shareHolderEquityType": "COMMON-STOCK",
+          "type": "BUY",
+          "units": "10",
+          "otherCharges": "",
+          "totalCharge": "10.21"
+        },
+        {
+          "txnId": "",
+          "orderId": "",
+          "isin": "",
+          "companyName": "Nifty Bank Index",
+          "symbol": "BANKNIFTY",
+          "exchange": "NSE",
+          "narration": "",
+          "transactionDateTime": "2022-01-14T10:25:00-05:00",
+          "equityCategory": "EQUITY_DERIVATIVES",
+          "instrumentType": "OPTIONS",
+          "optionType": "PUT",
+          "strikePrice": "38200",
+          "rate": "546.65",
+          "tradeValue": "27332.5",
+          "shareHolderEquityType": "COMMON-STOCK",
+          "type": "BUY",
+          "units": "50",
+          "otherCharges": "",
+          "totalCharge": "13.01"
+        },
+        {
+          "txnId": "",
+          "orderId": "",
+          "isin": "",
+          "companyName": "Nifty Bank Index",
+          "symbol": "BANKNIFTY",
+          "exchange": "NSE",
+          "narration": "",
+          "transactionDateTime": "2022-01-14T12:15:00-05:00",
+          "equityCategory": "EQUITY_DERIVATIVES",
+          "instrumentType": "OPTIONS",
+          "optionType": "PUT",
+          "strikePrice": "38200",
+          "rate": "497.26",
+          "tradeValue": "24863.00",
+          "shareHolderEquityType": "COMMON-STOCK",
+          "type": "SELL",
+          "units": "50",
+          "otherCharges": "",
+          "totalCharge": "145.61"
+        },
+        {
+          "txnId": "",
+          "orderId": "",
+          "isin": "INE075A01022",
+          "companyName": "Wipro Limited",
+          "symbol": "WIPRO",
+          "exchange": "NSE",
+          "narration": "",
+          "transactionDateTime": "2022-02-02T12:15:00-05:00",
+          "equityCategory": "EQUITY_DERIVATIVES",
+          "instrumentType": "FUTURES",
+          "optionType": "",
+          "strikePrice": "",
+          "rate": "581.60",
+          "tradeValue": "581600.00",
+          "shareHolderEquityType": "COMMON-STOCK",
+          "type": "BUY",
+          "units": "1000",
+          "otherCharges": "",
+          "totalCharge": "122.64"
+        },
+        {
+          "txnId": "",
+          "orderId": "",
+          "isin": "INE075A01022",
+          "companyName": "Wipro Limited",
+          "symbol": "WIPRO",
+          "exchange": "NSE",
+          "narration": "",
+          "transactionDateTime": "2022-02-18T12:15:00-05:00",
+          "equityCategory": "EQUITY_DERIVATIVES",
+          "instrumentType": "FUTURES",
+          "optionType": "",
+          "strikePrice": "",
+          "rate": "559.45",
+          "tradeValue": "559450.00",
+          "shareHolderEquityType": "COMMON-STOCK",
+          "type": "SELL",
+          "units": "1000",
+          "otherCharges": "",
+          "totalCharge": "542.64"
+        },
+        {
+          "txnId": "",
+          "orderId": "",
+          "isin": "INE002A01018",
+          "companyName": "Reliance Industries Limited",
+          "symbol": "RELIANCE",
+          "exchange": "NSE",
+          "narration": "",
+          "transactionDateTime": "2022-06-15T12:35:00-05:00",
+          "equityCategory": "EQUITY",
+          "instrumentType": "",
+          "optionType": "",
+          "strikePrice": "",
+          "rate": "2597.40",
+          "tradeValue": "23376.6",
+          "shareHolderEquityType": "COMMON-STOCK",
+          "type": "BUY",
+          "units": "9",
+          "otherCharges": "",
+          "totalCharge": "10.49"
+        }
+      ]
+    }
+  },
+  "linkedAccRef": "9eefa566-0027-4a8d-93b1-2c645d330f79",
+  "maskedAccNumber": "XXXXXX7890"
+}

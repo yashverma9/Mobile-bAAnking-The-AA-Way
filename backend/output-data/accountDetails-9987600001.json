@@ -1,0 +1,44 @@
+{
+  "accountDetails": [
+    {
+      "providerName": "Bank of Baroda",
+      "accounts": [
+        {
+          "type": "Savings",
+          "accNumber": "XXXX 3188"
+        },
+        {
+          "type": "Fixed Deposit",
+          "accNumber": "XXXX 2242"
+        }
+      ]
+    },
+    {
+      "providerName": "HDFC Bank",
+      "accounts": [
+        {
+          "type": "Savings",
+          "accNumber": "XXXX 3221"
+        }
+      ]
+    },
+    {
+      "providerName": "Angel Broking",
+      "accounts": [
+        {
+          "type": "Mutual Funds",
+          "accNumber": "XXXX 2990"
+        }
+      ]
+    },
+    {
+      "providerName": "Max Life Insurance",
+      "accounts": [
+        {
+          "type": "Life Insurance",
+          "accNumber": "XXXX 8788"
+        }
+      ]
+    }
+  ]
+}
