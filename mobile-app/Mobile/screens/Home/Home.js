@@ -90,11 +90,7 @@ const Home = ({navigation}) => {
         </View>
         <TouchableOpacity
             onPress={() => {
-              if(mobileNumber===''){
-                alert("Enter Mobile Number")
-                return;
-              }
-              navigation.navigate('Otp');
+              navigation.navigate('Journey');
             }}
             style={styles.button}>
             <Text style={styles.buttonText}>Check this out</Text>

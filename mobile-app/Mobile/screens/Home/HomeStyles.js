@@ -257,7 +257,7 @@ export default StyleSheet.create({
     shadowOffset: {width: 0, height: -10},
     shadowRadius: 10,
     elevation: 3,
-    //backgroundColor: 'white',
+    backgroundColor: 'white',
     alignItems: 'center',
   },
   pill: {
