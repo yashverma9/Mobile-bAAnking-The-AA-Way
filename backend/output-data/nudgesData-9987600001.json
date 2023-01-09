@@ -1,6 +1,10 @@
 {
   "nudges": [
     {
+      "mainText": "On the basis of your demographic and income, you are under insured. Would you like to opt for a better life insurance?",
+      "smallText": "80% customers of your age opt for a 1Cr+ life cover!"
+    },
+    {
       "mainText": "You have been saving up a lot in your bank accounts, why not put it in a lock-in free Fixed Deposit for better returns?",
       "smallText": "One can earn upto 7% interest on FDs"
     },
@@ -19,10 +23,6 @@
     {
       "mainText": "You have received lump sum amount in your bank account this week, would you like to invest in Mutual Funds?",
       "smallText": "Mutual Funds can give more than 10% average annualized return subject to market risk"
-    },
-    {
-      "mainText": "On the basis of your demographic and income, you are under insured. Would you like to opt for a better life insurance?",
-      "smallText": "80% customers of your age opt for a 1Cr+ life cover!"
     },
     {
       "mainText": "Shopping is the best medicine, we have a credit card just for you!",

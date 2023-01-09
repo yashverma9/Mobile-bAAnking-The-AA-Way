@@ -202,7 +202,7 @@ def getNudges(mobileNumber):
     #     nudgesDataUser2 = json.load(json_file2)
     
     combinedNudgesData = {
-     mobileNumber: nudgesData["nudges"],
+     "data": nudgesData["nudges"],
     } 
 
     return {"Type": "Success", "nudges": combinedNudgesData}
@@ -222,13 +222,15 @@ def getWidgetDetails(mobileNumber):
 # Get insuranceRecommendation for the user
 @app.route('/api/getInsuranceDetails/<string:mobileNumber>', methods = ['GET'])
 def getInsuranceDetails(mobileNumber):
+    try:
+        insuranceRecommendationJsonPath = './output-data/insuranceRecommendationData-' + mobileNumber + '.json'
 
-    insuranceRecommendationJsonPath = './output-data/insuranceRecommendationData-' + mobileNumber + '.json'
-
-    with open(insuranceRecommendationJsonPath) as json_file:
-        insuranceDetails = json.load(json_file)
-    return {"Type": "Success", "insuranceDetails": insuranceDetails}
-
+        with open(insuranceRecommendationJsonPath) as json_file:
+            insuranceDetails = json.load(json_file)
+        return {"Type": "Success", "insuranceDetails": insuranceDetails}
+    
+    except Exception as e:
+        return {"Type":"Success", "Message":"No data for this user", "insuranceDetails": {}}
 
 # Get all accounts (banks and providers accounts fetch)
 @app.route('/api/getAllAccounts/<string:mobileNumber>', methods = ['GET'])
