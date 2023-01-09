@@ -25,6 +25,7 @@ import SearchBar from 'react-native-dynamic-search-bar';
 import Lock from '../../assets/svg/lock.svg';
 import CheckBox from '@react-native-community/checkbox';
 import ProfileBig from '../../assets/svg/profileBig.svg';
+import P from '../../assets/svg/p.svg';
 import ConsentHistory from '../../assets/svg/consentHistory.svg';
 import Animated, {
   SlideInDown,
@@ -38,15 +39,17 @@ import Animated, {
   FadeInRight,
   AnimatedComponent,
 } from 'react-native-reanimated';
+import {GeneralContext} from '../../contexts/GeneralContext';
 const Consents = ({navigation}) => {
   const [mobileNumber, setMobileNumber] = React.useState('');
   const [toggleCheckBox, setToggleCheckBox] = React.useState(true);
   const [c1, sc1] = React.useState(true);
   const [c2, sc2] = React.useState(true);
   const [c3, sc3] = React.useState(true);
+  const {consentDetails, setConsentDetails} = React.useContext(GeneralContext);
   return (
     <View style={styles.FetchAA}>
-      <View style={styles.content}>
+      <ScrollView style={styles.content}>
         <Animated.View entering={FadeInRight.duration(650)}>
           <Text style={styles.headerText}>Consents{'\n'}</Text>
           {/* <Text style={styles.bodyText}>
@@ -54,45 +57,56 @@ const Consents = ({navigation}) => {
                 </Text> */}
         </Animated.View>
         <Text style={styles.headerTextTwo}>Connected Accounts{'\n'}</Text>
-        <Animated.View
-          entering={FadeInDown.duration(650)}
-          style={styles.consent}>
-          <View style={styles.consentAimation}>
-            <View style={styles.row}>
-              <Bob
-                style={styles.headerImg}
-                width={getScaledDimension(38, 'height')}
-                height={getScaledDimension(38, 'height')}
-              />
-              <Text style={styles.bankName}>&nbsp;Bank of Baroda</Text>
-              {/* <Tick
+        {consentDetails.accountsToConnect.map((item, index) => {
+          return (
+            <Animated.View
+              entering={FadeInDown.duration(650)}
+              style={styles.consent}>
+              <View style={styles.consentAimation}>
+                <View style={styles.row}>
+                  {item.providerName === 'Bank of Baroda' && (
+                    <Bob
+                      width={getScaledDimension(38, 'height')}
+                      height={getScaledDimension(38, 'height')}
+                    />
+                  )}
+                  {item.providerName === 'HDFC Bank' && (
+                    <Hdfc
+                      width={getScaledDimension(38, 'height')}
+                      height={getScaledDimension(38, 'height')}
+                    />
+                  )}
+                  {item.providerName === 'Angel Broking' && (
+                    <Angel
+                      width={getScaledDimension(38, 'height')}
+                      height={getScaledDimension(38, 'height')}
+                    />
+                  )}
+                  {item.providerName === 'Max Life Insurance' && (
+                    <Max
+                      width={getScaledDimension(38, 'height')}
+                      height={getScaledDimension(38, 'height')}
+                    />
+                  )}
+                  {item.providerName === 'Pirimid FinTech' && (
+                    <P
+                      width={getScaledDimension(38, 'height')}
+                      height={getScaledDimension(38, 'height')}
+                    />
+                  )}
+                  <Text style={styles.bankName}>&nbsp;{item.providerName}</Text>
+                  {/* <Tick
                   style={styles.tick}
                   width={getScaledDimension(25, 'height')}
                   height={getScaledDimension(25, 'height')}
                 /> */}
-            </View>
-          </View>
-        </Animated.View>
+                </View>
+              </View>
+            </Animated.View>
+          );
+        })}
 
-        <Animated.View
-          entering={FadeInDown.duration(650)}
-          style={styles.consent}>
-          <View style={styles.consentAimation}>
-            <View style={styles.row}>
-              <Bob
-                style={styles.headerImg}
-                width={getScaledDimension(38, 'height')}
-                height={getScaledDimension(38, 'height')}
-              />
-              <Text style={styles.bankName}>&nbsp;Bank of Baroda</Text>
-              {/* <Tick
-                  style={styles.tick}
-                  width={getScaledDimension(25, 'height')}
-                  height={getScaledDimension(25, 'height')}
-                /> */}
-            </View>
-          </View>
-        </Animated.View>
+   
 
         <Text style={styles.headerTextThree}>Consent History{'\n'}</Text>
 
@@ -119,24 +133,16 @@ const Consents = ({navigation}) => {
             <View style={styles.consentRow}>
               <Text style={[styles.consentText]}>Consents</Text>
             </View>
-            <View style={styles.consentRow}>
-              <Text style={[styles.consentText]}>Canara Bank</Text>
-              <View style={styles.status}>
-                <Text style={styles.statusText}>Active</Text>
-              </View>
-            </View>
-            <View style={styles.consentRow}>
-              <Text style={[styles.consentText]}>Axis Gilt Fund</Text>
-              <View style={styles.status}>
-                <Text style={styles.statusText}>Active</Text>
-              </View>
-            </View>
-            <View style={styles.consentRow}>
-              <Text style={[styles.consentText]}>Birla Sun Life Insurance</Text>
-              <View style={styles.status}>
-                <Text style={styles.statusText}>Active</Text>
-              </View>
-            </View>
+            {consentDetails.accountsToConnect.map((item, index) => {
+              return (
+                <View style={styles.consentRow}>
+                  <Text style={[styles.consentText]}>{item.providerName}</Text>
+                  <View style={styles.status}>
+                    <Text style={styles.statusText}>Active</Text>
+                  </View>
+                </View>
+              );
+            })}
           </View>
         </Animated.View>
 
@@ -153,7 +159,7 @@ const Consents = ({navigation}) => {
           style={styles.button}>
           <Text style={styles.buttonText}>Back</Text>
         </TouchableOpacity>
-      </View>
+      </ScrollView>
       {/* <View style={styles.secure}>
             <View style={styles.secureGroup}>
               <Lock

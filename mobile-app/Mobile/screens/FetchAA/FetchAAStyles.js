@@ -62,7 +62,7 @@ export default StyleSheet.create({
     color: '#00214E',
   },
   consent: {
-    marginTop: '4%',
+    marginTop: 'auto',
     paddingBottom: '4%',
     width: '95%',
     // height: '80%',
@@ -114,7 +114,9 @@ export default StyleSheet.create({
     fontFamily: 'Poppins-Medium',
     fontSize: getScaledDimension(13, 'font'),
     color: '#00214E',
-    marginLeft:'2%'
+    marginLeft:'2%',
+    marginRight:'8%'
+
   },
   showMore: {
     marginTop: '4%',

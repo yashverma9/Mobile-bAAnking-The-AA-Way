@@ -58,7 +58,7 @@ export default StyleSheet.create({
     padding: 0,
   },
   button: {
-    marginTop: 'auto',
+    marginTop: '4%',
     marginLeft: 'auto',
     marginRight: 'auto',
     marginBottom:'4%',

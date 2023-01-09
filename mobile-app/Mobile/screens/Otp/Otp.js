@@ -26,13 +26,13 @@ import axios from 'axios';
 const Otp = ({navigation}) => {
   //https://flask-production-a663.up.railway.app/api/initiateConsentJourney
   const [mobileNumber, setMobileNumber] = React.useState('');
-  const [hide, setHide] = React.useState(true);
+  const [hide, setHide] = React.useState(false);
   const [showLoader, setShowLoader] = React.useState(false);
 
   React.useEffect(() => {
-    setTimeout(() => {
-      setHide(false);
-    }, 700);
+    // setTimeout(() => {
+    //   setHide(false);
+    // }, 700);
     setTimeout(() => {
       setMobileNumber('1234');
       setHide(true);

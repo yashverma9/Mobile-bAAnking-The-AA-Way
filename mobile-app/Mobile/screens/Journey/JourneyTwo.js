@@ -45,7 +45,7 @@ const JourneyTwo = ({navigation}) => {
   const [c3, sc3] = React.useState(false);
   const [name, setName] = React.useState('b');
   const [dob, setDob] = React.useState('8888');
-  const [incomeRange, setIncomeRange] = React.useState('99');
+  const [incomeRange, setIncomeRange] = React.useState('8-12 LPA');
   const [address, setAddress] = React.useState('');
 
   const {insurance, setInsurance} = React.useContext(GeneralContext);
@@ -54,7 +54,7 @@ const JourneyTwo = ({navigation}) => {
   React.useEffect(() => {
     setName(profileData.name)
     setDob(profileData.dob)
-    setIncomeRange('9999')
+    setIncomeRange('8-12 LPA')
     setAddress(profileData.address)
   
 
@@ -175,7 +175,7 @@ const JourneyTwo = ({navigation}) => {
                 <Text style={styles.big}>Cover Amount</Text>
                 <Text style={styles.small}>1Crore</Text>
               </View>
-              <View style={styles.txtParent}>
+              {/* <View style={styles.txtParent}>
                 <Text style={styles.big}>Rider Details</Text>
                 <View style={styles.row}>
                   <Text style={styles.small}>
@@ -199,11 +199,11 @@ const JourneyTwo = ({navigation}) => {
                     tintColors={{true: '#00214E', false: '#00214E'}}
                   />
                 </View>
-              </View>
+              </View> */}
 
               <View style={styles.txtParent}>
                 <Text style={styles.big}>Total Amount</Text>
-                <Text style={styles.small}>xxx ₹224</Text>
+                <Text style={styles.small}>{insurance.annualPremium}</Text>
               </View>
             </TouchableOpacity>
           </Animated.View>

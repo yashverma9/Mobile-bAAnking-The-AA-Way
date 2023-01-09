@@ -96,7 +96,7 @@ const Home = ({navigation}) => {
           <Text style={styles.buttonText}>Continue</Text>
         </TouchableOpacity> */}
       </TouchableOpacity>
-      <Text style={styles.mediumText}>Financial Services</Text>
+      <Text style={styles.mediumText}>Financial Services for you</Text>
       <View style={styles.row}>
         <TouchableOpacity style={styles.widget}>
           <Text style={styles.widgetText}>{Object.keys(widgets[0])}</Text>

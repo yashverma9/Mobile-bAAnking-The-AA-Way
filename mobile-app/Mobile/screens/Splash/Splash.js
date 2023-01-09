@@ -16,8 +16,8 @@ const Splash = ({navigation}) => {
       <AppLogo style={styles.logo} />
       <Header
         style={styles.headerImg}
-        width={getScaledDimension(300, 'height')}
-        height={getScaledDimension(300, 'height')}
+        width={getScaledDimension(240, 'height')}
+        height={getScaledDimension(240, 'height')}
       />
       <Text style={styles.heroText}>Start bAAnking the AA way</Text>
       <TouchableOpacity

@@ -4,7 +4,7 @@ const GeneralContext = React.createContext();
 
 const GeneralProvider = ({children}) => {
   const [test, setTest] = React.useState('test123');
-  const [mobileNumber, setMobileNumber] = React.useState('9987600001');
+  const [mobileNumber, setMobileNumber] = React.useState('');
   const [profileData, setProfileData] = React.useState();
   const [widgets, setWidgets] = React.useState([
     {

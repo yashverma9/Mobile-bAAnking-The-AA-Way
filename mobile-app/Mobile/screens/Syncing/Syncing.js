@@ -44,6 +44,8 @@ const Syncing = ({navigation}) => {
   const {mobileNumber, setMobileNumber} = React.useContext(GeneralContext);
   const {insurance, setInsurance} = React.useContext(GeneralContext);
   const {profileData, setProfileData} = React.useContext(GeneralContext);
+  const {Nudges, setNudges} = React.useContext(GeneralContext);
+  const {widgets, setWidgets} = React.useContext(GeneralContext);
   const [hide, setHide] = React.useState(true);
   const [msg, setMsg] = React.useState('syncing your accounts');
   const [flag, setFlag] = React.useState(true);
@@ -58,6 +60,8 @@ const Syncing = ({navigation}) => {
   React.useEffect(() => {
     getProfile();
     getInsurance();
+    getNudge();
+    getWidget();
     const timeoutId = setTimeout(function () {
       changeMessage();
     }, 3000);
@@ -135,6 +139,56 @@ const Syncing = ({navigation}) => {
         alert('some error occured');
       });
   };
+
+  const getNudge = async () => {
+    var config = {
+      method: 'get',
+      url: `https://flask-production-a663.up.railway.app/api/getNudges/${mobileNumber}`,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      // params: {
+      //   mobileNumber: '9987600001',
+      // },
+    };
+    console.log(config);
+    axios(config)
+      .then(async function (response) {
+        console.log("------NUDGE-------")
+        console.log(response.data.nudges.data);
+        setNudges(response.data.nudges.data)
+  
+      })
+      .catch(function (error) {
+        console.log(error);
+        alert('some error occured');
+      });
+  };
+
+  const getWidget = async () => {
+    var config = {
+      method: 'get',
+      url: `https://flask-production-a663.up.railway.app/api/getWidgetDetails/${mobileNumber}`,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      // params: {
+      //   mobileNumber: '9987600001',
+      // },
+    };
+    console.log(config);
+    axios(config)
+      .then(async function (response) {
+        console.log("------WIDGET-------")
+        console.log(response.data);
+        setWidgets(response.data.widgetData.widgetsOrder)
+  
+      })
+      .catch(function (error) {
+        console.log(error);
+        alert('some error occured');
+      });
+  };
   return (
     <View style={styles.FetchAA}>
       <View style={styles.content}>
@@ -142,7 +196,7 @@ const Syncing = ({navigation}) => {
           entering={FadeInDown.duration(1000)}
           exiting={FadeOutRight.duration(1000)}>
           <Text style={styles.headerText}>
-            welcome to {'\n'}mobile bAAnking
+            welcome to {'\n'}Mobi bAAnk
           </Text>
           <Text style={styles.bodyText}>Hang Tight</Text>
         </Animated.View>
