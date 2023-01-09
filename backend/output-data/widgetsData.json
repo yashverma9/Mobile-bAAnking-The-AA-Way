@@ -1,1 +1,21 @@
-{"widgetsOrder": {"9987600001": [{"Investments": "Invest in different instruments for better returns on your money"}, {"Deposits": "Save and grow your money in fixed and recurring deposits"}, {"Payments": "Make all kinds of bill payments and earn cashback"}, {"Insurance": "Get Medical and Life insured with our customer friendly plans"}, {"Cards": "Manage your existing cards or choose from a wide range of cards to enjoy special privileges, offers and cashback points!"}, {"Accounts": "Manage all your accounts in one place"}, {"Loans": "Explore all kinds of different loans as per your needs"}]}}
+{
+  "widgetsOrder": {
+    "9987600001": [
+      {
+        "Investments": "Invest in different instruments for better returns on your money"
+      },
+      {
+        "Deposits": "Save and grow your money in fixed and recurring deposits"
+      },
+      { "Payments": "Make all kinds of bill payments and earn cashback" },
+      {
+        "Insurance": "Get Medical and Life insured with our customer friendly plans"
+      },
+      {
+        "Cards": "Manage your existing cards or choose from a wide range of cards to enjoy special privileges, offers and cashback points!"
+      },
+      { "Accounts": "Manage all your accounts in one place" },
+      { "Loans": "Explore all kinds of different loans as per your needs" }
+    ]
+  }
+}
