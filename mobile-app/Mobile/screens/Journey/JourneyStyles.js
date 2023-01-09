@@ -10,17 +10,16 @@ export default StyleSheet.create({
   },
   content: {
     width: '88%',
-   // backgroundColor: 'green',
+    // backgroundColor: 'green',
     backgroundColor: '#FFFFFF',
     flex: 1,
-
   },
   headerText: {
     marginTop: '4%',
     fontFamily: 'Poppins-SemiBold',
     fontSize: getScaledDimension(24, 'font'),
     color: '#00214E',
-    textAlign: 'center',
+    textAlign: 'left',
   },
   bodyText: {
     marginTop: '1.5%',
@@ -30,24 +29,24 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
   input: {
-    width: '100%',
-    minHeight: 50,
-    marginTop: '6%',
-    //backgroundColor: 'red',
+    width: 200,
+    // minHeight: 50,
+    // marginTop: '6%',
+   // backgroundColor: 'red',
 
     fontFamily: 'Poppins-Regular',
-    fontSize: getScaledDimension(24, 'font'),
+    fontSize: getScaledDimension(14, 'font'),
 
-    color: 'black',
+    color: '#00214E',
 
     textAlign: 'left',
     padding: 0,
   },
   button: {
-    marginTop: 'auto',
+    marginTop: '6%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginBottom:'4%',
+    marginBottom: '4%',
     width: '80%',
     //height: getScaledDimension(80, 'height'),
     backgroundColor: '#E9F2FF',
@@ -56,7 +55,6 @@ export default StyleSheet.create({
     justifyContent: 'center',
     paddingTop: '4%',
     paddingBottom: '4%',
-    
   },
   buttonText: {
     fontFamily: 'Poppins-Medium',
@@ -64,11 +62,11 @@ export default StyleSheet.create({
     color: '#00214E',
   },
   consent: {
-    marginTop: '15%',
+    marginTop: '4%',
     paddingBottom: '4%',
     width: '95%',
     // height: '80%',
-   // backgroundColor: 'red',
+    // backgroundColor: 'red',
     marginLeft: 'auto',
     marginRight: 'auto',
     borderRadius: 20,
@@ -182,23 +180,25 @@ export default StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'flex-start',
-   // flexDirection: 'row',
+    // flexDirection: 'row',
     padding: '2%',
   },
   selected: {
     borderColor: '#00214E',
   },
-  row:{
-    flexDirection:'row',
-    width:'100%',
-    alignItems:'center',
+  row: {
+    flexDirection: 'row',
+    width: '100%',
+    alignItems: 'center',
     //backgroundColor:'red',
-    justifyContent:'space-evenly'
+    justifyContent: 'flex-start',
+    // paddingLeft:'2%',
+    padding: '2%',
   },
-  rowAcc:{
-    justifyContent:'space-between',
-    paddingLeft:'2%',
-    paddingRight:'2%'
+  rowAcc: {
+    justifyContent: 'space-between',
+    paddingLeft: '2%',
+    paddingRight: '2%',
   },
   bankName: {
     marginLeft: '5%',
@@ -207,7 +207,7 @@ export default StyleSheet.create({
     color: 'black',
   },
   bktxt: {
-    marginTop:'2%',
+    marginTop: '2%',
     marginLeft: '5%',
     marginRight: 'auto',
     fontFamily: 'Poppins-SemiBold',
@@ -218,25 +218,25 @@ export default StyleSheet.create({
     marginLeft: 'auto',
     marginRight: '4%',
   },
-  secure:{
-    width:'100%',
-    height:"4%",
-    backgroundColor:'red',
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'center'
+  secure: {
+    width: '100%',
+    height: '4%',
+    backgroundColor: 'red',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  secureText:{
+  secureText: {
     marginLeft: '2%',
     fontFamily: 'Poppins-SemiBold',
     fontSize: getScaledDimension(12, 'font'),
     color: 'white',
   },
-  lock:{
-    marginRight:'2%'
+  lock: {
+    marginRight: '2%',
   },
-  secureGroup:{
-    flexDirection:'row'
+  secureGroup: {
+    flexDirection: 'row',
   },
   txtParent: {
     marginRight: 'auto',
@@ -248,9 +248,29 @@ export default StyleSheet.create({
     fontSize: getScaledDimension(16, 'font'),
     color: '#00214E',
   },
+  bigTwo: {
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: getScaledDimension(14, 'font'),
+    color: '#00214E',
+    // marginLeft: 'auto',
+    // marginRight: '4%',
+  },
+  smallTwo: {
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: getScaledDimension(10, 'font'),
+    color: 'grey',
+    //marginLeft: 'auto',
+    // marginRight: '4%',
+  },
   small: {
     fontFamily: 'Poppins-Medium',
     fontSize: getScaledDimension(14, 'font'),
     color: '#00214E',
+  },
+  instxtparent: {
+    marginLeft: 'auto',
+    marginRight: '4%',
+    alignItems: 'center',
+    //backgroundColor: 'red',
   },
 });

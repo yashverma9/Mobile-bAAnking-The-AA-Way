@@ -114,6 +114,7 @@ export default StyleSheet.create({
     fontFamily: 'Poppins-Medium',
     fontSize: getScaledDimension(13, 'font'),
     color: '#00214E',
+    marginLeft:'2%'
   },
   showMore: {
     marginTop: '4%',
@@ -198,6 +199,7 @@ export default StyleSheet.create({
   logoWithText:{
     flexDirection:'row',
     alignItems:'center',
-    justifyContent:'flex-start'
+    justifyContent:'flex-start',
+    marginTop:'2%',
   }
 });

@@ -4,21 +4,8 @@ const GeneralContext = React.createContext();
 
 const GeneralProvider = ({children}) => {
   const [test, setTest] = React.useState('test123');
-  const [mobileNumber, setMobileNumber] = React.useState('');
-  const [profileData, setProfileData] = React.useState({
-    accountType: 'SAVINGS',
-    address: '501 HARIKRISHNA PUNAGAM SURAT',
-    age: 22,
-    bank: 'HDFC Bank',
-    currentBalance: '15184.17',
-    dataEndDate: '2022-06-14',
-    dataStartDate: '2021-11-13',
-    dob: '2000-10-10',
-    email: 'ayan.bhanushali@gmail.com',
-    mobile: '9987600001',
-    monthsOfData: 8,
-    name: 'MR.AYAN BHANUSHALI',
-  });
+  const [mobileNumber, setMobileNumber] = React.useState('9987600001');
+  const [profileData, setProfileData] = React.useState();
   const [widgets, setWidgets] = React.useState([
     {
       Investments:
@@ -91,6 +78,9 @@ const GeneralProvider = ({children}) => {
         'People with higher credit scores get potentially lower interest rates',
     },
   ]);
+  const [insurance, setInsurance] = React.useState();
+  const [allAccounts, setAllAccounts] = React.useState();
+  const [consentDetails, setConsentDetails] = React.useState();
 
   return (
     <GeneralContext.Provider
@@ -105,6 +95,12 @@ const GeneralProvider = ({children}) => {
         setWidgets,
         Nudges,
         setNudges,
+        insurance,
+        setInsurance,
+        allAccounts,
+        setAllAccounts,
+        consentDetails,
+        setConsentDetails,
       }}>
       {children}
     </GeneralContext.Provider>

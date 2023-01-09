@@ -36,15 +36,33 @@ import Animated, {
   FadeInRight,
   AnimatedComponent,
 } from 'react-native-reanimated';
+import {GeneralContext} from '../../contexts/GeneralContext';
 const JourneyTwo = ({navigation}) => {
   const [mobileNumber, setMobileNumber] = React.useState('');
   const [toggleCheckBox, setToggleCheckBox] = React.useState(true);
   const [c1, sc1] = React.useState(false);
   const [c2, sc2] = React.useState(false);
   const [c3, sc3] = React.useState(false);
+  const [name, setName] = React.useState('b');
+  const [dob, setDob] = React.useState('8888');
+  const [incomeRange, setIncomeRange] = React.useState('99');
+  const [address, setAddress] = React.useState('');
+
+  const {insurance, setInsurance} = React.useContext(GeneralContext);
+  const {profileData, setProfileData} = React.useContext(GeneralContext);
+
+  React.useEffect(() => {
+    setName(profileData.name)
+    setDob(profileData.dob)
+    setIncomeRange('9999')
+    setAddress(profileData.address)
+  
+
+  }, [insurance,profileData])
+  
   return (
     <View style={styles.FetchAA}>
-      <View style={styles.content}>
+      <ScrollView style={styles.content}>
         <Animated.View entering={FadeInRight.duration(650)}>
           <Text style={styles.headerText}>Confirm Details</Text>
           {/* <Text style={styles.bodyText}>
@@ -59,14 +77,18 @@ const JourneyTwo = ({navigation}) => {
             <View style={styles.row}>
               <Bob
                 style={styles.headerImg}
-                width={getScaledDimension(70, 'height')}
-                height={getScaledDimension(70, 'height')}
+                width={getScaledDimension(52, 'height')}
+                height={getScaledDimension(52, 'height')}
               />
               <India
-                style={styles.headerImg}
-                width={getScaledDimension(70, 'height')}
-                height={getScaledDimension(70, 'height')}
+                style={{marginLeft: '2%'}}
+                width={getScaledDimension(52, 'height')}
+                height={getScaledDimension(52, 'height')}
               />
+              <View style={styles.instxtparent}>
+                <Text style={styles.bigTwo}>IndiaFirst Life Insurance</Text>
+                <Text style={styles.smallTwo}>Promoted by Bob</Text>
+              </View>
             </View>
 
             {/* <View style={styles.txtParent}>
@@ -92,21 +114,41 @@ const JourneyTwo = ({navigation}) => {
             <TouchableOpacity style={[styles.bankAccount, styles.selected]}>
               <View style={styles.txtParent}>
                 <Text style={styles.big}>Name</Text>
-                <Text style={styles.small}>Yash Verma</Text>
+                {/* <Text style={styles.small}>Yash Verma</Text> */}
+                <TextInput
+                  style={styles.input}
+                  onChangeText={setName}
+                  value={name}
+                />
               </View>
 
               <View style={styles.txtParent}>
                 <Text style={styles.big}>Date of Birth</Text>
-                <Text style={styles.small}>11/02/1999</Text>
+                {/* <Text style={styles.small}>11/02/1999</Text> */}
+                <TextInput
+                  style={styles.input}
+                  onChangeText={setDob}
+                  value={dob}
+                />
               </View>
               <View style={styles.txtParent}>
                 <Text style={styles.big}>Income Range</Text>
-                <Text style={styles.small}>60</Text>
+                {/* <Text style={styles.small}>60</Text> */}
+                <TextInput
+                  style={styles.input}
+                  onChangeText={setIncomeRange}
+                  value={incomeRange}
+                />
               </View>
 
               <View style={styles.txtParent}>
                 <Text style={styles.big}>Address</Text>
-                <Text style={styles.small}>blah blah</Text>
+                {/* <Text style={styles.small}>blah blah</Text> */}
+                <TextInput
+                  style={styles.input}
+                  onChangeText={setAddress}
+                  value={address}
+                />
               </View>
 
               <View style={styles.txtParent}>
@@ -130,8 +172,38 @@ const JourneyTwo = ({navigation}) => {
               </View>
 
               <View style={styles.txtParent}>
-                <Text style={styles.big}>Amount</Text>
+                <Text style={styles.big}>Cover Amount</Text>
                 <Text style={styles.small}>1Crore</Text>
+              </View>
+              <View style={styles.txtParent}>
+                <Text style={styles.big}>Rider Details</Text>
+                <View style={styles.row}>
+                  <Text style={styles.small}>
+                    Get all your premium back ₹185
+                  </Text>
+                  <CheckBox
+                    disabled={false}
+                    value={c1}
+                    onValueChange={newValue => sc1(newValue)}
+                    tintColors={{true: '#00214E', false: '#00214E'}}
+                  />
+                </View>
+                <View style={styles.row}>
+                  <Text style={styles.small}>
+                    Life Cover Payout on Accidental Disability ₹224
+                  </Text>
+                  <CheckBox
+                    disabled={false}
+                    value={c2}
+                    onValueChange={newValue => sc2(newValue)}
+                    tintColors={{true: '#00214E', false: '#00214E'}}
+                  />
+                </View>
+              </View>
+
+              <View style={styles.txtParent}>
+                <Text style={styles.big}>Total Amount</Text>
+                <Text style={styles.small}>xxx ₹224</Text>
               </View>
             </TouchableOpacity>
           </Animated.View>
@@ -150,7 +222,7 @@ const JourneyTwo = ({navigation}) => {
           style={styles.button}>
           <Text style={styles.buttonText}>Checkout</Text>
         </TouchableOpacity>
-      </View>
+      </ScrollView>
       {/* <View style={styles.secure}>
           <View style={styles.secureGroup}>
             <Lock

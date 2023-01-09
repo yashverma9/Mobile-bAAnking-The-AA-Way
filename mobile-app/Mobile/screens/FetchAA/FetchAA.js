@@ -22,6 +22,7 @@ import Kotak from '../../assets/svg/kotak.svg';
 import Bob from '../../assets/svg/bob.svg';
 import Angel from '../../assets/svg/angel.svg';
 import Max from '../../assets/svg/max.svg';
+import P from '../../assets/svg/p.svg';
 import Tick from '../../assets/svg/tick.svg';
 import Animated, {
   SlideInDown,
@@ -43,30 +44,38 @@ const FetchAA = ({navigation}) => {
   const [showMore, setShowMore] = React.useState(false);
   const [showLoader, setShowLoader] = React.useState(false);
   const {mobileNumber, setMobileNumber} = React.useContext(GeneralContext);
+  const {allAccounts, setAllAccounts} = React.useContext(GeneralContext);
+  const {consentDetails, setConsentDetails} = React.useContext(GeneralContext);
+
+  console.log('-=----', consentDetails);
 
   const callApi = async () => {
-    navigation.navigate('Syncing');
-    // setShowLoader(true);
-    // var config = {
-    //   method: 'get',
-    //   url: `https://flask-production-a663.up.railway.app/api/checkConsentStatus`,
+    setShowLoader(true);
 
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    // };
-    // axios(config)
-    //   .then(async function (response) {
-    //     setShowLoader(false);
-    //     console.log(response.data);
-    //     if(response.data.Type==="Success"){
-    //       navigation.navigate('Syncing');
-    //     }
-    //   })
-    //   .catch(function (error) {
-    //     setShowLoader(false);
-    //     alert('some error occured');
-    //   });
+    var config = {
+      method: 'get',
+      url: `https://flask-production-a663.up.railway.app/api/checkConsentStatus/${mobileNumber}`,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      // params: {
+      //   mobileNumber: '9987600001',
+      // },
+    };
+    // console.log(config);
+    axios(config)
+      .then(async function (response) {
+        setShowLoader(false);
+        console.log(response.data.Type);
+        if (response.data.Type === 'Success') {
+          navigation.navigate('Syncing');
+        }
+      })
+      .catch(function (error) {
+        setShowLoader(false);
+        console.log(error);
+        alert('some error occured');
+      });
   };
   return (
     <View style={styles.FetchAA}>
@@ -93,70 +102,84 @@ const FetchAA = ({navigation}) => {
 
             <View style={styles.txtParent}>
               <Text style={styles.big}>Consent Valid For</Text>
-              <Text style={styles.small}>1 Year</Text>
+              <Text style={styles.small}>{consentDetails.validFor}</Text>
               <Text style={[styles.small, {fontSize: 10, color: 'grey'}]}>
                 You can revoke anytime
               </Text>
             </View>
             <View style={styles.txtParent}>
               <Text style={styles.big}>Details to share</Text>
-              <Text style={styles.small}>PROFILE, SUMMARY, TRANSACTIONS</Text>
+              <Text style={styles.small}>
+                {consentDetails.detailsToShare.trim()}
+              </Text>
             </View>
             <View style={styles.txtParent}>
               <Text style={styles.big}>Accounts to connect</Text>
-              <View style={styles.logoWithText}>
-                <Bob
-                  width={getScaledDimension(20, 'height')}
-                  height={getScaledDimension(20, 'height')}
-                />
-                <Text style={styles.small}>
-                  Savings XXX3188, Fixed Deposit XXX2242
-                </Text>
-              </View>
-
-              <View style={styles.logoWithText}>
-                <Bob
-                  width={getScaledDimension(20, 'height')}
-                  height={getScaledDimension(20, 'height')}
-                />
-                <Text style={styles.small}>Savings XXX3221</Text>
-              </View>
-
-              <View style={styles.logoWithText}>
-                <Bob
-                  width={getScaledDimension(20, 'height')}
-                  height={getScaledDimension(20, 'height')}
-                />
-                <Text style={styles.small}>Angel Broking</Text>
-              </View>
-
-              <View style={styles.logoWithText}>
-                <Bob
-                  width={getScaledDimension(20, 'height')}
-                  height={getScaledDimension(20, 'height')}
-                />
-                <Text style={styles.small}>Max Life Insurance</Text>
-              </View>
+              {consentDetails.accountsToConnect.map((item, index) => {
+                return (
+                  <View style={styles.logoWithText}>
+                    {item.providerName === 'Bank of Baroda' && (
+                      <Bob
+                        width={getScaledDimension(20, 'height')}
+                        height={getScaledDimension(20, 'height')}
+                      />
+                    )}
+                    {item.providerName === 'HDFC Bank' && (
+                      <Hdfc
+                        width={getScaledDimension(20, 'height')}
+                        height={getScaledDimension(20, 'height')}
+                      />
+                    )}
+                    {item.providerName === 'Angel Broking' && (
+                      <Angel
+                        width={getScaledDimension(20, 'height')}
+                        height={getScaledDimension(20, 'height')}
+                      />
+                    )}
+                    {item.providerName === 'Max Life Insurance' && (
+                      <Max
+                        width={getScaledDimension(20, 'height')}
+                        height={getScaledDimension(20, 'height')}
+                      />
+                    )}
+                    {item.providerName === 'Pirimid FinTech' && (
+                      <P
+                        width={getScaledDimension(20, 'height')}
+                        height={getScaledDimension(20, 'height')}
+                      />
+                    )}
+                    <Text style={styles.small}>
+                      {item.providerName} {item.accountsText}
+                    </Text>
+                  </View>
+                );
+              })}
             </View>
             {showMore && (
               <>
                 <View style={styles.txtParent}>
                   <Text style={styles.big}>Purpose</Text>
-                  <Text style={styles.small}>Mobile Banking</Text>
+                  <Text style={styles.small}>
+                    {consentDetails.purpose.trim()}
+                  </Text>
                 </View>
                 <View style={styles.txtParent}>
                   <Text style={styles.big}>Consent duration</Text>
-                  <Text style={styles.small}>30 Dec 2022 - 30 Dec 2023</Text>
+                  <Text style={styles.small}>
+                    {consentDetails.transactionsFrom.trim()}
+                  </Text>
                 </View>
                 <View style={styles.txtParent}>
                   <Text style={styles.big}>Data Life</Text>
                   <Text style={styles.small}>
-                    10 years (or earlier on request)
+                    {consentDetails.dataLife.trim()}
                   </Text>
                 </View>
                 <View style={styles.txtParent}>
                   <Text style={styles.big}>Details fetched</Text>
-                  <Text style={styles.small}>Hourly</Text>
+                  <Text style={styles.small}>
+                    {consentDetails.detailsFetched.trim()}
+                  </Text>
                 </View>
               </>
             )}

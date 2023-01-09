@@ -36,18 +36,21 @@ import Animated, {
   FadeInRight,
   AnimatedComponent,
 } from 'react-native-reanimated';
+import {GeneralContext} from '../../contexts/GeneralContext';
 const Journey = ({navigation}) => {
   const [mobileNumber, setMobileNumber] = React.useState('');
   const [toggleCheckBox, setToggleCheckBox] = React.useState(true);
-  const [c1, sc1] = React.useState(true);
-  const [c2, sc2] = React.useState(true);
-  const [c3, sc3] = React.useState(true);
+  const {insurance, setInsurance} = React.useContext(GeneralContext);
+  const {profileData, setProfileData} = React.useContext(GeneralContext);
+  const [c1, sc1] = React.useState(false);
+  const [c2, sc2] = React.useState(false);
+  const [c3, sc3] = React.useState(false);
   return (
     <View style={styles.FetchAA}>
       <View style={styles.content}>
         <Animated.View entering={FadeInRight.duration(650)}>
           <Text style={styles.headerText}>
-            recommended insurance based on your{'\n'}demographic and finances
+            recommended insurance based on your demographic and finances
           </Text>
           {/* <Text style={styles.bodyText}>
             recommended insurance baased on your{'\n'}demographic and finances
@@ -61,14 +64,18 @@ const Journey = ({navigation}) => {
             <View style={styles.row}>
               <Bob
                 style={styles.headerImg}
-                width={getScaledDimension(70, 'height')}
-                height={getScaledDimension(70, 'height')}
+                width={getScaledDimension(52, 'height')}
+                height={getScaledDimension(52, 'height')}
               />
               <India
-                style={styles.headerImg}
-                width={getScaledDimension(70, 'height')}
-                height={getScaledDimension(70, 'height')}
+                style={{marginLeft: '2%'}}
+                width={getScaledDimension(52, 'height')}
+                height={getScaledDimension(52, 'height')}
               />
+              <View style={styles.instxtparent}>
+                <Text style={styles.bigTwo}>IndiaFirst Life Insurance</Text>
+                <Text style={styles.smallTwo}>Promoted by Bob</Text>
+              </View>
             </View>
 
             {/* <View style={styles.txtParent}>
@@ -92,27 +99,51 @@ const Journey = ({navigation}) => {
 
             <Text style={styles.bktxt}>Details</Text>
             <TouchableOpacity style={[styles.bankAccount, styles.selected]}>
-            <View style={styles.txtParent}>
-              <Text style={styles.big}>Insurance Name</Text>
-              <Text style={styles.small}>IndiaFirst Life Insurance promoted by Bank of Baroda</Text>
-            </View>
+              <View style={styles.txtParent}>
+                <Text style={styles.big}>Insurance Name</Text>
+                <Text style={styles.small}>
+                  {insurance.insuranceName}
+                </Text>
+              </View>
 
-            <View style={styles.txtParent}>
-              <Text style={styles.big}>Cover Amount</Text>
-              <Text style={styles.small}>1Crore</Text>
-            </View>
-            <View style={styles.txtParent}>
-              <Text style={styles.big}>Cover till age</Text>
-              <Text style={styles.small}>60</Text>
-            </View>
+              <View style={styles.txtParent}>
+                <Text style={styles.big}>Cover Amount</Text>
+                <Text style={styles.small}>{insurance.lifeCoverAmount}</Text>
+              </View>
+              <View style={styles.txtParent}>
+                <Text style={styles.big}>Cover till age</Text>
+                <Text style={styles.small}>{insurance.coverTillAge}</Text>
+              </View>
 
-            <View style={styles.txtParent}>
-              <Text style={styles.big}>Annual Premium</Text>
-              <Text style={styles.small}>₹7063</Text>
-            </View>
+              <View style={styles.txtParent}>
+                <Text style={styles.big}>Annual Premium</Text>
+                <Text style={styles.small}>{insurance.annualPremium}</Text>
+              </View>
+
+              <View style={styles.txtParent}>
+                <Text style={styles.big}>Rider Details</Text>
+                <View style={styles.row}>
+                  <Text style={styles.small}>Get all your premium back ₹185</Text>
+                  <CheckBox
+                    disabled={false}
+                    value={c1}
+                    onValueChange={newValue => sc1(newValue)}
+                    tintColors={{true: '#00214E', false: '#00214E'}}
+                  />
+                </View>
+                <View style={styles.row}>
+                  <Text style={styles.small}>Life Cover Payout on Accidental Disability ₹224</Text>
+                  <CheckBox
+                    disabled={false}
+                    value={c2}
+                    onValueChange={newValue => sc2(newValue)}
+                    tintColors={{true: '#00214E', false: '#00214E'}}
+                  />
+                </View>
+              </View>
+
+
             </TouchableOpacity>
-
-     
           </Animated.View>
         </View>
 
