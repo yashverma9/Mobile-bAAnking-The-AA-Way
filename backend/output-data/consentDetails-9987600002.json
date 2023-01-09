@@ -1,0 +1,19 @@
+{
+  "vuaId": "9987600002@dashboard-aa-uat",
+  "validFor": "1 Year",
+  "detailsToShare": "Profile, Summary, Transactions",
+  "accountsToConnect": [
+    {
+      "providerName": "Pirimid FinTech",
+      "accountsText": "Current XXXX 1122"
+    },
+    {
+      "providerName": "Pirimid FinTech",
+      "accountsText": "Mutual Funds XXXX 7779"
+    }
+  ],
+  "transactionsFrom": "08 Jan 2021 to 08 Jan 2023",
+  "purpose": "Mobile Banking",
+  "dataLife": "10 years (or earlier on request)",
+  "detailsFetched": "Hourly"
+}

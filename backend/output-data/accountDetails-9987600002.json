@@ -1,0 +1,22 @@
+{
+  "accountDetails": [
+    {
+      "providerName": "Pirimid FinTech",
+      "accounts": [
+        {
+          "type": "Current",
+          "accNumber": "XXXX 1122"
+        }
+      ]
+    },
+    {
+      "providerName": "Pirimid FinTech",
+      "accounts": [
+        {
+          "type": "Mutual Funds",
+          "accNumber": "XXXX 7779"
+        }
+      ]
+    }
+  ]
+}

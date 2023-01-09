@@ -1,0 +1,20 @@
+{
+  "nudges": [
+    {
+      "mainText": "You are going to graduate soon. Any plans for higher education? Check out pre-approved student loans just for you!",
+      "smallText": "Student loans cover entire cost associated with the degree and the interest rates are lower"
+    },
+    {
+      "mainText": "People who love to eat are always the best people! Why not go for the best card with offers on leading food ordering platforms",
+      "smallText": "Our cards provide extra discounts on Zomato, Swiggy and many more....."
+    },
+    {
+      "mainText": "We notice you are a big spender, get this credit card for a higher credit limit!",
+      "smallText": "More than 50% of our users with similar spends use this card!"
+    },
+    {
+      "mainText": "You have been saving up a lot in your bank accounts, why not put it in a lock-in free Fixed Deposit for better returns?",
+      "smallText": "One can earn upto 7% interest on FDs"
+    }
+  ]
+}
