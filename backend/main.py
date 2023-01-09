@@ -25,9 +25,10 @@ currentConsent = {
 def test():
     return "Working!"
 
-
+'''
 @app.route('/api/initiateConsentJourney', methods = ['POST'])
 def initiateConsentJourney():
+    
     payloadData = request.json
     
     mobileNumber = str(payloadData["mobileNumber"])
@@ -60,13 +61,43 @@ def initiateConsentJourney():
     session["referenceId"] = referenceId
 
     return {"Type":"Success", "Message":"Consent Journey Initiated", "Response": response.json()}
+'''
+
+@app.route('/api/initiateConsentJourney', methods = ['POST'])
+def initiateConsentJourney():
+    
+    payloadData = request.json
+    
+    mobileNumber = str(payloadData["mobileNumber"])
+    session['mobileNumber'] = mobileNumber
+
+    vuaId = mobileNumber + "@dashboard-aa-uat"
+
+    idDetailsJsonPath = './output-data/idDetails.json'
+
+    with open(idDetailsJsonPath) as json_file:
+        idDetails = json.load(json_file)
+
+    trackingId = idDetails[mobileNumber]["trackingId"]
+    referenceId = idDetails[mobileNumber]["referenceId"]
+
+    return {"Type":"Success", "Message":"Consent Journey Initiated with following details", "vuaId": vuaId, "trackingId": trackingId, "referenceId": referenceId}
 
 
 # Get the consent/data fetch status
-@app.route('/api/checkConsentStatus', methods = ['GET'])
-def checkConsentStatus():
-    
-    url = "https://hackathon.pirimidtech.com/hackathon/consent/status?referenceId=" + session["referenceId"] + "&trackingId=" + session["trackingId"]
+@app.route('/api/checkConsentStatus/<string:mobileNumber>', methods = ['GET'])
+def checkConsentStatus(mobileNumber):
+
+    vuaId = mobileNumber + "@dashboard-aa-uat"
+    idDetailsJsonPath = './output-data/idDetails.json'
+ 
+    with open(idDetailsJsonPath) as json_file:
+        idDetails = json.load(json_file)
+
+    trackingId = idDetails[mobileNumber]["trackingId"]
+    referenceId = idDetails[mobileNumber]["referenceId"]
+
+    url = "https://hackathon.pirimidtech.com/hackathon/consent/status?referenceId=" + referenceId + "&trackingId=" + trackingId
 
     payload={}
     headers = {
@@ -78,14 +109,23 @@ def checkConsentStatus():
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
-    return {"Type": "Success", "Message":"Status checked successfully", "Response":response.json()}
+    return {"Type": "Success", "Message":"Status checked successfully", "Response":response.json(), "vuaId": vuaId}
 
 
 # Get the FI Data after consent
-@app.route('/api/getFIData', methods = ['GET'])
-def getFIData():
+@app.route('/api/getFIData/<string:mobileNumber>', methods = ['GET'])
+def getFIData(mobileNumber):
+
+    vuaId = mobileNumber + "@dashboard-aa-uat"
+    idDetailsJsonPath = './output-data/idDetails.json'
+ 
+    with open(idDetailsJsonPath) as json_file:
+        idDetails = json.load(json_file)
+
+    trackingId = idDetails[mobileNumber]["trackingId"]
+    referenceId = idDetails[mobileNumber]["referenceId"]
     
-    url = "https://hackathon.pirimidtech.com/hackathon/consent/data/fetch?referenceId=" + session["referenceId"] + "&trackingId=" + session["trackingId"]
+    url = "https://hackathon.pirimidtech.com/hackathon/consent/data/fetch?referenceId=" + referenceId + "&trackingId=" + trackingId
 
     payload={}
     headers = {
@@ -96,21 +136,28 @@ def getFIData():
     }
 
     response = requests.request("GET", url, headers=headers, data=payload)
-    fiDataRespJsonPath = "./output-data/fiData-" + session["mobileNumber"] + ".json"
-
-    print("mobileNumber:", session["mobileNumber"])
+    fiDataRespJsonPath = "./output-data/fiData-" + mobileNumber + ".json"
 
     with open(fiDataRespJsonPath, "w") as outfile:
         json.dump(response.json(), outfile)
 
-    return {"Type": "Success", "Message":"FI Data fetched successfully", "Response":response.json()}
+    return {"Type": "Success", "Message":"FI Data fetched successfully", "Response":response.json(), "vuaId": vuaId}
 
 
 # Get the bank analysis data
-@app.route('/api/getBankAnalysisData', methods = ['GET'])
-def getBankAnalysisData():
+@app.route('/api/getBankAnalysisData/<string:mobileNumber>', methods = ['GET'])
+def getBankAnalysisData(mobileNumber):
     
-    url = "https://hackathon.pirimidtech.com/hackathon/consent/analytics/fetch?referenceId=" + session["referenceId"] + "&trackingId=" + session["trackingId"]
+    vuaId = mobileNumber + "@dashboard-aa-uat"
+    idDetailsJsonPath = './output-data/idDetails.json'
+ 
+    with open(idDetailsJsonPath) as json_file:
+        idDetails = json.load(json_file)
+
+    trackingId = idDetails[mobileNumber]["trackingId"]
+    referenceId = idDetails[mobileNumber]["referenceId"]
+
+    url = "https://hackathon.pirimidtech.com/hackathon/consent/analytics/fetch?referenceId=" + referenceId + "&trackingId=" + trackingId
 
     payload={}
     headers = {
@@ -121,22 +168,19 @@ def getBankAnalysisData():
     }
 
     response = requests.request("GET", url, headers=headers, data=payload)
-    bankAnalysisRespJsonPath = "./output-data/bankAnalysisData-" + session["mobileNumber"] + ".json"
-
-    print("mobileNumber:", session["mobileNumber"])
+    bankAnalysisRespJsonPath = "./output-data/bankAnalysisData-" + mobileNumber + ".json"
 
     with open(bankAnalysisRespJsonPath, "w") as outfile:
         json.dump(response.json(), outfile)
 
-    return {"Type": "Success", "Message":"Bank analysis Data fetched successfully", "response":response.json()}
+    return {"Type": "Success", "Message":"Bank analysis Data fetched successfully", "response":response.json(), "vuaId": vuaId}
 
 
 
 # Get personalized nudge for the user
-@app.route('/api/getProfile', methods = ['GET'])
-def getProfile():
-    payloadData = request.json
-    mobileNumber = str(payloadData["mobileNumber"])
+@app.route('/api/getProfile/<string:mobileNumber>', methods = ['GET'])
+def getProfile(mobileNumber):
+    
     profileJsonPath = './output-data/profileData-' + mobileNumber + '.json'
     with open(profileJsonPath) as json_file:
         profileData = json.load(json_file)
@@ -146,10 +190,9 @@ def getProfile():
 
 
 # Get personalized nudge for the user
-@app.route('/api/getNudges', methods = ['GET'])
-def getNudges():
-    payloadData = request.json
-    mobileNumber = str(payloadData["mobileNumber"])
+@app.route('/api/getNudges/<string:mobileNumber>', methods = ['GET'])
+def getNudges(mobileNumber):
+    
     nudgesJsonPath = './output-data/nudgesData-' + mobileNumber + '.json'
 
     with open(nudgesJsonPath) as json_file:
@@ -166,13 +209,9 @@ def getNudges():
 
 
 # Get personalized widget details for the user
-@app.route('/api/getWidgetDetails', methods = ['GET'])
-def getWidgetDetails():
+@app.route('/api/getWidgetDetails/<string:mobileNumber>', methods = ['GET'])
+def getWidgetDetails(mobileNumber):
 
-    # sampleWidgetDetails = {"widget_name_1": "This widget does ...", "widget_name_2": "This widget does this..."}    
-    
-    payloadData = request.json
-    mobileNumber = str(payloadData["mobileNumber"])
     widgetsJsonPath = './output-data/widgetsData-' + mobileNumber + '.json'
 
     with open(widgetsJsonPath) as json_file:
@@ -181,11 +220,9 @@ def getWidgetDetails():
 
 
 # Get insuranceRecommendation for the user
-@app.route('/api/getInsuranceDetails', methods = ['GET'])
-def getInsuranceDetails():
+@app.route('/api/getInsuranceDetails/<string:mobileNumber>', methods = ['GET'])
+def getInsuranceDetails(mobileNumber):
 
-    payloadData = request.json
-    mobileNumber = str(payloadData["mobileNumber"])
     insuranceRecommendationJsonPath = './output-data/insuranceRecommendationData-' + mobileNumber + '.json'
 
     with open(insuranceRecommendationJsonPath) as json_file:
@@ -194,10 +231,9 @@ def getInsuranceDetails():
 
 
 # Get all accounts (banks and providers accounts fetch)
-@app.route('/api/getAllAccounts', methods = ['GET'])
-def getAllAccounts():
-    payloadData = request.json
-    mobileNumber = str(payloadData["mobileNumber"])
+@app.route('/api/getAllAccounts/<string:mobileNumber>', methods = ['GET'])
+def getAllAccounts(mobileNumber):
+
     accountDetailsJsonPath = './output-data/accountDetails-' + mobileNumber + '.json'
 
     with open(accountDetailsJsonPath) as json_file:
@@ -206,10 +242,9 @@ def getAllAccounts():
 
 
 # Get consent details
-@app.route('/api/getConsentDetails', methods = ['GET'])
-def getConsentDetails():
-    payloadData = request.json
-    mobileNumber = str(payloadData["mobileNumber"])
+@app.route('/api/getConsentDetails/<string:mobileNumber>', methods = ['GET'])
+def getConsentDetails(mobileNumber):
+
     consentDetailsJsonPath = './output-data/consentDetails-' + mobileNumber + '.json'
 
     with open(consentDetailsJsonPath) as json_file:
