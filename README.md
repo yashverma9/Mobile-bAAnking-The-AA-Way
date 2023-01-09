@@ -1,4 +1,10 @@
-# Mobile-bAAnking-The-AA-Way
+# Mobi bAAnk
+**banking experience tailored just for you!**
+
+![logo-256](https://user-images.githubusercontent.com/53463512/211359499-cbbda7ae-89fb-4a43-9540-d783a2cb3368.png)
+
+
+
 Project submisson for the bob World hAAckathon 2022
 
 ## Summary
