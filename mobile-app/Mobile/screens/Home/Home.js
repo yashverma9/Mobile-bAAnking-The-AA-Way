@@ -77,7 +77,7 @@ const Home = ({navigation}) => {
         </View>
       </View>
 
-      <Text style={styles.bigText}>specially for you</Text>
+      <Text style={styles.bigText}>Specially for you</Text>
 
       <TouchableOpacity
         onPress={() => {
@@ -88,6 +88,17 @@ const Home = ({navigation}) => {
         <View style={styles.nudgeDescription}>
           <Text style={styles.nudgeText}>{Nudges[0].smallText}</Text>
         </View>
+        <TouchableOpacity
+            onPress={() => {
+              if(mobileNumber===''){
+                alert("Enter Mobile Number")
+                return;
+              }
+              navigation.navigate('Otp');
+            }}
+            style={styles.button}>
+            <Text style={styles.buttonText}>Check this out</Text>
+          </TouchableOpacity>
         {/* <TouchableOpacity
           onPress={() => {
             alert('Nudges');
@@ -161,7 +172,7 @@ const Home = ({navigation}) => {
 
       <View style={styles.bottomTab}>
         <View style={styles.pill}></View>
-        <Text style={styles.bottomTabText}>Our Services</Text>
+        <Text style={styles.bottomTabText}>Features</Text>
         <View style={styles.hr}></View>
         <View style={styles.menuParent}>
           <TouchableOpacity style={styles.menuItems}>
