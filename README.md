@@ -3,9 +3,9 @@
 
 ![logo-256](https://user-images.githubusercontent.com/53463512/211359499-cbbda7ae-89fb-4a43-9540-d783a2cb3368.png)
 
-
-
 Project submisson for the bob World hAAckathon 2022
+
+NOTE: **FOR THE DEMO APP, USE THESE MOBILE NUMBERS ONLY (provided by Pirimid)- 9987600001, 9987600002**
 
 ## Summary
 
