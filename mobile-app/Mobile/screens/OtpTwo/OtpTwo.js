@@ -58,7 +58,7 @@ const Otp = ({navigation}) => {
           {!hide && (
             <View style={styles.fetchingOtp}>
               <Lottie
-                source={require('../../assets/svg/otp-loader.json')}
+                source={require('../../assets/svg/otp-loader-two.json')}
                 autoPlay
                 loop
                 style={{width: 150, height: 150}}

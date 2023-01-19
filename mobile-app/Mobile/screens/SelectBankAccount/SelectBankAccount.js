@@ -71,7 +71,7 @@ const SelectBankAccount = ({navigation}) => {
             <Text style={styles.bktxt}>Choose which ones to connect</Text>
             {allAccounts.map((item, index) => {
               return (
-                <TouchableOpacity style={[styles.bankAccount, styles.selected]}>
+                <TouchableOpacity key={index} style={[styles.bankAccount, styles.selected]}>
                   <View style={styles.row}>
                     {item.providerName === 'Bank of Baroda' && (
                       <Bob
@@ -116,7 +116,7 @@ const SelectBankAccount = ({navigation}) => {
                   </View>
                   {item.accounts.map((itm, idx) => {
                     return (
-                      <View style={[styles.row, styles.rowAcc]}>
+                      <View key={idx} style={[styles.row, styles.rowAcc]}>
                         <Text
                           style={{
                             color: 'black',

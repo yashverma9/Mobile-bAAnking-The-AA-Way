@@ -117,7 +117,7 @@ const FetchAA = ({navigation}) => {
               <Text style={styles.big}>Accounts to connect</Text>
               {consentDetails.accountsToConnect.map((item, index) => {
                 return (
-                  <View style={styles.logoWithText}>
+                  <View key={index} style={styles.logoWithText}>
                     {item.providerName === 'Bank of Baroda' && (
                       <Bob
                         width={getScaledDimension(20, 'height')}

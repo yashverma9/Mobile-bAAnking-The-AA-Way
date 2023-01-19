@@ -30,9 +30,9 @@ const Otp = ({navigation}) => {
   const [showLoader, setShowLoader] = React.useState(false);
 
   React.useEffect(() => {
-    // setTimeout(() => {
-    //   setHide(false);
-    // }, 700);
+    setTimeout(() => {
+      setHide(false);
+    }, 700);
     setTimeout(() => {
       setMobileNumber('1234');
       setHide(true);
@@ -85,7 +85,7 @@ const Otp = ({navigation}) => {
           {!hide && (
             <View style={styles.fetchingOtp}>
               <Lottie
-                source={require('../../assets/svg/otp-loader.json')}
+                source={require('../../assets/svg/otp-loader-two.json')}
                 autoPlay
                 loop
                 style={{width: 150, height: 150}}
