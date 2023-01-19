@@ -53,6 +53,8 @@ export default StyleSheet.create({
     paddingBottom: '4%',
     marginTop: 'auto',
     marginBottom: '8%',
+    borderWidth: 1,
+    borderColor: '#086DF6',
   },
   buttonText: {
     fontFamily: 'Poppins-Medium',

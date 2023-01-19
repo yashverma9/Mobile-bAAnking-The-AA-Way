@@ -55,6 +55,8 @@ export default StyleSheet.create({
     justifyContent: 'center',
     paddingTop: '4%',
     paddingBottom: '4%',
+    borderWidth: 1,
+    borderColor: '#086DF6',
     
   },
   buttonText: {

@@ -106,9 +106,16 @@ const Consents = ({navigation}) => {
           );
         })}
 
-   
+        <Text style={styles.headerTextThree}>Manage Consent</Text>
+        <TouchableOpacity
+          onPress={() => {
+            alert("consent revoked")
+          }}
+          style={styles.buttonRC}>
+          <Text style={styles.buttonTextRC}>Revoke Consent</Text>
+        </TouchableOpacity>
 
-        <Text style={styles.headerTextThree}>Consent History{'\n'}</Text>
+        <Text style={styles.headerTextThree}>Consent History</Text>
 
         <Animated.View
           entering={FadeInDown.duration(650)}

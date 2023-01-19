@@ -10,10 +10,9 @@ export default StyleSheet.create({
   },
   content: {
     width: '88%',
-   // backgroundColor: 'green',
+    // backgroundColor: 'green',
     backgroundColor: '#FFFFFF',
     flex: 1,
-
   },
   headerText: {
     marginTop: '4%',
@@ -57,11 +56,32 @@ export default StyleSheet.create({
     textAlign: 'left',
     padding: 0,
   },
+  buttonRC: {
+    marginTop: '4%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginBottom: '4%',
+    width: '100%',
+    //height: getScaledDimension(80, 'height'),
+    backgroundColor: '#FF8356',
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: '4%',
+    paddingBottom: '4%',
+    // borderWidth: 1,
+    // borderColor: '#086DF6',
+  },
+  buttonTextRC: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: getScaledDimension(18, 'font'),
+    color: '#ffffff',
+  },
   button: {
     marginTop: '4%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginBottom:'4%',
+    marginBottom: '4%',
     width: '80%',
     //height: getScaledDimension(80, 'height'),
     backgroundColor: '#E9F2FF',
@@ -70,7 +90,8 @@ export default StyleSheet.create({
     justifyContent: 'center',
     paddingTop: '4%',
     paddingBottom: '4%',
-    
+    borderWidth: 1,
+    borderColor: '#086DF6',
   },
   buttonText: {
     fontFamily: 'Poppins-Medium',
@@ -80,10 +101,10 @@ export default StyleSheet.create({
   consent: {
     marginTop: '6%',
     paddingBottom: '4%',
-    paddingTop:'4%',
+    paddingTop: '4%',
     width: '100%',
     // height: '80%',
-   // backgroundColor: 'red',
+    // backgroundColor: 'red',
     marginLeft: 'auto',
     marginRight: 'auto',
     borderRadius: 20,
@@ -99,10 +120,10 @@ export default StyleSheet.create({
   consentTwo: {
     marginTop: '0%',
     paddingBottom: '4%',
-    paddingTop:'4%',
+    paddingTop: '4%',
     width: '100%',
     // height: '80%',
-   // backgroundColor: 'red',
+    // backgroundColor: 'red',
     marginLeft: 'auto',
     marginRight: 'auto',
     borderRadius: 20,
@@ -215,24 +236,24 @@ export default StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'flex-start',
-   // flexDirection: 'row',
+    // flexDirection: 'row',
     padding: '2%',
   },
   selected: {
     borderColor: '#00214E',
   },
-  row:{
-    flexDirection:'row',
-    width:'100%',
-    alignItems:'center',
-   // backgroundColor:'red',
-    justifyContent:'flex-start',
-    paddingLeft:'4%'
+  row: {
+    flexDirection: 'row',
+    width: '100%',
+    alignItems: 'center',
+    // backgroundColor:'red',
+    justifyContent: 'flex-start',
+    paddingLeft: '4%',
   },
-  rowAcc:{
-    justifyContent:'space-between',
-    paddingLeft:'2%',
-    paddingRight:'2%'
+  rowAcc: {
+    justifyContent: 'space-between',
+    paddingLeft: '2%',
+    paddingRight: '2%',
   },
   bankName: {
     marginLeft: '5%',
@@ -241,7 +262,7 @@ export default StyleSheet.create({
     color: 'black',
   },
   bktxt: {
-    marginTop:'2%',
+    marginTop: '2%',
     marginLeft: '5%',
     marginRight: 'auto',
     fontFamily: 'Poppins-SemiBold',
@@ -252,25 +273,25 @@ export default StyleSheet.create({
     marginLeft: 'auto',
     marginRight: '4%',
   },
-  secure:{
-    width:'100%',
-    height:"4%",
-    backgroundColor:'red',
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'center'
+  secure: {
+    width: '100%',
+    height: '4%',
+    backgroundColor: 'red',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  secureText:{
+  secureText: {
     marginLeft: '2%',
     fontFamily: 'Poppins-SemiBold',
     fontSize: getScaledDimension(12, 'font'),
     color: 'white',
   },
-  lock:{
-    marginRight:'2%'
+  lock: {
+    marginRight: '2%',
   },
-  secureGroup:{
-    flexDirection:'row'
+  secureGroup: {
+    flexDirection: 'row',
   },
   txtParent: {
     marginRight: 'auto',
@@ -288,13 +309,13 @@ export default StyleSheet.create({
     color: '#00214E',
   },
 
-  consentRow:{
-    marginTop:'3%',
-    flexDirection:'row',
-    width:'88%',
-    alignItems:'center',
+  consentRow: {
+    marginTop: '3%',
+    flexDirection: 'row',
+    width: '88%',
+    alignItems: 'center',
     //backgroundColor:'red',
-    justifyContent:'flex-start'
+    justifyContent: 'flex-start',
   },
   consentText: {
     //marginLeft: '5%',
@@ -302,19 +323,19 @@ export default StyleSheet.create({
     fontSize: getScaledDimension(13, 'font'),
     color: '#00214E',
   },
-  status:{
-    marginLeft:'auto',
+  status: {
+    marginLeft: 'auto',
     borderRadius: 16,
-    width:88,
+    width: 88,
     // height:21,
-    alignItems:'center',
-    justifyContent:'center',
-    backgroundColor:'#EBFAF5',
-    padding:'1%'
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#EBFAF5',
+    padding: '1%',
   },
-  statusText:{
+  statusText: {
     fontFamily: 'Poppins-SemiBold',
     fontSize: getScaledDimension(11, 'font'),
     color: '#0ABB85',
-  }
+  },
 });
