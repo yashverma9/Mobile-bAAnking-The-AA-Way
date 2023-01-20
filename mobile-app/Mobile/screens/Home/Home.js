@@ -21,6 +21,87 @@ import CreditCard from '../../assets/svg/creditCard.svg';
 import CC2 from '../../assets/svg/cc2.svg';
 import UPI from '../../assets/svg/upi.svg';
 import VA from '../../assets/svg/virtualAssistant.svg';
+
+import Investment from '../../assets/svg/investment.svg';
+import Deposit from '../../assets/svg/deposit.svg';
+import Payment from '../../assets/svg/payment.svg';
+import Insurance from '../../assets/svg/insurance.svg';
+import Card from '../../assets/svg/card.svg';
+import Account from '../../assets/svg/account.svg';
+import Loan from '../../assets/svg/loan.svg';
+
+const getIcon = data => {
+  // alert('called');
+  // console.log('----getIcon called-----');
+  // console.log(typeof data)
+  // console.log(data[0]);
+  switch (data[0]) {
+    case 'Investments':
+      console.log('----INVESTMENTS CASE-----');
+      return (
+        <Investment
+          style={{paddingLeft: '1%'}}
+          width={getScaledDimension(35, 'height')}
+          height={getScaledDimension(35, 'height')}
+        />
+      );
+      break;
+    case 'Deposits':
+      return (
+        <Deposit
+          style={{paddingLeft: '1%'}}
+          width={getScaledDimension(35, 'height')}
+          height={getScaledDimension(35, 'height')}
+        />
+      );
+      break;
+    case 'Payments':
+      return (
+        <Payment
+          style={{paddingLeft: '1%'}}
+          width={getScaledDimension(35, 'height')}
+          height={getScaledDimension(35, 'height')}
+        />
+      );
+      break;
+    case 'Insurance':
+      return (
+        <Insurance
+          style={{paddingLeft: '1%'}}
+          width={getScaledDimension(35, 'height')}
+          height={getScaledDimension(35, 'height')}
+        />
+      );
+      break;
+    case 'Cards':
+      return (
+        <Card
+          style={{paddingLeft: '1%'}}
+          width={getScaledDimension(35, 'height')}
+          height={getScaledDimension(35, 'height')}
+        />
+      );
+      break;
+    case 'Accounts':
+      return (
+        <Account
+          style={{paddingLeft: '1%'}}
+          width={getScaledDimension(35, 'height')}
+          height={getScaledDimension(35, 'height')}
+        />
+      );
+      break;
+    case 'Loans':
+      return (
+        <Loan
+          style={{paddingLeft: '1%'}}
+          width={getScaledDimension(35, 'height')}
+          height={getScaledDimension(35, 'height')}
+        />
+      );
+      break;
+  }
+};
 import {GeneralContext} from '../../contexts/GeneralContext';
 const Home = ({navigation}) => {
   const {profileData, setProfileData} = React.useContext(GeneralContext);
@@ -124,19 +205,39 @@ const Home = ({navigation}) => {
         <Text style={styles.mediumText}>Financial Services for you</Text>
 
         <View style={styles.row}>
-          <TouchableOpacity style={styles.widget}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('ComingSoon');
+            }}
+            style={styles.widget}>
+            {getIcon(Object.keys(widgets[0]))}
             <Text style={styles.widgetText}>{Object.keys(widgets[0])}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.widget}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('ComingSoon');
+            }}
+            style={styles.widget}>
+            {getIcon(Object.keys(widgets[1]))}
             <Text style={styles.widgetText}>{Object.keys(widgets[1])}</Text>
           </TouchableOpacity>
         </View>
 
         <View style={styles.row}>
-          <TouchableOpacity style={styles.widget}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('ComingSoon');
+            }}
+            style={styles.widget}>
+            {getIcon(Object.keys(widgets[2]))}
             <Text style={styles.widgetText}>{Object.keys(widgets[2])}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.widget}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('ComingSoon');
+            }}
+            style={styles.widget}>
+            {getIcon(Object.keys(widgets[3]))}
             <Text style={styles.widgetText}>{Object.keys(widgets[3])}</Text>
           </TouchableOpacity>
         </View>
@@ -156,7 +257,6 @@ const Home = ({navigation}) => {
             height={getScaledDimension(25, 'height')}
           />
         </TouchableOpacity>
-        
       </ScrollView>
 
       {/* <Text style={[styles.mediumText,{marginTop:'1%'}]}>Account Aggregator</Text>

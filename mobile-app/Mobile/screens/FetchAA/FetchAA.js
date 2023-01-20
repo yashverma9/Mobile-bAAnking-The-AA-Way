@@ -83,7 +83,7 @@ const FetchAA = ({navigation}) => {
         <Animated.View entering={FadeInRight.duration(650)}>
           <Text style={styles.headerText}>consent request</Text>
           <Text style={styles.bodyText}>
-            Grant consnet to retrieve account details
+            Grant consent to retrieve account details
           </Text>
         </Animated.View>
 
@@ -164,7 +164,7 @@ const FetchAA = ({navigation}) => {
                   </Text>
                 </View>
                 <View style={styles.txtParent}>
-                  <Text style={styles.big}>Consent duration</Text>
+                  <Text style={styles.big}>Transaction duration</Text>
                   <Text style={styles.small}>
                     {consentDetails.transactionsFrom.trim()}
                   </Text>
