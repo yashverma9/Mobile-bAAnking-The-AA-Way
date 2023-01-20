@@ -52,14 +52,12 @@ const JourneyTwo = ({navigation}) => {
   const {profileData, setProfileData} = React.useContext(GeneralContext);
 
   React.useEffect(() => {
-    setName(profileData.name)
-    setDob(profileData.dob)
-    setIncomeRange('8-12 LPA')
-    setAddress(profileData.address)
-  
+    setName(profileData.name);
+    setDob(profileData.dob);
+    setIncomeRange('8-12 LPA');
+    setAddress(profileData.address);
+  }, [insurance, profileData]);
 
-  }, [insurance,profileData])
-  
   return (
     <View style={styles.FetchAA}>
       <ScrollView style={styles.content}>
@@ -214,15 +212,15 @@ const JourneyTwo = ({navigation}) => {
               style={styles.floatingMessage}>
               <Text style={styles.floatingMessage}>Revoke consent anytime</Text>
             </Animated.View> */}
-
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate('Home');
-          }}
-          style={styles.button}>
-          <Text style={styles.buttonText}>Checkout</Text>
-        </TouchableOpacity>
       </ScrollView>
+
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Home');
+        }}
+        style={styles.button}>
+        <Text style={styles.buttonText}>Checkout</Text>
+      </TouchableOpacity>
       {/* <View style={styles.secure}>
           <View style={styles.secureGroup}>
             <Lock

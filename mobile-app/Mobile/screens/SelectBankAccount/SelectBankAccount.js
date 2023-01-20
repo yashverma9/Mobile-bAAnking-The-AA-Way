@@ -134,7 +134,7 @@ const SelectBankAccount = ({navigation}) => {
                           style={{
                             color: 'black',
                           }}>{`${itm.type} ${itm.accNumber}`}</Text>
-                        {console.log(index,checkedState[index])}
+                        {console.log(index, checkedState[index])}
                         <CheckBox
                           disabled={false}
                           // value={c3}
@@ -256,15 +256,14 @@ const SelectBankAccount = ({navigation}) => {
           style={styles.floatingMessage}>
           <Text style={styles.floatingMessage}>Revoke consent anytime</Text>
         </Animated.View> */}
-
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate('OtpTwo');
-          }}
-          style={styles.button}>
-          <Text style={styles.buttonText}>Verify Accounts</Text>
-        </TouchableOpacity>
       </ScrollView>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('OtpTwo');
+        }}
+        style={styles.button}>
+        <Text style={styles.buttonText}>Verify Accounts</Text>
+      </TouchableOpacity>
       <View style={styles.secure}>
         <View style={styles.secureGroup}>
           <Lock

@@ -66,6 +66,7 @@ export default StyleSheet.create({
   consent: {
     marginTop: '4%',
     paddingBottom: '4%',
+    marginBottom:'2%',
     width: '95%',
     // height: '80%',
     // backgroundColor: 'red',

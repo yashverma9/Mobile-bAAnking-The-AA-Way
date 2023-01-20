@@ -13,6 +13,7 @@ export default StyleSheet.create({
     // backgroundColor: 'green',
     backgroundColor: '#FFFFFF',
     flex: 1,
+    
   },
   headerText: {
     marginTop: '4%',
@@ -65,6 +66,7 @@ export default StyleSheet.create({
   consent: {
     marginTop: '2%',
     paddingBottom: '4%',
+    marginBottom:'2%',
     width: '95%',
     // height: '80%',
     // backgroundColor: 'red',

@@ -62,8 +62,9 @@ export default StyleSheet.create({
     color: '#00214E',
   },
   consent: {
-    marginTop: 'auto',
+    marginTop: '4%',
     paddingBottom: '4%',
+    marginBottom:'2%',
     width: '95%',
     // height: '80%',
     backgroundColor: 'red',

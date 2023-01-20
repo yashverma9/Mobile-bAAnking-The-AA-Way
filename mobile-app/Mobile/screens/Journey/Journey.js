@@ -153,14 +153,15 @@ const Journey = ({navigation}) => {
             <Text style={styles.floatingMessage}>Revoke consent anytime</Text>
           </Animated.View> */}
 
-        <TouchableOpacity
+
+      </ScrollView>
+      <TouchableOpacity
           onPress={() => {
             navigation.navigate('JourneyTwo');
           }}
           style={styles.button}>
           <Text style={styles.buttonText}>Proceed</Text>
         </TouchableOpacity>
-      </ScrollView>
       {/* <View style={styles.secure}>
         <View style={styles.secureGroup}>
           <Lock

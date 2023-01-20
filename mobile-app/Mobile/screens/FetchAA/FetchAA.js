@@ -221,16 +221,7 @@ const FetchAA = ({navigation}) => {
             )}
           </Animated.View>
         </View>
-        <Animated.View
-          entering={FadeInRight.duration(650)}
-          style={styles.floatingMessage}>
-          <Saafe
-            style={{marginLeft: 'auto', marginRight: 'auto', marginTop: '4%'}}
-            width={getScaledDimension(20, 'height')}
-            height={getScaledDimension(20, 'height')}
-          />
-          <Text style={styles.floatingMessage}>Powered by Saafe</Text>
-        </Animated.View>
+
 
         {/* <TouchableOpacity
           onPress={() => {
@@ -240,6 +231,16 @@ const FetchAA = ({navigation}) => {
           <Text style={styles.buttonText}>...</Text>
         </TouchableOpacity> */}
       </ScrollView>
+      <Animated.View
+          entering={FadeInRight.duration(650)}
+          style={styles.floatingMessage}>
+          <Saafe
+            style={{marginLeft: 'auto', marginRight: 'auto', marginTop: '4%'}}
+            width={getScaledDimension(20, 'height')}
+            height={getScaledDimension(20, 'height')}
+          />
+          <Text style={styles.floatingMessage}>Powered by Saafe</Text>
+        </Animated.View>
       {true && (
         <View style={styles.secure}>
           <View style={styles.secureGroup}>
