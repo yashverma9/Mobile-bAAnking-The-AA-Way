@@ -45,12 +45,23 @@ const SelectBankAccount = ({navigation}) => {
   const [c3, sc3] = React.useState(true);
   const [c4, sc4] = React.useState(true);
   const [c5, sc5] = React.useState(true);
+  const [checkedState, setCheckedState] = React.useState(
+    new Array(20).fill(true),
+  );
+  console.log(checkedState);
   const {allAccounts, setAllAccounts} = React.useContext(GeneralContext);
   const {consentDetails, setConsentDetails} = React.useContext(GeneralContext);
   console.log('-----', allAccounts);
+
+  const handleOnChange = position => {
+    const updatedCheckedState = checkedState.map((item, index) =>
+      index === position ? !item : item,
+    );
+    setCheckedState(updatedCheckedState);
+  };
   return (
     <View style={styles.FetchAA}>
-      <View style={styles.content}>
+      <ScrollView style={styles.content}>
         <Animated.View entering={FadeInRight.duration(650)}>
           <Text style={styles.headerText}>securely view accounts</Text>
           <Text style={styles.bodyText}>
@@ -69,9 +80,11 @@ const SelectBankAccount = ({navigation}) => {
               height={getScaledDimension(100, 'height')}
             /> */}
             <Text style={styles.bktxt}>Choose which ones to connect</Text>
-            {allAccounts.map((item, index) => {
+            {allAccounts?.map((item, index) => {
               return (
-                <TouchableOpacity key={index} style={[styles.bankAccount, styles.selected]}>
+                <TouchableOpacity
+                  key={index}
+                  style={[styles.bankAccount, styles.selected]}>
                   <View style={styles.row}>
                     {item.providerName === 'Bank of Baroda' && (
                       <Bob
@@ -121,10 +134,13 @@ const SelectBankAccount = ({navigation}) => {
                           style={{
                             color: 'black',
                           }}>{`${itm.type} ${itm.accNumber}`}</Text>
+                        {console.log(index,checkedState[index])}
                         <CheckBox
                           disabled={false}
-                          value={c3}
-                          onValueChange={newValue => sc3(newValue)}
+                          // value={c3}
+                          // onValueChange={newValue => sc3(newValue)}
+                          value={checkedState[index]}
+                          onChange={() => handleOnChange(index)}
                           tintColors={{true: '#00214E', false: '#00214E'}}
                         />
                       </View>
@@ -248,7 +264,7 @@ const SelectBankAccount = ({navigation}) => {
           style={styles.button}>
           <Text style={styles.buttonText}>Verify Accounts</Text>
         </TouchableOpacity>
-      </View>
+      </ScrollView>
       <View style={styles.secure}>
         <View style={styles.secureGroup}>
           <Lock

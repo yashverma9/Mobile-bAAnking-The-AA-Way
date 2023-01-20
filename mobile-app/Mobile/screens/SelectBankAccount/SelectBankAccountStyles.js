@@ -10,10 +10,9 @@ export default StyleSheet.create({
   },
   content: {
     width: '88%',
-   // backgroundColor: 'green',
+    // backgroundColor: 'green',
     backgroundColor: '#FFFFFF',
     flex: 1,
-
   },
   headerText: {
     marginTop: '4%',
@@ -43,10 +42,10 @@ export default StyleSheet.create({
     padding: 0,
   },
   button: {
-    marginTop: 'auto',
+    marginTop: '4%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginBottom:'2%',
+    marginBottom: '2%',
     width: '80%',
     //height: getScaledDimension(80, 'height'),
     backgroundColor: '#E9F2FF',
@@ -57,7 +56,6 @@ export default StyleSheet.create({
     paddingBottom: '4%',
     borderWidth: 1,
     borderColor: '#086DF6',
-    
   },
   buttonText: {
     fontFamily: 'Poppins-Medium',
@@ -69,7 +67,7 @@ export default StyleSheet.create({
     paddingBottom: '4%',
     width: '95%',
     // height: '80%',
-   // backgroundColor: 'red',
+    // backgroundColor: 'red',
     marginLeft: 'auto',
     marginRight: 'auto',
     borderRadius: 20,
@@ -183,22 +181,22 @@ export default StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'flex-start',
-   // flexDirection: 'row',
+    // flexDirection: 'row',
     padding: '2%',
   },
   selected: {
     borderColor: '#00214E',
   },
-  row:{
-    flexDirection:'row',
-    width:'100%',
-    alignItems:'center',
+  row: {
+    flexDirection: 'row',
+    width: '100%',
+    alignItems: 'center',
     //backgroundColor:'red'
   },
-  rowAcc:{
-    justifyContent:'space-between',
-    paddingLeft:'2%',
-    paddingRight:'2%'
+  rowAcc: {
+    justifyContent: 'space-between',
+    paddingLeft: '2%',
+    paddingRight: '2%',
   },
   bankName: {
     marginLeft: '0%',
@@ -207,7 +205,7 @@ export default StyleSheet.create({
     color: 'black',
   },
   bktxt: {
-    marginTop:'2%',
+    marginTop: '2%',
     marginLeft: '5%',
     marginRight: 'auto',
     fontFamily: 'Poppins-SemiBold',
@@ -218,24 +216,24 @@ export default StyleSheet.create({
     marginLeft: 'auto',
     marginRight: '4%',
   },
-  secure:{
-    width:'100%',
-    height:"4%",
-    backgroundColor:'#FF5851',
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'center'
+  secure: {
+    width: '100%',
+    height: '4%',
+    backgroundColor: '#FF5851',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  secureText:{
+  secureText: {
     marginLeft: '2%',
     fontFamily: 'Poppins-SemiBold',
     fontSize: getScaledDimension(12, 'font'),
     color: 'white',
   },
-  lock:{
-    marginRight:'2%'
+  lock: {
+    marginRight: '2%',
   },
-  secureGroup:{
-    flexDirection:'row'
-  }
+  secureGroup: {
+    flexDirection: 'row',
+  },
 });

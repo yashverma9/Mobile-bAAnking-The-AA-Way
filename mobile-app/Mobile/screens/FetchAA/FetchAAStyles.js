@@ -10,7 +10,7 @@ export default StyleSheet.create({
   },
   content: {
     width: '88%',
-    backgroundColor: 'green',
+    // backgroundColor: 'green',
     backgroundColor: '#FFFFFF',
     flex: 1,
   },
@@ -114,9 +114,8 @@ export default StyleSheet.create({
     fontFamily: 'Poppins-Medium',
     fontSize: getScaledDimension(13, 'font'),
     color: '#00214E',
-    marginLeft:'2%',
-    marginRight:'8%'
-
+    marginLeft: '2%',
+    marginRight: '8%',
   },
   showMore: {
     marginTop: '4%',
@@ -140,7 +139,7 @@ export default StyleSheet.create({
     // elevation: 3,
     alignItems: 'center',
     justifyContent: 'center',
-    height:48
+    height: 48,
   },
   acceptText: {
     fontFamily: 'Poppins-Medium',
@@ -161,7 +160,7 @@ export default StyleSheet.create({
     // elevation: 3,
     alignItems: 'center',
     justifyContent: 'center',
-    height:48
+    height: 48,
   },
   rejectText: {
     fontFamily: 'Poppins-Medium',
@@ -169,8 +168,8 @@ export default StyleSheet.create({
     color: 'white',
   },
   floatingMessage: {
-    marginTop:'2%',
-    marginTop: 'auto',
+    //backgroundColor: 'red',
+    marginTop: '4%',
     marginBottom: '2%',
     fontFamily: 'Poppins-Medium',
     fontSize: getScaledDimension(15, 'font'),
@@ -178,30 +177,30 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
 
-  secure:{
-    width:'100%',
-    height:"4%",
-    backgroundColor:'#FF5851',
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'center'
+  secure: {
+    width: '100%',
+    height: '4%',
+    backgroundColor: '#FF5851',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  secureText:{
+  secureText: {
     marginLeft: '2%',
     fontFamily: 'Poppins-SemiBold',
     fontSize: getScaledDimension(12, 'font'),
     color: 'white',
   },
-  lock:{
-    marginRight:'2%'
+  lock: {
+    marginRight: '2%',
   },
-  secureGroup:{
-    flexDirection:'row'
+  secureGroup: {
+    flexDirection: 'row',
   },
-  logoWithText:{
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'flex-start',
-    marginTop:'2%',
-  }
+  logoWithText: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    marginTop: '2%',
+  },
 });

@@ -47,7 +47,7 @@ const Journey = ({navigation}) => {
   const [c3, sc3] = React.useState(false);
   return (
     <View style={styles.FetchAA}>
-      <View style={styles.content}>
+      <ScrollView style={styles.content}>
         <Animated.View entering={FadeInRight.duration(650)}>
           <Text style={styles.headerText}>
             recommended insurance based on your demographic and finances
@@ -160,7 +160,7 @@ const Journey = ({navigation}) => {
           style={styles.button}>
           <Text style={styles.buttonText}>Proceed</Text>
         </TouchableOpacity>
-      </View>
+      </ScrollView>
       {/* <View style={styles.secure}>
         <View style={styles.secureGroup}>
           <Lock

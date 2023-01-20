@@ -79,7 +79,7 @@ const FetchAA = ({navigation}) => {
   };
   return (
     <View style={styles.FetchAA}>
-      <View style={styles.content}>
+      <ScrollView style={styles.content}>
         <Animated.View entering={FadeInRight.duration(650)}>
           <Text style={styles.headerText}>consent request</Text>
           <Text style={styles.bodyText}>
@@ -200,7 +200,7 @@ const FetchAA = ({navigation}) => {
                 Show More{' '}
               </Text>
             )}
-            {!showMore && (
+            {true && (
               <View style={styles.buttonParent}>
                 <TouchableOpacity
                   onPress={() => {
@@ -225,7 +225,7 @@ const FetchAA = ({navigation}) => {
           entering={FadeInRight.duration(650)}
           style={styles.floatingMessage}>
           <Saafe
-            style={{marginLeft: 'auto', marginRight: 'auto'}}
+            style={{marginLeft: 'auto', marginRight: 'auto', marginTop: '4%'}}
             width={getScaledDimension(20, 'height')}
             height={getScaledDimension(20, 'height')}
           />
@@ -239,8 +239,8 @@ const FetchAA = ({navigation}) => {
           style={styles.button}>
           <Text style={styles.buttonText}>...</Text>
         </TouchableOpacity> */}
-      </View>
-      {!showMore && (
+      </ScrollView>
+      {true && (
         <View style={styles.secure}>
           <View style={styles.secureGroup}>
             <Lock

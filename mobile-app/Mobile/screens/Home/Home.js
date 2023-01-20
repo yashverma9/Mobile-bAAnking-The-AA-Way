@@ -81,7 +81,11 @@ const Home = ({navigation}) => {
 
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('Journey');
+          if (profileData.mobile === '9987600001') {
+            navigation.navigate('Journey');
+          } else {
+            navigation.navigate('ComingSoon');
+          }
         }}
         style={styles.nudge}>
         <Text style={styles.nudgeH1}>{Nudges[0].mainText}</Text>
@@ -90,7 +94,11 @@ const Home = ({navigation}) => {
         </View>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('Journey');
+            if (profileData.mobile === '9987600001') {
+              navigation.navigate('Journey');
+            } else {
+              navigation.navigate('ComingSoon');
+            }
           }}
           style={styles.button}>
           <Text style={styles.buttonText}>Check this out</Text>
