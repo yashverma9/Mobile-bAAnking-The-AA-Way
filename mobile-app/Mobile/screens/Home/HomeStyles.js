@@ -1,9 +1,21 @@
 import {StyleSheet} from 'react-native';
 import {getScaledDimension} from '../../utils/DynamicScaling';
 export default StyleSheet.create({
-  content: {
-    backgroundColor: 'white',
+  scroll: {
+    // backgroundColor: 'red',
+    backgroundColor: '#FFFFFF',
+  },
+  parent: {
+    backgroundColor: '#FFFFFF',
     flex: 1,
+    //alignItems: 'center',
+  },
+  content: {
+    height: '100%',
+    //backgroundColor: 'green',
+    // backgroundColor: 'white',
+    flexGrow: 1,
+    backgroundColor: '#FFFFFF',
   },
   header: {
     width: '100%',
@@ -165,7 +177,7 @@ export default StyleSheet.create({
     //borderWidth: 0.5,
     //  borderColor: '#BE4A4A',
     padding: '2%',
-   //  backgroundColor: '#BE4A4A',
+    //  backgroundColor: '#BE4A4A',
     borderRadius: 20,
     borderTopLeftRadius: 0,
     borderTopRightRadius: 0,
@@ -245,8 +257,10 @@ export default StyleSheet.create({
     marginLeft: '4%',
   },
   bottomTab: {
-    //  backgroundColor: 'red',
-    marginTop: 'auto',
+    // position: 'absolute',
+    // bottom: 0,
+   // backgroundColor: 'red',
+    //marginTop: '10%',
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     width: '100%',
@@ -269,7 +283,7 @@ export default StyleSheet.create({
   },
   bottomTabText: {
     marginLeft: '4%',
-    marginTop: '4%',
+    marginTop: '0%',
     marginRight: 'auto',
     fontFamily: 'Poppins-SemiBold',
     fontSize: getScaledDimension(20, 'font'),
