@@ -60,6 +60,7 @@ const Consents = ({navigation}) => {
         {consentDetails.accountsToConnect.map((item, index) => {
           return (
             <Animated.View
+              key={index}
               entering={FadeInDown.duration(650)}
               style={styles.consent}>
               <View style={styles.consentAimation}>
@@ -106,14 +107,16 @@ const Consents = ({navigation}) => {
           );
         })}
 
-        <Text style={styles.headerTextThree}>Manage Consent</Text>
-        <TouchableOpacity
-          onPress={() => {
-            alert("consent revoked")
-          }}
-          style={styles.buttonRC}>
-          <Text style={styles.buttonTextRC}>Revoke Consent</Text>
-        </TouchableOpacity>
+        <Animated.View entering={FadeInDown.duration(650)}>
+          <Text style={styles.headerTextThree}>Manage Consent</Text>
+          <TouchableOpacity
+            onPress={() => {
+              alert('consent revoked');
+            }}
+            style={styles.buttonRC}>
+            <Text style={styles.buttonTextRC}>Revoke Consent</Text>
+          </TouchableOpacity>
+        </Animated.View>
 
         <Text style={styles.headerTextThree}>Consent History</Text>
 
@@ -142,7 +145,7 @@ const Consents = ({navigation}) => {
             </View>
             {consentDetails.accountsToConnect.map((item, index) => {
               return (
-                <View style={styles.consentRow}>
+                <View key={index} style={styles.consentRow}>
                   <Text style={[styles.consentText]}>{item.providerName}</Text>
                   <View style={styles.status}>
                     <Text style={styles.statusText}>Active</Text>

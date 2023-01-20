@@ -30,9 +30,9 @@ const Otp = ({navigation}) => {
   const [showLoader, setShowLoader] = React.useState(false);
 
   React.useEffect(() => {
-    setTimeout(() => {
-      setHide(false);
-    }, 700);
+    // setTimeout(() => {
+    //   setHide(false);
+    // }, 700);
     setTimeout(() => {
       setMobileNumber('1234');
       setHide(true);

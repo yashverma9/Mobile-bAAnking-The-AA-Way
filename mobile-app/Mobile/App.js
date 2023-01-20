@@ -17,6 +17,7 @@ import Journey from './screens/Journey/Journey';
 import JourneyTwo from './screens/Journey/JourneyTwo';
 import Profile from './screens/Profile/Profile';
 import Consents from './screens/Consents/Consents';
+import ComingSoon from './screens/ComingSoon/ComingSoon';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -94,6 +95,11 @@ const App = () => {
             name="Consents"
             options={{headerShown: false, animation: 'none'}}
             component={Consents}
+          />
+          <Stack.Screen
+            name="ComingSoon"
+            options={{headerShown: false, animation: 'none'}}
+            component={ComingSoon}
           />
         </Stack.Navigator>
       </NavigationContainer>

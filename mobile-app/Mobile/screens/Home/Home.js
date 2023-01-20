@@ -89,12 +89,12 @@ const Home = ({navigation}) => {
           <Text style={styles.nudgeText}>{Nudges[0].smallText}</Text>
         </View>
         <TouchableOpacity
-            onPress={() => {
-              navigation.navigate('Journey');
-            }}
-            style={styles.button}>
-            <Text style={styles.buttonText}>Check this out</Text>
-          </TouchableOpacity>
+          onPress={() => {
+            navigation.navigate('Journey');
+          }}
+          style={styles.button}>
+          <Text style={styles.buttonText}>Check this out</Text>
+        </TouchableOpacity>
         {/* <TouchableOpacity
           onPress={() => {
             alert('Nudges');
@@ -121,7 +121,13 @@ const Home = ({navigation}) => {
         </TouchableOpacity>
       </View>
       <TouchableOpacity style={styles.aaButtonPress}>
-        <Text style={styles.viewMore}>View More</Text>
+        <Text
+          onPress={() => {
+            navigation.navigate('ComingSoon');
+          }}
+          style={styles.viewMore}>
+          View More
+        </Text>
 
         <RightArrow
           style={styles.rightArrow}
@@ -171,7 +177,11 @@ const Home = ({navigation}) => {
         <Text style={styles.bottomTabText}>Features</Text>
         <View style={styles.hr}></View>
         <View style={styles.menuParent}>
-          <TouchableOpacity style={styles.menuItems}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Home');
+            }}
+            style={styles.menuItems}>
             <HomeSVG
               style={styles.rightArrow}
               width={getScaledDimension(25, 'height')}
@@ -179,7 +189,11 @@ const Home = ({navigation}) => {
             />
             <Text style={styles.menuItemsText}>Home</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.menuItems}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('ComingSoon');
+            }}
+            style={styles.menuItems}>
             <CreditCard
               style={styles.rightArrow}
               width={getScaledDimension(25, 'height')}
@@ -187,7 +201,11 @@ const Home = ({navigation}) => {
             />
             <Text style={styles.menuItemsText}>Accounts</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.menuItems}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('ComingSoon');
+            }}
+            style={styles.menuItems}>
             <CC2
               style={styles.rightArrow}
               width={getScaledDimension(25, 'height')}
